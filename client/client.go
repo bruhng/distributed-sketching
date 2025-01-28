@@ -7,8 +7,8 @@ import (
 	"github.com/bruhng/distributed-sketching/types"
 )
 
-func Init(port string) {
-	client, err := rpc.DialHTTP("tcp", "127.0.0.1:"+port)
+func Init(port string, adr string) {
+	client, err := rpc.DialHTTP("tcp", adr+":"+port)
 	if err != nil {
 		panic(fmt.Sprint("Dial error:", client))
 	}
