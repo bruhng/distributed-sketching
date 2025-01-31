@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package = "github.com/bruhng/distributed-sketching";
+
+
+package sketch;
+
+service Server {
+  // Merges a sketch into the main sketch
+  rpc Merge (MergeRequest) returns  (MergeResponse) {}
+}
+
+
+message MergeRequest {
+  int32 sketch = 1;
+}
+
+message MergeResponse {
+  int32 status = 1;
+}
+
+
