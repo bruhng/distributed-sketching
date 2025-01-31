@@ -1,33 +1,39 @@
 package server
 
 import (
+	"context"
 	"fmt"
 	"net"
-	"net/http"
-	"net/rpc"
 
-	"github.com/bruhng/distributed-sketching/types"
+	"google.golang.org/grpc"
+
+	pb "github.com/bruhng/distributed-sketching/proto"
 )
 
-type Server struct {
-	Sketch types.Sketch
+type server struct {
+	pb.UnimplementedServerServer
 }
 
-func (s *Server) Merge(args *types.Args, reply *types.Reply) error {
-	fmt.Printf("wow merge is called")
-	*reply = 69
-	return nil
+func newServer() *server {
+	s := &server{}
+	return s
+}
+
+func (s *server) Merge(_ context.Context, in *pb.MergeRequest) (*pb.MergeResponse, error) {
+	fmt.Println("Got request", in.Sketch)
+
+	return &pb.MergeResponse{Status: 0}, nil
 }
 
 func Init(port string) {
-	server := new(Server)
-	rpc.Register(server)
-	rpc.HandleHTTP()
 	l, err := net.Listen("tcp", ":"+port)
 	if err != nil {
 		panic(fmt.Sprint("listen error: ", err))
 	}
-	go http.Serve(l, nil)
+	grpcServer := grpc.NewServer()
+	pb.RegisterServerServer(grpcServer, newServer())
+
+	go grpcServer.Serve(l)
 
 	for {
 

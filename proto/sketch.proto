@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-option go_package = "github.com/bruhng/distributed-sketching";
+option go_package = "github.com/bruhng/distributed-sketching/proto";
 
 
-package sketch;
+package proto;
 
 service Server {
   // Merges a sketch into the main sketch

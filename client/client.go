@@ -1,25 +1,30 @@
 package client
 
 import (
+	"context"
 	"fmt"
-	"net/rpc"
+	"time"
 
-	"github.com/bruhng/distributed-sketching/types"
+	pb "github.com/bruhng/distributed-sketching/proto"
+	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
 )
 
 func Init(port string, adr string) {
-	client, err := rpc.DialHTTP("tcp", adr+":"+port)
+	conn, err := grpc.NewClient(adr+":"+port, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
-		panic(fmt.Sprint("Dial error:", client))
+		fmt.Println(err)
+		panic("Could not connect to server")
 	}
+	defer conn.Close()
+	c := pb.NewServerClient(conn)
 
-	args := types.Args{Sketch: 1}
-	var reply types.Reply
-	err = client.Call("Server.Merge", args, &reply)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
+	defer cancel()
+	r, err := c.Merge(ctx, &pb.MergeRequest{Sketch: 12})
 	if err != nil {
-		fmt.Println("ohh no", err)
+		fmt.Println("could not Merge")
 	}
-	fmt.Println(reply)
-	fmt.Println("done")
+	fmt.Println("Response: ", r.GetStatus())
 
 }
