@@ -5,11 +5,8 @@ import (
 	"encoding/gob"
 	"hash/fnv"
 	"math/rand"
-	"reflect"
 	"slices"
 	"strconv"
-
-	sk "github.com/bruhng/distributed-sketching/sketches"
 )
 
 type CountSketch[T any, R any] struct {
@@ -17,7 +14,7 @@ type CountSketch[T any, R any] struct {
 	Seeds  []int
 }
 
-func NewCountSketch[T any](seed int64, size uint64, num_hashes int) sk.Sketch[T, int, CountSketch[T, int]] {
+func NewCountSketch[T any](seed int64, size uint64, num_hashes int) *CountSketch[T, int] {
 	arr := make([][]int, num_hashes)
 
 	for i := 0; i < num_hashes; i++ {
@@ -29,14 +26,13 @@ func NewCountSketch[T any](seed int64, size uint64, num_hashes int) sk.Sketch[T,
 	for i := 0; i < num_hashes; i++ {
 		seeds[i] = r.Intn(2^63)
 	}
-
 	return &CountSketch[T, int]{Sketch: arr, Seeds: seeds}
 }
 
 func getSign(data []byte) int {
-	hash := fnv.New32a()
+	hash := fnv.New64a()
 	hash.Write(data)
-	hashValue := hash.Sum32()
+	hashValue := hash.Sum64()
 
 	if hashValue%2 == 0 {
 		return 1
@@ -87,15 +83,15 @@ func (cs *CountSketch[T, R]) Query(item T) int {
 
 	slices.Sort(results)
 	if result_size%2 == 0 {
-		return (results[result_size] + results[result_size/2+1]) / 2
+		return (results[result_size/2 - 1] + results[result_size/2]) / 2
 	}
 	return results[result_size/2]
 }
 
 func (cs *CountSketch[T, R]) Merge(sketch CountSketch[T, R]) {
-	if reflect.DeepEqual(cs.Seeds, sketch.Seeds) {
+	/*if reflect.DeepEqual(cs.Seeds, sketch.Seeds) {
 		panic("Missmatched hash function in merged sketches")
-	}
+	}*/
 	if len(cs.Sketch[0]) != len(sketch.Sketch[0]) {
 		panic("Missmatched length of second dimension in merged sketches")
 	}
