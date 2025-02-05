@@ -24,10 +24,10 @@ func NewCountSketch[T any](seed int64, size uint64, num_hashes int) sk.Sketch[T,
 		arr[i] = make([]int, size)
 	}
 
-	rand.Seed(seed)
+	r := rand.New(rand.NewSource(seed))
 	seeds := make([]int, num_hashes)
 	for i := 0; i < num_hashes; i++ {
-		seeds[i] = rand.Intn(2 ^ 63)
+		seeds[i] = r.Intn(2^63)
 	}
 
 	return &CountSketch[T, int]{Sketch: arr, Seeds: seeds}
