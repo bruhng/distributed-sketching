@@ -17,7 +17,7 @@ type CountSketch[T any, R any] struct {
 	Seeds  []int
 }
 
-func NewCountSketch[T any](seed int64, size uint64, num_hashes int) sk.Sketch[T, int] {
+func NewCountSketch[T any](seed int64, size uint64, num_hashes int) sk.Sketch[T, int, CountSketch[T, int]] {
 	arr := make([][]int, num_hashes)
 
 	for i := 0; i < num_hashes; i++ {
@@ -30,7 +30,7 @@ func NewCountSketch[T any](seed int64, size uint64, num_hashes int) sk.Sketch[T,
 		seeds[i] = rand.Intn(2 ^ 63)
 	}
 
-	return CountSketch[T, int]{Sketch: arr, Seeds: seeds}
+	return &CountSketch[T, int]{Sketch: arr, Seeds: seeds}
 }
 
 func getSign(data []byte) int {
@@ -92,7 +92,7 @@ func (cs *CountSketch[T, R]) Query(item T) int {
 	return results[result_size/2]
 }
 
-func (cs *CountSketch[T, R]) Merge(sketch CountSketch[T, int]) {
+func (cs *CountSketch[T, R]) Merge(sketch CountSketch[T, R]) {
 	if reflect.DeepEqual(cs.Seeds, sketch.Seeds) {
 		panic("Missmatched hash function in merged sketches")
 	}
