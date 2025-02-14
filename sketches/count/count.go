@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/gob"
 	"hash/fnv"
+	"math"
 	"math/rand"
 	"slices"
 	"strconv"
@@ -24,7 +25,7 @@ func NewCountSketch[T any](seed int64, size uint64, num_hashes int) *CountSketch
 	r := rand.New(rand.NewSource(seed))
 	seeds := make([]int, num_hashes)
 	for i := 0; i < num_hashes; i++ {
-		seeds[i] = r.Intn(2^63)
+		seeds[i] = r.Intn(int(math.Pow(2, 63)))
 	}
 	return &CountSketch[T, int]{Sketch: arr, Seeds: seeds}
 }
@@ -83,7 +84,7 @@ func (cs *CountSketch[T, R]) Query(item T) int {
 
 	slices.Sort(results)
 	if result_size%2 == 0 {
-		return (results[result_size/2 - 1] + results[result_size/2]) / 2
+		return (results[result_size/2-1] + results[result_size/2]) / 2
 	}
 	return results[result_size/2]
 }
