@@ -2,9 +2,11 @@ package kll
 
 import (
 	"cmp"
+	"fmt"
 	"math"
 	"math/rand/v2"
 	"slices"
+	"sort"
 )
 
 type KLLSketch[T cmp.Ordered, R any] struct {
@@ -85,4 +87,39 @@ func (kll *KLLSketch[T, R]) Query(val T) int {
 		}
 	}
 	return sum
+}
+
+func (kll *KLLSketch[T, R]) QueryQuantile(q int) (T, error) {
+	if q > kll.N {
+		return kll.Sketch[0][0], fmt.Errorf("Requested quantile is bigger than N")
+	}
+	quantileSum := 0
+	sketch := kll.Sketch
+	var smallestH int
+	var smallestVal T
+	for _, row := range sketch {
+		sort.Slice(row, func(i, j int) bool {
+			return row[i] < row[j]
+		})
+	}
+
+	for quantileSum < q {
+		smallestH = -1
+		for h, row := range sketch {
+			if len(row) == 0 {
+				continue
+			}
+			if smallestH == -1 {
+				smallestVal = row[0]
+				smallestH = h
+			}
+			if row[0] < smallestVal {
+				smallestVal = row[0]
+				smallestH = h
+			}
+		}
+		sketch[smallestH] = sketch[smallestH][1:]
+		quantileSum += int(math.Pow(2.0, float64(smallestH)))
+	}
+	return smallestVal, nil
 }

@@ -3,6 +3,7 @@ package main
 import (
 	// "flag"
 	"fmt"
+	"math/rand"
 
 	// "github.com/bruhng/distributed-sketching/client"
 	// "github.com/bruhng/distributed-sketching/server"
@@ -11,13 +12,15 @@ import (
 
 func main() {
 
-	sketch := kll.NewKLLSketch[int, int](10)
+	sketch := kll.NewKLLSketch[int, int](200)
 
 	for i := 0; i <= 10000; i++ {
-		sketch.Add(i)
+		sketch.Add(rand.Intn(100))
 	}
 	fmt.Println(sketch.Query(0))
-	fmt.Println(sketch.Query(5000))
+	fmt.Println(sketch.Query(50))
+	fmt.Println(sketch.Query(99))
+	fmt.Println(sketch.QueryQuantile(5000))
 
 	// isClient := flag.Bool("client", false, "use flag if you want to create a client process instead of server")
 	// port := flag.String("port", "8080", "Choose what port to use")
