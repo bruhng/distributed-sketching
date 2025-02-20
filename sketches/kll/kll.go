@@ -89,12 +89,10 @@ func (kll *KLLSketch[T, R]) Query(val T) int {
 	return sum
 }
 
-func (kll *KLLSketch[T, R]) QueryQuantile(q int) (T, error) {
-	if q > kll.N {
-		return kll.Sketch[0][0], fmt.Errorf("Requested quantile is bigger than N")
-	}
+func (kll *KLLSketch[T, R]) QueryQuantile(q int) T {
 	quantileSum := 0
-	sketch := kll.Sketch
+	sketch := make([][]T, len(kll.Sketch))
+	copy(sketch, kll.Sketch)
 	var smallestH int
 	var smallestVal T
 	for _, row := range sketch {
@@ -118,8 +116,12 @@ func (kll *KLLSketch[T, R]) QueryQuantile(q int) (T, error) {
 				smallestH = h
 			}
 		}
+		if smallestH == -1 {
+			fmt.Println("oops i went out of bounds")
+			return smallestVal
+		}
 		sketch[smallestH] = sketch[smallestH][1:]
 		quantileSum += int(math.Pow(2.0, float64(smallestH)))
 	}
-	return smallestVal, nil
+	return smallestVal
 }

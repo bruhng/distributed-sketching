@@ -21,6 +21,8 @@ func main() {
 	fmt.Println(sketch.Query(50))
 	fmt.Println(sketch.Query(99))
 	fmt.Println(sketch.QueryQuantile(5000))
+	fmt.Println(sketch.QueryQuantile(9999))
+	fmt.Println(sketch.QueryQuantile(10000))
 
 	// isClient := flag.Bool("client", false, "use flag if you want to create a client process instead of server")
 	// port := flag.String("port", "8080", "Choose what port to use")
