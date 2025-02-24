@@ -9,22 +9,22 @@ import (
 	"sort"
 )
 
-type KLLSketch[T cmp.Ordered, R any] struct {
+type KLLSketch[T cmp.Ordered] struct {
 	Sketch [][]T
 	K      int
 	N      int
 }
 
-func NewKLLSketch[T cmp.Ordered, R int](k int) *KLLSketch[T, int] {
+func NewKLLSketch[T cmp.Ordered](k int) *KLLSketch[T] {
 	arr := make([][]T, 1)
-	return &KLLSketch[T, int]{Sketch: arr, K: k}
+	return &KLLSketch[T]{Sketch: arr, K: k}
 }
 
 func getSize(k int, h int, H int) int {
 	return max(2, k*int(math.Round(math.Pow(2.0/3.0, float64(H-h)))))
 }
 
-func (kll *KLLSketch[T, R]) Add(item T) {
+func (kll *KLLSketch[T]) Add(item T) {
 	kll.Sketch[0] = append(kll.Sketch[0], item)
 	kll.N++
 	compress(kll)
@@ -40,7 +40,7 @@ func everyOther[T any](xs []T) []T {
 	return append([]T{xs[0]}, everyOther(xs[2:])...)
 }
 
-func compress[T cmp.Ordered, R any](kll *KLLSketch[T, R]) {
+func compress[T cmp.Ordered](kll *KLLSketch[T]) {
 	h := 0
 	for {
 		row := kll.Sketch[h]
@@ -65,7 +65,7 @@ func compress[T cmp.Ordered, R any](kll *KLLSketch[T, R]) {
 	}
 }
 
-func (kll *KLLSketch[T, int]) Merge(sketch KLLSketch[T, int]) {
+func (kll *KLLSketch[T]) Merge(sketch KLLSketch[T]) {
 	H := max(len(kll.Sketch), len(sketch.Sketch))
 	diff := H - len(kll.Sketch)
 	kll.Sketch = append(kll.Sketch, make([][]T, diff)...)
@@ -77,7 +77,7 @@ func (kll *KLLSketch[T, int]) Merge(sketch KLLSketch[T, int]) {
 	compress(kll)
 }
 
-func (kll *KLLSketch[T, R]) Query(val T) int {
+func (kll *KLLSketch[T]) Query(val T) int {
 	sum := 0
 	for h, row := range kll.Sketch {
 		for _, elem := range row {
@@ -89,7 +89,7 @@ func (kll *KLLSketch[T, R]) Query(val T) int {
 	return sum
 }
 
-func (kll *KLLSketch[T, R]) QueryQuantile(q int) T {
+func (kll *KLLSketch[T]) QueryQuantile(q int) T {
 	quantileSum := 0
 	sketch := make([][]T, len(kll.Sketch))
 	copy(sketch, kll.Sketch)

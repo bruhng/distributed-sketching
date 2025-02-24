@@ -19,10 +19,10 @@ func newServer() *server {
 	return s
 }
 
-func (s *server) Merge(_ context.Context, in *pb.MergeRequest) (*pb.MergeResponse, error) {
-	fmt.Println("Got request", in.Sketch)
+func (s *server) MergeKll(_ context.Context, in *pb.Ordered2DArray) (*pb.MergeReply, error) {
+	fmt.Println("arr", in.Rows)
 
-	return &pb.MergeResponse{Status: 0}, nil
+	return &pb.MergeReply{Status: 0}, nil
 }
 
 func Init(port string) {
