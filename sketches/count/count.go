@@ -3,16 +3,16 @@ package count
 import (
 	"bytes"
 	"encoding/gob"
-	"hash/fnv"
-	"math"
+	"fmt"
 	"math/rand"
 	"slices"
-	"strconv"
+
+	"github.com/spaolacci/murmur3"
 )
 
 type CountSketch[T any, R any] struct {
 	Sketch [][]int
-	Seeds  []int
+	Seeds  []uint32
 }
 
 func NewCountSketch[T any](seed int64, size uint64, num_hashes int) *CountSketch[T, int] {
@@ -23,15 +23,15 @@ func NewCountSketch[T any](seed int64, size uint64, num_hashes int) *CountSketch
 	}
 
 	r := rand.New(rand.NewSource(seed))
-	seeds := make([]int, num_hashes)
+	seeds := make([]uint32, num_hashes)
 	for i := 0; i < num_hashes; i++ {
-		seeds[i] = r.Intn(int(math.Pow(2, 63)))
+		seeds[i] = r.Uint32()
 	}
 	return &CountSketch[T, int]{Sketch: arr, Seeds: seeds}
 }
 
 func getSign(data []byte) int {
-	hash := fnv.New64a()
+	hash := murmur3.New64()
 	hash.Write(data)
 	hashValue := hash.Sum64()
 
@@ -41,11 +41,9 @@ func getSign(data []byte) int {
 	return -1
 }
 
-func getIndex(data []byte, seed int, size uint64) uint64 {
-	seededBytes := []byte(strconv.Itoa(seed))
-	seededBytes = append(seededBytes, data...)
-	hash := fnv.New64()
-	hash.Write(seededBytes)
+func getIndex(data []byte, seed uint32, size uint64) uint64 {
+	hash := murmur3.New64WithSeed(seed)
+	hash.Write(data)
 	hashVal := hash.Sum64()
 	return hashVal % size
 
@@ -64,6 +62,7 @@ func (cs *CountSketch[T, R]) Add(item T) {
 		index := getIndex(buf.Bytes(), seed, size)
 		cs.Sketch[i][index] += sign
 	}
+	fmt.Println(cs)
 }
 
 func (cs *CountSketch[T, R]) Query(item T) int {
