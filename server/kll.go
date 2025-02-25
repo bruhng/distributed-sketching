@@ -43,6 +43,6 @@ func (s *server) QueryKll(_ context.Context, in *pb.OrderedValue) (*pb.QueryRetu
 
 func (s *server) ReverseQueryKll(_ context.Context, in *pb.ReverseQuery) (*pb.OrderedValue, error) {
 	phi := in.GetPhi()
-	ret := kllState.QueryQuantile(int(phi))
+	ret := kllState.QueryQuantile(float64(phi))
 	return &pb.OrderedValue{Value: &pb.OrderedValue_IntVal{IntVal: int32(ret)}}, nil
 }

@@ -57,12 +57,12 @@ func Init(port string, adr string) {
 				fmt.Println("ReverseQueryKll requires an int")
 				continue
 			}
-			x, err := strconv.Atoi(words[1])
+			x, err := strconv.ParseFloat(words[1], 32)
 			if err != nil {
 				fmt.Println("ReverseQueryKll requires an int")
 				continue
 			}
-			res, err := c.ReverseQueryKll(ctx, &pb.ReverseQuery{Phi: int32(x)})
+			res, err := c.ReverseQueryKll(ctx, &pb.ReverseQuery{Phi: float32(x)})
 
 			if err != nil {
 				fmt.Println("Could not fetch: ", err)

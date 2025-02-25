@@ -29,7 +29,7 @@ message OrderedValue {
 }
 
 message ReverseQuery {
-  int32 phi = 1;
+  float phi = 1;
 }
 
 message QueryReturn {

@@ -99,7 +99,9 @@ func (kll *KLLSketch[T]) Query(val T) int {
 	return sum
 }
 
-func (kll *KLLSketch[T]) QueryQuantile(q int) T {
+func (kll *KLLSketch[T]) QueryQuantile(phi float64) T {
+	q := int(phi * float64(kll.N))
+
 	quantileSum := 0
 	sketch := make([][]T, len(kll.Sketch))
 	copy(sketch, kll.Sketch)
