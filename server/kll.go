@@ -34,3 +34,15 @@ func (s *server) MergeKll(_ context.Context, in *pb.KLLSketch) (*pb.MergeReply, 
 	fmt.Println("Recived sketch, state is now: ", kllState)
 	return &pb.MergeReply{Status: 0}, nil
 }
+
+func (s *server) QueryKll(_ context.Context, in *pb.OrderedValue) (*pb.QueryReturn, error) {
+	val := in.GetIntVal()
+	ret := kllState.Query(int(val))
+	return &pb.QueryReturn{N: int32(kllState.N), Phi: int32(ret)}, nil
+}
+
+func (s *server) ReverseQueryKll(_ context.Context, in *pb.ReverseQuery) (*pb.OrderedValue, error) {
+	phi := in.GetPhi()
+	ret := kllState.QueryQuantile(int(phi))
+	return &pb.OrderedValue{Value: &pb.OrderedValue_IntVal{IntVal: int32(ret)}}, nil
+}

@@ -5,9 +5,11 @@ option go_package = "github.com/bruhng/distributed-sketching/proto";
 
 package proto;
 
-service Server {
+service Sketcher {
   // Merges a sketch into the main sketch
   rpc MergeKll (KLLSketch) returns  (MergeReply) {}
+  rpc QueryKll (OrderedValue) returns (QueryReturn) {} 
+  rpc ReverseQueryKll (ReverseQuery) returns (OrderedValue) {}
 }
 
 message KLLSketch {
@@ -24,6 +26,15 @@ message OrderedValue {
     int32 int_val = 1;
     float float_val = 2;
   }
+}
+
+message ReverseQuery {
+  int32 phi = 1;
+}
+
+message QueryReturn {
+  int32 phi = 1;
+  int32 N = 2;
 }
 
 message MergeReply {

@@ -11,7 +11,7 @@ import (
 )
 
 type server struct {
-	pb.UnimplementedServerServer
+	pb.UnimplementedSketcherServer
 }
 
 func newServer() *server {
@@ -28,7 +28,7 @@ func Init(port string) {
 		panic(fmt.Sprint("listen error: ", err))
 	}
 	grpcServer := grpc.NewServer()
-	pb.RegisterServerServer(grpcServer, newServer())
+	pb.RegisterSketcherServer(grpcServer, newServer())
 
 	go grpcServer.Serve(l)
 

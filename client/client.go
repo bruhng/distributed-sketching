@@ -15,7 +15,7 @@ func Init(port string, adr string, sketchType string) {
 		panic("Could not connect to server")
 	}
 	defer conn.Close()
-	c := pb.NewServerClient(conn)
+	c := pb.NewSketcherClient(conn)
 
 	switch sketchType {
 	case "kll":

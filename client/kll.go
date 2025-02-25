@@ -10,7 +10,7 @@ import (
 	"github.com/bruhng/distributed-sketching/sketches/kll"
 )
 
-func kllClient(k int, c pb.ServerClient) {
+func kllClient(k int, c pb.SketcherClient) {
 
 	sketch := kll.NewKLLSketch[int](k)
 	i := 1

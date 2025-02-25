@@ -19,103 +19,179 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	Server_MergeKll_FullMethodName = "/proto.Server/MergeKll"
+	Sketcher_MergeKll_FullMethodName        = "/proto.Sketcher/MergeKll"
+	Sketcher_QueryKll_FullMethodName        = "/proto.Sketcher/QueryKll"
+	Sketcher_ReverseQueryKll_FullMethodName = "/proto.Sketcher/ReverseQueryKll"
 )
 
-// ServerClient is the client API for Server service.
+// SketcherClient is the client API for Sketcher service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type ServerClient interface {
+type SketcherClient interface {
 	// Merges a sketch into the main sketch
 	MergeKll(ctx context.Context, in *KLLSketch, opts ...grpc.CallOption) (*MergeReply, error)
+	QueryKll(ctx context.Context, in *OrderedValue, opts ...grpc.CallOption) (*QueryReturn, error)
+	ReverseQueryKll(ctx context.Context, in *ReverseQuery, opts ...grpc.CallOption) (*OrderedValue, error)
 }
 
-type serverClient struct {
+type sketcherClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewServerClient(cc grpc.ClientConnInterface) ServerClient {
-	return &serverClient{cc}
+func NewSketcherClient(cc grpc.ClientConnInterface) SketcherClient {
+	return &sketcherClient{cc}
 }
 
-func (c *serverClient) MergeKll(ctx context.Context, in *KLLSketch, opts ...grpc.CallOption) (*MergeReply, error) {
+func (c *sketcherClient) MergeKll(ctx context.Context, in *KLLSketch, opts ...grpc.CallOption) (*MergeReply, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(MergeReply)
-	err := c.cc.Invoke(ctx, Server_MergeKll_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, Sketcher_MergeKll_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// ServerServer is the server API for Server service.
-// All implementations must embed UnimplementedServerServer
-// for forward compatibility.
-type ServerServer interface {
-	// Merges a sketch into the main sketch
-	MergeKll(context.Context, *KLLSketch) (*MergeReply, error)
-	mustEmbedUnimplementedServerServer()
+func (c *sketcherClient) QueryKll(ctx context.Context, in *OrderedValue, opts ...grpc.CallOption) (*QueryReturn, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(QueryReturn)
+	err := c.cc.Invoke(ctx, Sketcher_QueryKll_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
 }
 
-// UnimplementedServerServer must be embedded to have
+func (c *sketcherClient) ReverseQueryKll(ctx context.Context, in *ReverseQuery, opts ...grpc.CallOption) (*OrderedValue, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(OrderedValue)
+	err := c.cc.Invoke(ctx, Sketcher_ReverseQueryKll_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// SketcherServer is the server API for Sketcher service.
+// All implementations must embed UnimplementedSketcherServer
+// for forward compatibility.
+type SketcherServer interface {
+	// Merges a sketch into the main sketch
+	MergeKll(context.Context, *KLLSketch) (*MergeReply, error)
+	QueryKll(context.Context, *OrderedValue) (*QueryReturn, error)
+	ReverseQueryKll(context.Context, *ReverseQuery) (*OrderedValue, error)
+	mustEmbedUnimplementedSketcherServer()
+}
+
+// UnimplementedSketcherServer must be embedded to have
 // forward compatible implementations.
 //
 // NOTE: this should be embedded by value instead of pointer to avoid a nil
 // pointer dereference when methods are called.
-type UnimplementedServerServer struct{}
+type UnimplementedSketcherServer struct{}
 
-func (UnimplementedServerServer) MergeKll(context.Context, *KLLSketch) (*MergeReply, error) {
+func (UnimplementedSketcherServer) MergeKll(context.Context, *KLLSketch) (*MergeReply, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method MergeKll not implemented")
 }
-func (UnimplementedServerServer) mustEmbedUnimplementedServerServer() {}
-func (UnimplementedServerServer) testEmbeddedByValue()                {}
+func (UnimplementedSketcherServer) QueryKll(context.Context, *OrderedValue) (*QueryReturn, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method QueryKll not implemented")
+}
+func (UnimplementedSketcherServer) ReverseQueryKll(context.Context, *ReverseQuery) (*OrderedValue, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ReverseQueryKll not implemented")
+}
+func (UnimplementedSketcherServer) mustEmbedUnimplementedSketcherServer() {}
+func (UnimplementedSketcherServer) testEmbeddedByValue()                  {}
 
-// UnsafeServerServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to ServerServer will
+// UnsafeSketcherServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to SketcherServer will
 // result in compilation errors.
-type UnsafeServerServer interface {
-	mustEmbedUnimplementedServerServer()
+type UnsafeSketcherServer interface {
+	mustEmbedUnimplementedSketcherServer()
 }
 
-func RegisterServerServer(s grpc.ServiceRegistrar, srv ServerServer) {
-	// If the following call pancis, it indicates UnimplementedServerServer was
+func RegisterSketcherServer(s grpc.ServiceRegistrar, srv SketcherServer) {
+	// If the following call pancis, it indicates UnimplementedSketcherServer was
 	// embedded by pointer and is nil.  This will cause panics if an
 	// unimplemented method is ever invoked, so we test this at initialization
 	// time to prevent it from happening at runtime later due to I/O.
 	if t, ok := srv.(interface{ testEmbeddedByValue() }); ok {
 		t.testEmbeddedByValue()
 	}
-	s.RegisterService(&Server_ServiceDesc, srv)
+	s.RegisterService(&Sketcher_ServiceDesc, srv)
 }
 
-func _Server_MergeKll_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Sketcher_MergeKll_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(KLLSketch)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ServerServer).MergeKll(ctx, in)
+		return srv.(SketcherServer).MergeKll(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Server_MergeKll_FullMethodName,
+		FullMethod: Sketcher_MergeKll_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ServerServer).MergeKll(ctx, req.(*KLLSketch))
+		return srv.(SketcherServer).MergeKll(ctx, req.(*KLLSketch))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// Server_ServiceDesc is the grpc.ServiceDesc for Server service.
+func _Sketcher_QueryKll_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(OrderedValue)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(SketcherServer).QueryKll(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Sketcher_QueryKll_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(SketcherServer).QueryKll(ctx, req.(*OrderedValue))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Sketcher_ReverseQueryKll_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ReverseQuery)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(SketcherServer).ReverseQueryKll(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Sketcher_ReverseQueryKll_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(SketcherServer).ReverseQueryKll(ctx, req.(*ReverseQuery))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+// Sketcher_ServiceDesc is the grpc.ServiceDesc for Sketcher service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var Server_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "proto.Server",
-	HandlerType: (*ServerServer)(nil),
+var Sketcher_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "proto.Sketcher",
+	HandlerType: (*SketcherServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "MergeKll",
-			Handler:    _Server_MergeKll_Handler,
+			Handler:    _Sketcher_MergeKll_Handler,
+		},
+		{
+			MethodName: "QueryKll",
+			Handler:    _Sketcher_QueryKll_Handler,
+		},
+		{
+			MethodName: "ReverseQueryKll",
+			Handler:    _Sketcher_ReverseQueryKll_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
