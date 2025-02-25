@@ -1,13 +1,13 @@
 package server
 
 import (
-	"context"
 	"fmt"
 	"net"
 
 	"google.golang.org/grpc"
 
 	pb "github.com/bruhng/distributed-sketching/proto"
+	"github.com/bruhng/distributed-sketching/sketches/kll"
 )
 
 type server struct {
@@ -19,13 +19,10 @@ func newServer() *server {
 	return s
 }
 
-func (s *server) MergeKll(_ context.Context, in *pb.Ordered2DArray) (*pb.MergeReply, error) {
-	fmt.Println("arr", in.Rows)
-
-	return &pb.MergeReply{Status: 0}, nil
-}
-
 func Init(port string) {
+
+	kllState = kll.NewKLLSketch[int](200)
+
 	l, err := net.Listen("tcp", ":"+port)
 	if err != nil {
 		panic(fmt.Sprint("listen error: ", err))

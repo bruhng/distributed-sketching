@@ -2,7 +2,6 @@ package client
 
 import (
 	"context"
-	"fmt"
 	"math/rand"
 	"time"
 
@@ -21,8 +20,8 @@ func kllClient(k int, c pb.ServerClient) {
 		data := rand.Intn(100)
 		sketch.Add(data)
 
-		if i%100 == 0 {
-			protoSketch := convertToOrdered2DArray(sketch.Sketch)
+		if i%10000 == 0 {
+			protoSketch := convertToProtoKLL(sketch)
 			ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 			defer cancel()
 			_, err := c.MergeKll(ctx, protoSketch)
@@ -32,14 +31,14 @@ func kllClient(k int, c pb.ServerClient) {
 			sketch = kll.NewKLLSketch[int](k)
 
 		}
-		time.Sleep(200 * time.Millisecond)
+		time.Sleep(10 * time.Microsecond)
 		i++
 	}
 }
 
-func convertToOrdered2DArray(data [][]int) *pb.Ordered2DArray {
-	fmt.Println(data)
-	orderedArray := &proto.Ordered2DArray{}
+func convertToProtoKLL(sketch *kll.KLLSketch[int]) *pb.KLLSketch {
+	orderedArray := &proto.KLLSketch{N: int32(sketch.N)}
+	data := sketch.Sketch
 
 	for _, row := range data {
 		protoRow := &proto.OrderedRow{} // Create a new row

@@ -20,8 +20,18 @@ func NewKLLSketch[T cmp.Ordered](k int) *KLLSketch[T] {
 	return &KLLSketch[T]{Sketch: arr, K: k}
 }
 
+func NewKLLFromData[T cmp.Ordered](arr [][]T, n int, k int) *KLLSketch[T] {
+	return &KLLSketch[T]{Sketch: arr, K: k, N: n}
+}
+
 func getSize(k int, h int, H int) int {
-	return max(2, k*int(math.Round(math.Pow(2.0/3.0, float64(H-h)))))
+	diff := float64(H - 1 - h)
+	exp := float64(k) * math.Pow(2.0/3.0, diff)
+	rounded := math.Round(exp)
+	ked := int(rounded)
+	size := max(2, ked)
+
+	return size
 }
 
 func (kll *KLLSketch[T]) Add(item T) {

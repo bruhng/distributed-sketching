@@ -19,7 +19,7 @@ func Init(port string, adr string, sketchType string) {
 
 	switch sketchType {
 	case "kll":
-		kllClient(10, c)
+		kllClient(100, c)
 	default:
 		panic("No sketch provided or invalid sketch")
 	}

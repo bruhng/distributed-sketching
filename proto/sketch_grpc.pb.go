@@ -27,7 +27,7 @@ const (
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type ServerClient interface {
 	// Merges a sketch into the main sketch
-	MergeKll(ctx context.Context, in *Ordered2DArray, opts ...grpc.CallOption) (*MergeReply, error)
+	MergeKll(ctx context.Context, in *KLLSketch, opts ...grpc.CallOption) (*MergeReply, error)
 }
 
 type serverClient struct {
@@ -38,7 +38,7 @@ func NewServerClient(cc grpc.ClientConnInterface) ServerClient {
 	return &serverClient{cc}
 }
 
-func (c *serverClient) MergeKll(ctx context.Context, in *Ordered2DArray, opts ...grpc.CallOption) (*MergeReply, error) {
+func (c *serverClient) MergeKll(ctx context.Context, in *KLLSketch, opts ...grpc.CallOption) (*MergeReply, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(MergeReply)
 	err := c.cc.Invoke(ctx, Server_MergeKll_FullMethodName, in, out, cOpts...)
@@ -53,7 +53,7 @@ func (c *serverClient) MergeKll(ctx context.Context, in *Ordered2DArray, opts ..
 // for forward compatibility.
 type ServerServer interface {
 	// Merges a sketch into the main sketch
-	MergeKll(context.Context, *Ordered2DArray) (*MergeReply, error)
+	MergeKll(context.Context, *KLLSketch) (*MergeReply, error)
 	mustEmbedUnimplementedServerServer()
 }
 
@@ -64,7 +64,7 @@ type ServerServer interface {
 // pointer dereference when methods are called.
 type UnimplementedServerServer struct{}
 
-func (UnimplementedServerServer) MergeKll(context.Context, *Ordered2DArray) (*MergeReply, error) {
+func (UnimplementedServerServer) MergeKll(context.Context, *KLLSketch) (*MergeReply, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method MergeKll not implemented")
 }
 func (UnimplementedServerServer) mustEmbedUnimplementedServerServer() {}
@@ -89,7 +89,7 @@ func RegisterServerServer(s grpc.ServiceRegistrar, srv ServerServer) {
 }
 
 func _Server_MergeKll_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(Ordered2DArray)
+	in := new(KLLSketch)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -101,7 +101,7 @@ func _Server_MergeKll_Handler(srv interface{}, ctx context.Context, dec func(int
 		FullMethod: Server_MergeKll_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ServerServer).MergeKll(ctx, req.(*Ordered2DArray))
+		return srv.(ServerServer).MergeKll(ctx, req.(*KLLSketch))
 	}
 	return interceptor(ctx, in, info, handler)
 }
