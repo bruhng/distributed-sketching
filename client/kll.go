@@ -2,21 +2,35 @@ package client
 
 import (
 	"context"
-	"math/rand"
+	"fmt"
+	"strconv"
 	"time"
 
 	pb "github.com/bruhng/distributed-sketching/proto"
 	"github.com/bruhng/distributed-sketching/sketches/kll"
+	"github.com/bruhng/distributed-sketching/stream"
 )
 
-func kllClient(k int, c pb.SketcherClient) {
+func kllClient(k int, c pb.SketcherClient, dataSetPath string) {
 
 	sketch := kll.NewKLLSketch[int](k)
 	i := 1
-
+	dataStream := stream.NewStreamFromPath(dataSetPath)
 	for {
-		// Read Data
-		data := rand.Intn(100)
+		strData := <-dataStream.Data
+		if strData == "" {
+			continue
+		}
+		for _, char := range strData {
+			fmt.Println(int(char))
+		}
+		data, err := strconv.Atoi(strData)
+
+		if err != nil {
+			fmt.Println(err)
+			panic("Could not convert file to int")
+		}
+
 		sketch.Add(data)
 
 		if i%10000 == 0 {
@@ -30,8 +44,8 @@ func kllClient(k int, c pb.SketcherClient) {
 			sketch = kll.NewKLLSketch[int](k)
 
 		}
-		time.Sleep(10 * time.Microsecond)
 		i++
+
 	}
 }
 

@@ -8,7 +8,7 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 )
 
-func Init(port string, adr string, sketchType string) {
+func Init(port string, adr string, sketchType string, dataSetPath string) {
 	conn, err := grpc.NewClient(adr+":"+port, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		fmt.Println(err)
@@ -19,10 +19,9 @@ func Init(port string, adr string, sketchType string) {
 
 	switch sketchType {
 	case "kll":
-		kllClient(100, c)
+		kllClient(100, c, dataSetPath)
 	case "count":
-		countClient(c)
-
+		countClient(c, dataSetPath)
 	default:
 		panic("No sketch provided or invalid sketch")
 	}

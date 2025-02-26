@@ -2,27 +2,41 @@ package client
 
 import (
 	"context"
-	"math/rand"
+	"fmt"
+	"strconv"
 	"time"
 
 	pb "github.com/bruhng/distributed-sketching/proto"
 	"github.com/bruhng/distributed-sketching/sketches/count"
+	"github.com/bruhng/distributed-sketching/stream"
 )
 
-func countClient(c pb.SketcherClient) {
+func countClient(c pb.SketcherClient, dataSetPath string) {
 
 	sketch := count.NewCountSketch[int](157, 100, 10)
 	i := 1
-
+	dataStream := stream.NewStreamFromPath(dataSetPath)
 	for {
-		// Read Data
-		data := rand.Intn(100)
+		strData := <-dataStream.Data
+		if strData == "" {
+			continue
+		}
+		for _, char := range strData {
+			fmt.Println(int(char))
+		}
+		data, err := strconv.Atoi(strData)
+
+		if err != nil {
+			fmt.Println(err)
+			panic("Could not convert file to int")
+		}
 		sketch.Add(data)
 
 		if i%10000 == 0 {
 			ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 			defer cancel()
 			protoSketch := convertToProtoCount(sketch)
+			fmt.Println("NU")
 			_, err := c.MergeCount(ctx, protoSketch)
 			if err != nil {
 				panic(err)
@@ -30,7 +44,6 @@ func countClient(c pb.SketcherClient) {
 			sketch = count.NewCountSketch[int](157, 100, 10)
 
 		}
-		time.Sleep(100 * time.Microsecond)
 		i++
 	}
 }
