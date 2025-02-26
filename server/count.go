@@ -23,9 +23,7 @@ func covertProtoCountToCount(protoData *pb.CountSketch) *count.CountSketch[int] 
 
 		data = append(data, row)
 	}
-	for _, protoSeed := range protoData.Seeds {
-		seeds = append(seeds, protoSeed)
-	}
+	seeds = append(seeds, protoData.Seeds...)
 
 	return count.NewCountFromData[int](data, seeds)
 }
