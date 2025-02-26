@@ -54,12 +54,12 @@ func Init(port string, adr string) {
 
 		case "ReverseQueryKll":
 			if len(words) < 2 {
-				fmt.Println("ReverseQueryKll requires an int")
+				fmt.Println("ReverseQueryKll requires an float")
 				continue
 			}
 			x, err := strconv.ParseFloat(words[1], 32)
 			if err != nil {
-				fmt.Println("ReverseQueryKll requires an int")
+				fmt.Println("ReverseQueryKll requires an float")
 				continue
 			}
 			res, err := c.ReverseQueryKll(ctx, &pb.ReverseQuery{Phi: float32(x)})
@@ -70,8 +70,8 @@ func Init(port string, adr string) {
 			fmt.Println(res)
 
 		case "help":
-			fmt.Println("ReverseQueryKll [int]")
-			fmt.Println("Returns value at quantile [int]\n")
+			fmt.Println("ReverseQueryKll [float]")
+			fmt.Println("Returns value at quantile [float]\n")
 			fmt.Println("QueryKll x")
 			fmt.Println("Returns quantlie of value [int]\n")
 			fmt.Println("help")
