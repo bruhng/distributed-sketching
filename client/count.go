@@ -36,7 +36,6 @@ func countClient(c pb.SketcherClient, dataSetPath string) {
 			ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 			defer cancel()
 			protoSketch := convertToProtoCount(sketch)
-			fmt.Println("NU")
 			_, err := c.MergeCount(ctx, protoSketch)
 			if err != nil {
 				panic(err)
