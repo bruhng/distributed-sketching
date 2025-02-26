@@ -3,6 +3,7 @@ package count
 import (
 	"bytes"
 	"encoding/gob"
+	"math"
 	"math/rand"
 	"slices"
 
@@ -90,10 +91,23 @@ func (cs *CountSketch[T]) Query(item T) int {
 	return results[result_size/2]
 }
 
+func (cs *CountSketch[T]) QueryMean() float64 {
+	es := make([]float64, len(cs.Sketch))
+	esize := len(es)
+	for j, row := range cs.Sketch {
+		for _, k := range row {
+			es[j] = es[j] + math.Pow(float64(k), 2.0)
+		}
+	}
+
+	slices.Sort(es)
+	if esize%2 == 0 {
+		return (es[esize/2-1] + es[esize/2]) / 2
+	}
+	return es[esize/2]
+}
+
 func (cs *CountSketch[T]) Merge(sketch CountSketch[T]) {
-	/*if reflect.DeepEqual(cs.Seeds, sketch.Seeds) {
-		panic("Missmatched hash function in merged sketches")
-	}*/
 	if len(cs.Sketch[0]) != len(sketch.Sketch[0]) {
 		panic("Missmatched length of second dimension in merged sketches")
 	}
