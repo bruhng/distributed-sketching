@@ -10,7 +10,25 @@ service Sketcher {
   rpc MergeKll (KLLSketch) returns  (MergeReply) {}
   rpc QueryKll (OrderedValue) returns (QueryReturn) {} 
   rpc ReverseQueryKll (ReverseQuery) returns (OrderedValue) {}
+  rpc MergeCount (CountSketch) returns (MergeReply) {}
+  rpc QueryCount (AnyValue) returns (CountQueryReply) {}
 }
+
+
+
+message CountSketch {
+  repeated IntRow rows = 1;
+  repeated uint32 seeds = 2;
+}
+
+message IntRow {
+  repeated int32 val = 1;
+}
+
+message CountQueryReply {
+  int32 res = 1;
+}
+
 
 message KLLSketch {
   repeated OrderedRow rows = 1;
@@ -25,6 +43,15 @@ message OrderedValue {
   oneof value {
     int32 int_val = 1;
     float float_val = 2;
+  }
+}
+
+message AnyValue {
+  oneof value {
+    int32 int_val = 1;
+    float float_val = 2;
+    string string_val = 3;
+    uint32 uint_val = 4;
   }
 }
 

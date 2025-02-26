@@ -17,9 +17,10 @@ func main() {
 	isCustomer := flag.Bool("customer", false, "use flag if you want to create a customer process instead of a server")
 	port := flag.String("port", "8080", "Choose what port to use")
 	adress := flag.String("a", "127.0.0.1", "Choose what ip to connect to")
+	sketchType := flag.String("type", "kll", "Choose what sketch to use")
 	flag.Parse()
 	if *isClient {
-		client.Init(*port, *adress, "kll")
+		client.Init(*port, *adress, *sketchType)
 	} else if *isCustomer {
 		customer.Init(*port, *adress)
 	} else {

@@ -5,7 +5,6 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/bruhng/distributed-sketching/proto"
 	pb "github.com/bruhng/distributed-sketching/proto"
 	"github.com/bruhng/distributed-sketching/sketches/kll"
 )
@@ -37,15 +36,15 @@ func kllClient(k int, c pb.SketcherClient) {
 }
 
 func convertToProtoKLL(sketch *kll.KLLSketch[int]) *pb.KLLSketch {
-	orderedArray := &proto.KLLSketch{N: int32(sketch.N)}
+	orderedArray := &pb.KLLSketch{N: int32(sketch.N)}
 	data := sketch.Sketch
 
 	for _, row := range data {
-		protoRow := &proto.OrderedRow{} // Create a new row
+		protoRow := &pb.OrderedRow{} // Create a new row
 
 		for _, val := range row {
-			protoRow.Values = append(protoRow.Values, &proto.OrderedValue{
-				Value: &proto.OrderedValue_IntVal{IntVal: int32(val)}, // Wrap value properly
+			protoRow.Values = append(protoRow.Values, &pb.OrderedValue{
+				Value: &pb.OrderedValue_IntVal{IntVal: int32(val)}, // Wrap value properly
 			})
 		}
 		orderedArray.Rows = append(orderedArray.Rows, protoRow)

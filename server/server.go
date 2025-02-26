@@ -7,6 +7,7 @@ import (
 	"google.golang.org/grpc"
 
 	pb "github.com/bruhng/distributed-sketching/proto"
+	"github.com/bruhng/distributed-sketching/sketches/count"
 	"github.com/bruhng/distributed-sketching/sketches/kll"
 )
 
@@ -22,6 +23,7 @@ func newServer() *server {
 func Init(port string) {
 
 	kllState = kll.NewKLLSketch[int](200)
+	countState = count.NewCountSketch[int](157, 100, 10)
 
 	l, err := net.Listen("tcp", ":"+port)
 	if err != nil {

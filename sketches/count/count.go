@@ -3,19 +3,18 @@ package count
 import (
 	"bytes"
 	"encoding/gob"
-	"fmt"
 	"math/rand"
 	"slices"
 
 	"github.com/spaolacci/murmur3"
 )
 
-type CountSketch[T any, R any] struct {
+type CountSketch[T any] struct {
 	Sketch [][]int
 	Seeds  []uint32
 }
 
-func NewCountSketch[T any](seed int64, size uint64, num_hashes int) *CountSketch[T, int] {
+func NewCountSketch[T any](seed int64, size uint64, num_hashes int) *CountSketch[T] {
 	arr := make([][]int, num_hashes)
 
 	for i := 0; i < num_hashes; i++ {
@@ -27,7 +26,11 @@ func NewCountSketch[T any](seed int64, size uint64, num_hashes int) *CountSketch
 	for i := 0; i < num_hashes; i++ {
 		seeds[i] = r.Uint32()
 	}
-	return &CountSketch[T, int]{Sketch: arr, Seeds: seeds}
+	return &CountSketch[T]{Sketch: arr, Seeds: seeds}
+}
+
+func NewCountFromData[T any](arr [][]int, seeds []uint32) *CountSketch[T] {
+	return &CountSketch[T]{Sketch: arr, Seeds: seeds}
 }
 
 func getSign(data []byte) int {
@@ -49,7 +52,7 @@ func getIndex(data []byte, seed uint32, size uint64) uint64 {
 
 }
 
-func (cs *CountSketch[T, R]) Add(item T) {
+func (cs *CountSketch[T]) Add(item T) {
 	var buf bytes.Buffer
 	enc := gob.NewEncoder(&buf)
 	err := enc.Encode(item)
@@ -62,10 +65,9 @@ func (cs *CountSketch[T, R]) Add(item T) {
 		index := getIndex(buf.Bytes(), seed, size)
 		cs.Sketch[i][index] += sign
 	}
-	fmt.Println(cs)
 }
 
-func (cs *CountSketch[T, R]) Query(item T) int {
+func (cs *CountSketch[T]) Query(item T) int {
 	var buf bytes.Buffer
 	enc := gob.NewEncoder(&buf)
 	err := enc.Encode(item)
@@ -88,7 +90,7 @@ func (cs *CountSketch[T, R]) Query(item T) int {
 	return results[result_size/2]
 }
 
-func (cs *CountSketch[T, R]) Merge(sketch CountSketch[T, R]) {
+func (cs *CountSketch[T]) Merge(sketch CountSketch[T]) {
 	/*if reflect.DeepEqual(cs.Seeds, sketch.Seeds) {
 		panic("Missmatched hash function in merged sketches")
 	}*/

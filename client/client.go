@@ -20,6 +20,9 @@ func Init(port string, adr string, sketchType string) {
 	switch sketchType {
 	case "kll":
 		kllClient(100, c)
+	case "count":
+		countClient(c)
+
 	default:
 		panic("No sketch provided or invalid sketch")
 	}
