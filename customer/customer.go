@@ -43,23 +43,31 @@ func Init(port string, adr string) {
 		switch words[0] {
 		case "QueryKll":
 			if len(words) < 2 {
-				fmt.Println("QueryKll requires an int")
+				fmt.Println("QueryKll requires an int or float")
 				continue
 			}
 			x, err := strconv.Atoi(words[1])
 			if err != nil {
-				fmt.Println("QueryKll requires an int")
-				continue
+				x, err := strconv.ParseFloat(words[1], 32)
+				if err != nil {
+					fmt.Println("QueryKll requires an int or float")
+					continue
+				}
+				res, err := c.QueryKll(ctx, &pb.OrderedValue{Value: &pb.OrderedValue_FloatVal{FloatVal: float32(x)}, Type: "float64"})
+				if err != nil {
+					fmt.Println("Could not fetch: ", err)
+				}
+				fmt.Println(res)
 			}
-			res, err := c.QueryKll(ctx, &pb.OrderedValue{Value: &pb.OrderedValue_IntVal{IntVal: int32(x)}})
+			res, err := c.QueryKll(ctx, &pb.OrderedValue{Value: &pb.OrderedValue_IntVal{IntVal: int32(x)}, Type: "int"})
 			if err != nil {
 				fmt.Println("Could not fetch: ", err)
 			}
 			fmt.Println(res)
 
 		case "ReverseQueryKll":
-			if len(words) < 2 {
-				fmt.Println("ReverseQueryKll requires an float")
+			if len(words) < 3 {
+				fmt.Println("ReverseQueryKll requires an float and a type")
 				continue
 			}
 			x, err := strconv.ParseFloat(words[1], 32)
@@ -67,7 +75,7 @@ func Init(port string, adr string) {
 				fmt.Println("ReverseQueryKll requires an float")
 				continue
 			}
-			res, err := c.ReverseQueryKll(ctx, &pb.ReverseQuery{Phi: float32(x)})
+			res, err := c.ReverseQueryKll(ctx, &pb.ReverseQuery{Phi: float32(x), Type: words[2]})
 
 			if err != nil {
 				fmt.Println("Could not fetch: ", err)
@@ -85,7 +93,7 @@ func Init(port string, adr string) {
 				fmt.Println("PlotKll requires an int")
 				continue
 			}
-			res, err := c.PlotKll(ctx, &pb.PlotRequest{NumBins: int32(numBins)})
+			res, err := c.PlotKll(ctx, &pb.OrderedValue{Value: &pb.OrderedValue_IntVal{IntVal: int32(numBins)}})
 			if err != nil {
 				fmt.Println("Could not fetch: ", err)
 				continue

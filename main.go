@@ -16,11 +16,18 @@ func main() {
 	isCustomer := flag.Bool("customer", false, "use flag if you want to create a customer process instead of a server")
 	port := flag.String("port", "8080", "Choose what port to use")
 	adress := flag.String("a", "127.0.0.1", "Choose what ip to connect to")
-	sketchType := flag.String("type", "kll", "Choose what sketch to use")
+	sketchType := flag.String("sketch", "kll", "Choose what sketch to use")
 	dataSetPath := flag.String("d", "", "Choose what data set path to use as data stream")
+	dataSetName := flag.String("name", "", "Choose what part of the data set to use as data stream")
+	dataSetType := flag.String("type", "int", "Choose what type the data set is")
+
 	flag.Parse()
 	if *isClient {
-		client.Init(*port, *adress, *sketchType, *dataSetPath)
+		if *dataSetType == "float" {
+			client.Init[float64](*port, *adress, *sketchType, *dataSetPath, *dataSetName)
+		} else if *dataSetType == "int" {
+			client.Init[int](*port, *adress, *sketchType, *dataSetPath, *dataSetName)
+		}
 	} else if *isCustomer {
 		customer.Init(*port, *adress)
 	} else {

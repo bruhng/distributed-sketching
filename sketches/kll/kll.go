@@ -40,7 +40,7 @@ func (kll *KLLSketch[T]) Add(item T) {
 	compress(kll)
 }
 
-func everyOther[T any](xs []T) []T {
+func everyOther[T cmp.Ordered](xs []T) []T {
 	if len(xs) == 0 {
 		return []T{}
 	}

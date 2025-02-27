@@ -8,15 +8,16 @@ import (
 	"math/rand"
 	"slices"
 
+	"github.com/bruhng/distributed-sketching/shared"
 	"github.com/spaolacci/murmur3"
 )
 
-type CountSketch[T any] struct {
+type CountSketch[T shared.Number] struct {
 	Sketch [][]int
 	Seeds  []uint32
 }
 
-func NewCountSketch[T any](seed int64, size uint64, num_hashes int) *CountSketch[T] {
+func NewCountSketch[T shared.Number](seed int64, size uint64, num_hashes int) *CountSketch[T] {
 	arr := make([][]int, num_hashes)
 
 	for i := 0; i < num_hashes; i++ {
@@ -31,7 +32,7 @@ func NewCountSketch[T any](seed int64, size uint64, num_hashes int) *CountSketch
 	return &CountSketch[T]{Sketch: arr, Seeds: seeds}
 }
 
-func NewCountFromData[T any](arr [][]int, seeds []uint32) *CountSketch[T] {
+func NewCountFromData[T shared.Number](arr [][]int, seeds []uint32) *CountSketch[T] {
 	return &CountSketch[T]{Sketch: arr, Seeds: seeds}
 }
 

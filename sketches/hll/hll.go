@@ -8,17 +8,18 @@ import (
 	"math/bits"
 	"math/rand"
 
+	"github.com/bruhng/distributed-sketching/shared"
 	"github.com/spaolacci/murmur3"
 )
 
-type HLLSketch[T any] struct {
+type HLLSketch[T shared.Number] struct {
 	C []int
 	m uint64
 	h uint32
 	g uint32
 }
 
-func NewHLLSketch[T any](m uint64, seed int64) *HLLSketch[T] {
+func NewHLLSketch[T shared.Number](m uint64, seed int64) *HLLSketch[T] {
 	arr := make([]int, m)
 
 	r := rand.New(rand.NewSource(seed))

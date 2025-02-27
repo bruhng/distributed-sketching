@@ -2,34 +2,20 @@ package client
 
 import (
 	"context"
-	"fmt"
-	"strconv"
 	"time"
 
 	pb "github.com/bruhng/distributed-sketching/proto"
+	"github.com/bruhng/distributed-sketching/shared"
 	"github.com/bruhng/distributed-sketching/sketches/count"
 	"github.com/bruhng/distributed-sketching/stream"
 )
 
-func countClient(c pb.SketcherClient, dataSetPath string) {
+func countClient[T shared.Number](c pb.SketcherClient, dataStream stream.Stream[T]) {
 
-	sketch := count.NewCountSketch[int](157, 100, 10)
+	sketch := count.NewCountSketch[T](157, 100, 10)
 	i := 1
-	dataStream := stream.NewStreamFromPath(dataSetPath)
 	for {
-		strData := <-dataStream.Data
-		if strData == "" {
-			continue
-		}
-		for _, char := range strData {
-			fmt.Println(int(char))
-		}
-		data, err := strconv.Atoi(strData)
-
-		if err != nil {
-			fmt.Println(err)
-			panic("Could not convert file to int")
-		}
+		data := <-dataStream.Data
 		sketch.Add(data)
 
 		if i%10000 == 0 {
@@ -40,14 +26,14 @@ func countClient(c pb.SketcherClient, dataSetPath string) {
 			if err != nil {
 				panic(err)
 			}
-			sketch = count.NewCountSketch[int](157, 100, 10)
+			sketch = count.NewCountSketch[T](157, 100, 10)
 
 		}
 		i++
 	}
 }
 
-func convertToProtoCount(sketch *count.CountSketch[int]) *pb.CountSketch {
+func convertToProtoCount[T shared.Number](sketch *count.CountSketch[T]) *pb.CountSketch {
 	protoArray := &pb.CountSketch{}
 	data := sketch.Sketch
 	seeds := sketch.Seeds
