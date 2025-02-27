@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"context"
 	"fmt"
+	"image/color"
 	"math"
 	"os"
 	"strconv"
@@ -87,13 +88,13 @@ func Init(port string, adr string) {
 			res, err := c.PlotKll(ctx, &pb.PlotRequest{NumBins: int32(numBins)})
 			if err != nil {
 				fmt.Println("Could not fetch: ", err)
+				continue
 			}
-			fmt.Println(res)
 			pmf := res.Pmf
-			p := plot.New()
-			p.Title.Text = "KLL Sketch Histogram"
-			p.X.Label.Text = "Value"
-			p.Y.Label.Text = "Probability Mass"
+			pHist := plot.New()
+			pHist.Title.Text = "KLL Sketch Histogram"
+			pHist.X.Label.Text = "Value"
+			pHist.Y.Label.Text = "Probability Mass"
 
 			bars := make(plotter.Values, numBins)
 			labels := make([]string, len(pmf))
@@ -104,14 +105,18 @@ func Init(port string, adr string) {
 			}
 
 			hist, err := plotter.NewBarChart(bars, vg.Points(float64(step)))
-			hist.Width = vg.Points(float64(step) * 2)
 			if err != nil {
 				panic(err)
 			}
 
-			p.Add(hist)
-			p.NominalX(labels...)
-			if err := p.Save(8*vg.Inch, 4*vg.Inch, "histogram.png"); err != nil {
+			hist.Width = vg.Points(float64(step) * 6.5)
+			hist.LineStyle.Width = vg.Points(2)
+			hist.LineStyle.Color = color.RGBA{R: 0, B: 0, G: 0, A: 255}
+			hist.Color = color.RGBA{R: 135, G: 206, B: 250, A: 255}
+
+			pHist.Add(hist)
+			pHist.NominalX(labels...)
+			if err := pHist.Save(10*vg.Inch, 5*vg.Inch, "histogram.png"); err != nil {
 				panic(err)
 			}
 
