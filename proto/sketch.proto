@@ -10,7 +10,7 @@ service Sketcher {
   rpc MergeKll (KLLSketch) returns  (MergeReply) {}
   rpc QueryKll (OrderedValue) returns (QueryReturn) {} 
   rpc ReverseQueryKll (ReverseQuery) returns (OrderedValue) {}
-  rpc PlotKll (PlotRequest) returns (PlotKllReply) {}
+  rpc PlotKll (OrderedValue) returns (PlotKllReply) {}
   rpc MergeCount (CountSketch) returns (MergeReply) {}
   rpc QueryCount (AnyValue) returns (CountQueryReply) {}
 }
@@ -67,10 +67,6 @@ message QueryReturn {
 
 message MergeReply {
   int32 status = 1;  
-}
-
-message PlotRequest {
-  int32 numBins = 1;
 }
 
 message PlotKllReply  {

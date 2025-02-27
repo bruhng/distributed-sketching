@@ -85,7 +85,7 @@ func Init(port string, adr string) {
 				fmt.Println("PlotKll requires an int")
 				continue
 			}
-			res, err := c.PlotKll(ctx, &pb.PlotRequest{NumBins: int32(numBins)})
+			res, err := c.PlotKll(ctx, &pb.OrderedValue{Value: &pb.OrderedValue_IntVal{IntVal: int32(numBins)}})
 			if err != nil {
 				fmt.Println("Could not fetch: ", err)
 				continue

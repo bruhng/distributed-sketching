@@ -46,8 +46,8 @@ func (s *server) ReverseQueryKll(_ context.Context, in *pb.ReverseQuery) (*pb.Or
 	return &pb.OrderedValue{Value: &pb.OrderedValue_IntVal{IntVal: int32(ret)}}, nil
 }
 
-func (s *server) PlotKll(_ context.Context, in *pb.PlotRequest) (*pb.PlotKllReply, error) {
-	numBins := int(in.GetNumBins())
+func (s *server) PlotKll(_ context.Context, in *pb.OrderedValue) (*pb.PlotKllReply, error) {
+	numBins := int(in.GetIntVal())
 	xmin := kllState.QueryQuantile(0.0)
 	xmax := kllState.QueryQuantile(1.0)
 	step := float64(xmax-xmin) / float64(numBins)
