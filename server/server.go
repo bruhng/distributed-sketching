@@ -4,11 +4,10 @@ import (
 	"fmt"
 	"net"
 
-	"google.golang.org/grpc"
-
 	pb "github.com/bruhng/distributed-sketching/proto"
 	"github.com/bruhng/distributed-sketching/sketches/count"
 	"github.com/bruhng/distributed-sketching/sketches/kll"
+	"google.golang.org/grpc"
 )
 
 type server struct {

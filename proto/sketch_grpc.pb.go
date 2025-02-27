@@ -22,6 +22,7 @@ const (
 	Sketcher_MergeKll_FullMethodName        = "/proto.Sketcher/MergeKll"
 	Sketcher_QueryKll_FullMethodName        = "/proto.Sketcher/QueryKll"
 	Sketcher_ReverseQueryKll_FullMethodName = "/proto.Sketcher/ReverseQueryKll"
+	Sketcher_PlotKll_FullMethodName         = "/proto.Sketcher/PlotKll"
 	Sketcher_MergeCount_FullMethodName      = "/proto.Sketcher/MergeCount"
 	Sketcher_QueryCount_FullMethodName      = "/proto.Sketcher/QueryCount"
 )
@@ -34,6 +35,7 @@ type SketcherClient interface {
 	MergeKll(ctx context.Context, in *KLLSketch, opts ...grpc.CallOption) (*MergeReply, error)
 	QueryKll(ctx context.Context, in *OrderedValue, opts ...grpc.CallOption) (*QueryReturn, error)
 	ReverseQueryKll(ctx context.Context, in *ReverseQuery, opts ...grpc.CallOption) (*OrderedValue, error)
+	PlotKll(ctx context.Context, in *PlotRequest, opts ...grpc.CallOption) (*PlotKllReply, error)
 	MergeCount(ctx context.Context, in *CountSketch, opts ...grpc.CallOption) (*MergeReply, error)
 	QueryCount(ctx context.Context, in *AnyValue, opts ...grpc.CallOption) (*CountQueryReply, error)
 }
@@ -76,6 +78,16 @@ func (c *sketcherClient) ReverseQueryKll(ctx context.Context, in *ReverseQuery, 
 	return out, nil
 }
 
+func (c *sketcherClient) PlotKll(ctx context.Context, in *PlotRequest, opts ...grpc.CallOption) (*PlotKllReply, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(PlotKllReply)
+	err := c.cc.Invoke(ctx, Sketcher_PlotKll_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *sketcherClient) MergeCount(ctx context.Context, in *CountSketch, opts ...grpc.CallOption) (*MergeReply, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(MergeReply)
@@ -104,6 +116,7 @@ type SketcherServer interface {
 	MergeKll(context.Context, *KLLSketch) (*MergeReply, error)
 	QueryKll(context.Context, *OrderedValue) (*QueryReturn, error)
 	ReverseQueryKll(context.Context, *ReverseQuery) (*OrderedValue, error)
+	PlotKll(context.Context, *PlotRequest) (*PlotKllReply, error)
 	MergeCount(context.Context, *CountSketch) (*MergeReply, error)
 	QueryCount(context.Context, *AnyValue) (*CountQueryReply, error)
 	mustEmbedUnimplementedSketcherServer()
@@ -124,6 +137,9 @@ func (UnimplementedSketcherServer) QueryKll(context.Context, *OrderedValue) (*Qu
 }
 func (UnimplementedSketcherServer) ReverseQueryKll(context.Context, *ReverseQuery) (*OrderedValue, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ReverseQueryKll not implemented")
+}
+func (UnimplementedSketcherServer) PlotKll(context.Context, *PlotRequest) (*PlotKllReply, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method PlotKll not implemented")
 }
 func (UnimplementedSketcherServer) MergeCount(context.Context, *CountSketch) (*MergeReply, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method MergeCount not implemented")
@@ -206,6 +222,24 @@ func _Sketcher_ReverseQueryKll_Handler(srv interface{}, ctx context.Context, dec
 	return interceptor(ctx, in, info, handler)
 }
 
+func _Sketcher_PlotKll_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PlotRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(SketcherServer).PlotKll(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Sketcher_PlotKll_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(SketcherServer).PlotKll(ctx, req.(*PlotRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _Sketcher_MergeCount_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CountSketch)
 	if err := dec(in); err != nil {
@@ -260,6 +294,10 @@ var Sketcher_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ReverseQueryKll",
 			Handler:    _Sketcher_ReverseQueryKll_Handler,
+		},
+		{
+			MethodName: "PlotKll",
+			Handler:    _Sketcher_PlotKll_Handler,
 		},
 		{
 			MethodName: "MergeCount",

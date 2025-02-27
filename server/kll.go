@@ -45,3 +45,21 @@ func (s *server) ReverseQueryKll(_ context.Context, in *pb.ReverseQuery) (*pb.Or
 	ret := kllState.QueryQuantile(float64(phi))
 	return &pb.OrderedValue{Value: &pb.OrderedValue_IntVal{IntVal: int32(ret)}}, nil
 }
+
+func (s *server) PlotKll(_ context.Context, in *pb.PlotRequest) (*pb.PlotKllReply, error) {
+	numBins := int(in.GetNumBins())
+	xmin := kllState.QueryQuantile(0.0)
+	xmax := kllState.QueryQuantile(1.0)
+	step := float64(xmax-xmin) / float64(numBins)
+
+	splits := make([]int, numBins+1)
+	for i := 0; i <= numBins; i++ {
+		splits[i] = xmin + int(step*float64(i))
+	}
+
+	pmf := make([]float32, numBins)
+	for i := 0; i < numBins; i++ {
+		pmf[i] = float32(kllState.Query(splits[i+1]) - kllState.Query(splits[i]))
+	}
+	return &pb.PlotKllReply{Step: float32(step), Pmf: pmf}, nil
+}

@@ -4,12 +4,16 @@ import (
 	"bufio"
 	"context"
 	"fmt"
+	"math"
 	"os"
 	"strconv"
 	"strings"
 	"time"
 
 	pb "github.com/bruhng/distributed-sketching/proto"
+	"gonum.org/v1/plot"
+	"gonum.org/v1/plot/plotter"
+	"gonum.org/v1/plot/vg"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
@@ -69,11 +73,57 @@ func Init(port string, adr string) {
 			}
 			fmt.Println(res)
 
+		case "PlotKll":
+			if len(words) < 2 {
+				fmt.Println("PlotKll requires an int")
+				continue
+			}
+
+			numBins, err := strconv.Atoi(words[1])
+			if err != nil {
+				fmt.Println("PlotKll requires an int")
+				continue
+			}
+			res, err := c.PlotKll(ctx, &pb.PlotRequest{NumBins: int32(numBins)})
+			if err != nil {
+				fmt.Println("Could not fetch: ", err)
+			}
+			fmt.Println(res)
+			pmf := res.Pmf
+			p := plot.New()
+			p.Title.Text = "KLL Sketch Histogram"
+			p.X.Label.Text = "Value"
+			p.Y.Label.Text = "Probability Mass"
+
+			bars := make(plotter.Values, numBins)
+			labels := make([]string, len(pmf))
+			step := math.Round(float64(res.Step))
+			for i, v := range pmf {
+				bars[i] = float64(v)
+				labels[i] = strconv.Itoa(int(step) * i)
+			}
+
+			hist, err := plotter.NewBarChart(bars, vg.Points(float64(step)))
+			hist.Width = vg.Points(float64(step) * 2)
+			if err != nil {
+				panic(err)
+			}
+
+			p.Add(hist)
+			p.NominalX(labels...)
+			if err := p.Save(8*vg.Inch, 4*vg.Inch, "histogram.png"); err != nil {
+				panic(err)
+			}
+
+			fmt.Println("Histogram saved as histogram.png")
+
 		case "help":
 			fmt.Println("ReverseQueryKll [float]")
 			fmt.Println("Returns value at quantile [float]\n")
 			fmt.Println("QueryKll x")
 			fmt.Println("Returns quantlie of value [int]\n")
+			fmt.Println("PlotKll [int]")
+			fmt.Println("Returns a histogram of the sketch\n")
 			fmt.Println("help")
 			fmt.Println("Prints Help")
 
