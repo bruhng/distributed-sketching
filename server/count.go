@@ -2,7 +2,6 @@ package server
 
 import (
 	"context"
-	"fmt"
 
 	pb "github.com/bruhng/distributed-sketching/proto"
 	"github.com/bruhng/distributed-sketching/sketches/count"
@@ -31,7 +30,7 @@ func covertProtoCountToCount(protoData *pb.CountSketch) *count.CountSketch[int] 
 func (s *server) MergeCount(_ context.Context, in *pb.CountSketch) (*pb.MergeReply, error) {
 	sketch := covertProtoCountToCount(in)
 	countState.Merge(*sketch)
-	fmt.Println(countState)
+	countState.Print()
 	return &pb.MergeReply{Status: 0}, nil
 }
 

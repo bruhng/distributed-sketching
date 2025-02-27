@@ -3,6 +3,7 @@ package count
 import (
 	"bytes"
 	"encoding/gob"
+	"fmt"
 	"math"
 	"math/rand"
 	"slices"
@@ -116,4 +117,12 @@ func (cs *CountSketch[T]) Merge(sketch CountSketch[T]) {
 			cs.Sketch[i][j] = elems + sketch.Sketch[i][j]
 		}
 	}
+}
+
+func (cs *CountSketch[T]) Print() {
+	fmt.Println("Count sketch")
+	for _, row := range cs.Sketch {
+		fmt.Println(row)
+	}
+	fmt.Println("Seeds : ", cs.Seeds)
 }

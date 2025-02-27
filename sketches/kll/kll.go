@@ -137,3 +137,12 @@ func (kll *KLLSketch[T]) QueryQuantile(phi float64) T {
 	}
 	return smallestVal
 }
+
+func (kll *KLLSketch[T]) Print() {
+	fmt.Println("KLL sketch")
+	for h := len(kll.Sketch) - 1; h >= 0; h-- {
+		fmt.Println("Level ", h, "= ", kll.Sketch[h])
+	}
+	fmt.Println("K = ", kll.K)
+	fmt.Println("N = ", kll.N)
+}

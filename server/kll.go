@@ -2,7 +2,6 @@ package server
 
 import (
 	"context"
-	"fmt"
 
 	pb "github.com/bruhng/distributed-sketching/proto"
 	"github.com/bruhng/distributed-sketching/sketches/kll"
@@ -31,7 +30,7 @@ func covertProtoKLLToKLL(protoData *pb.KLLSketch) *kll.KLLSketch[int] {
 func (s *server) MergeKll(_ context.Context, in *pb.KLLSketch) (*pb.MergeReply, error) {
 	sketch := covertProtoKLLToKLL(in)
 	kllState.Merge(*sketch)
-	fmt.Println("Recived sketch, state is now: ", kllState)
+	kllState.Print()
 	return &pb.MergeReply{Status: 0}, nil
 }
 
