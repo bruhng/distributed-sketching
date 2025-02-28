@@ -39,7 +39,7 @@ func kllClient[T shared.Number](k int, c pb.SketcherClient, dataStream stream.St
 
 func convertToProtoKLL[T shared.Number](sketch *kll.KLLSketch[T]) *pb.KLLSketch {
 	t := fmt.Sprintf("%T", sketch.Sketch)[4:]
-	orderedArray := &pb.KLLSketch{N: int32(sketch.N), Type: t}
+	orderedArray := &pb.KLLSketch{N: int64(sketch.N), Type: t}
 	data := sketch.Sketch
 
 	for _, row := range data {
@@ -48,7 +48,7 @@ func convertToProtoKLL[T shared.Number](sketch *kll.KLLSketch[T]) *pb.KLLSketch 
 		for _, val := range row {
 			if reflect.ValueOf(val).Kind() == reflect.Int {
 				protoRow.Values = append(protoRow.Values, &pb.OrderedValue{
-					Value: &pb.OrderedValue_IntVal{IntVal: int32(val)}, // Wrap value properly
+					Value: &pb.OrderedValue_IntVal{IntVal: int64(val)}, // Wrap value properly
 				})
 
 			} else {

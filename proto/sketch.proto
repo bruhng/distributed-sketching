@@ -10,7 +10,7 @@ service Sketcher {
   rpc MergeKll (KLLSketch) returns  (MergeReply) {}
   rpc QueryKll (OrderedValue) returns (QueryReturn) {} 
   rpc ReverseQueryKll (ReverseQuery) returns (OrderedValue) {}
-  rpc PlotKll (OrderedValue) returns (PlotKllReply) {}
+  rpc PlotKll (PlotRequest) returns (PlotKllReply) {}
   rpc MergeCount (CountSketch) returns (MergeReply) {}
   rpc QueryCount (AnyValue) returns (CountQueryReply) {}
 }
@@ -24,17 +24,17 @@ message CountSketch {
 }
 
 message IntRow {
-  repeated int32 val = 1;
+  repeated int64 val = 1;
 }
 
 message CountQueryReply {
-  int32 res = 1;
+  int64 res = 1;
 }
 
 
 message KLLSketch {
   repeated OrderedRow rows = 1;
-  int32 n = 2;
+  int64 n = 2;
   string type = 3;
 }
 
@@ -44,7 +44,7 @@ message OrderedRow {
 
 message OrderedValue {
   oneof value {
-    int32 int_val = 1;
+    int64 int_val = 1;
     float float_val = 2;
   }
   string type = 3;
@@ -52,10 +52,10 @@ message OrderedValue {
 
 message AnyValue {
   oneof value {
-    int32 int_val = 1;
+    int64 int_val = 1;
     float float_val = 2;
     string string_val = 3;
-    uint32 uint_val = 4;
+    uint64 uint_val = 4;
   }
   string type = 5;
 }
@@ -66,16 +66,16 @@ message ReverseQuery {
 }
 
 message QueryReturn {
-  int32 phi = 1;
-  int32 N = 2;
+  int64 phi = 1;
+  int64 N = 2;
 }
 
 message MergeReply {
-  int32 status = 1;  
+  int64 status = 1;  
 }
 
 message PlotRequest {
-  int32 numBins = 1;
+  int64 numBins = 1;
   string type = 2;
 }
 

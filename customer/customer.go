@@ -58,13 +58,13 @@ func Init(port string, adr string) {
 					fmt.Println("Could not fetch: ", err)
 				}
 				fmt.Println(res)
+			} else {
+				res, err := c.QueryKll(ctx, &pb.OrderedValue{Value: &pb.OrderedValue_IntVal{IntVal: int64(x)}, Type: "int"})
+				if err != nil {
+					fmt.Println("Could not fetch: ", err)
+				}
+				fmt.Println(res)
 			}
-			res, err := c.QueryKll(ctx, &pb.OrderedValue{Value: &pb.OrderedValue_IntVal{IntVal: int32(x)}, Type: "int"})
-			if err != nil {
-				fmt.Println("Could not fetch: ", err)
-			}
-			fmt.Println(res)
-
 		case "ReverseQueryKll":
 			if len(words) < 3 {
 				fmt.Println("ReverseQueryKll requires an float and a type")
@@ -93,10 +93,25 @@ func Init(port string, adr string) {
 				fmt.Println("PlotKll requires an int")
 				continue
 			}
-			res, err := c.PlotKll(ctx, &pb.OrderedValue{Value: &pb.OrderedValue_IntVal{IntVal: int32(numBins)}})
+			var res *pb.PlotKllReply
+			_, _ = strconv.Atoi(words[1])
 			if err != nil {
-				fmt.Println("Could not fetch: ", err)
-				continue
+				_, err := strconv.ParseFloat(words[1], 32)
+				if err != nil {
+					fmt.Println("QueryKll requires an int or float")
+					continue
+				}
+				res, err = c.PlotKll(ctx, &pb.PlotRequest{NumBins: int64(numBins), Type: "float"})
+				if err != nil {
+					fmt.Println("Could not fetch: ", err)
+					continue
+				}
+			} else {
+				res, err = c.PlotKll(ctx, &pb.PlotRequest{NumBins: int64(numBins), Type: "int"})
+				if err != nil {
+					fmt.Println("Could not fetch: ", err)
+					continue
+				}
 			}
 			pmf := res.Pmf
 			pHist := plot.New()

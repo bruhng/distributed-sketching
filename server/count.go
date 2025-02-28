@@ -37,5 +37,5 @@ func (s *server) MergeCount(_ context.Context, in *pb.CountSketch) (*pb.MergeRep
 func (s *server) QueryCount(_ context.Context, in *pb.AnyValue) (*pb.CountQueryReply, error) {
 	val := in.GetIntVal()
 	ret := countState.Query(int(val))
-	return &pb.CountQueryReply{Res: int32(ret)}, nil
+	return &pb.CountQueryReply{Res: int64(ret)}, nil
 }

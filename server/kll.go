@@ -73,12 +73,12 @@ func (s *server) QueryKll(_ context.Context, in *pb.OrderedValue) (*pb.QueryRetu
 		kllState := getOrCreateKllState[int]()
 		val := in.GetIntVal()
 		ret := kllState.Query(int(val))
-		return &pb.QueryReturn{N: int32(kllState.N), Phi: int32(ret)}, nil
+		return &pb.QueryReturn{N: int64(kllState.N), Phi: int64(ret)}, nil
 	} else if in.Type == "float64" {
 		kllState := getOrCreateKllState[float32]()
 		val := in.GetIntVal()
 		ret := kllState.Query(float32(val))
-		return &pb.QueryReturn{N: int32(kllState.N), Phi: int32(ret)}, nil
+		return &pb.QueryReturn{N: int64(kllState.N), Phi: int64(ret)}, nil
 	} else {
 		return nil, fmt.Errorf("Type submitted is not supported")
 	}
@@ -89,7 +89,7 @@ func (s *server) ReverseQueryKll(_ context.Context, in *pb.ReverseQuery) (*pb.Or
 	if in.Type == "int" {
 		kllState := getOrCreateKllState[int]()
 		ret := kllState.QueryQuantile(float64(phi))
-		return &pb.OrderedValue{Value: &pb.OrderedValue_IntVal{IntVal: int32(ret)}}, nil
+		return &pb.OrderedValue{Value: &pb.OrderedValue_IntVal{IntVal: int64(ret)}}, nil
 	} else if in.Type == "float64" {
 		kllState := getOrCreateKllState[float32]()
 		ret := kllState.QueryQuantile(float64(phi))

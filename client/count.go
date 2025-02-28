@@ -42,7 +42,7 @@ func convertToProtoCount[T shared.Number](sketch *count.CountSketch[T]) *pb.Coun
 		protoRow := &pb.IntRow{} // Create a new row
 
 		for _, val := range row {
-			protoRow.Val = append(protoRow.Val, int32(val))
+			protoRow.Val = append(protoRow.Val, int64(val))
 		}
 		protoArray.Rows = append(protoArray.Rows, protoRow)
 	}
