@@ -6,6 +6,7 @@ import (
 	"log"
 	"net"
 	"sync"
+	"sync/atomic"
 	"time"
 
 	pb "github.com/bruhng/distributed-sketching/proto"
@@ -32,6 +33,7 @@ var wg sync.WaitGroup
 var waiting bool = false
 var mu sync.Mutex
 var restarts int = 0
+var mergeCount int64
 
 func (s *Server) RestartServer(ctx context.Context, in *pb.RestartMessage) (*pb.EmptyMessage, error) {
 	mu.Lock()
@@ -103,12 +105,20 @@ func PanicRecoveryInterceptor(
 	return handler(ctx, req)
 }
 
-func Init(port string) {
+func Init(port string, messureIntervalSeconds time.Duration) {
 	savedPort = port
-	startServer()
-	for {
-	}
+	if messureIntervalSeconds == -1 {
+		startServer()
+		for {
+		}
+	} else {
+		go startServer()
+		for {
+			time.Sleep(messureIntervalSeconds * time.Second)
+			fmt.Println(atomic.SwapInt64(&mergeCount, 0))
+		}
 
+	}
 }
 
 func startServer() {
@@ -120,8 +130,6 @@ func startServer() {
 		panic(fmt.Sprint("listen error: ", err))
 
 	}
-
-	// }
 
 	grpcServer = grpc.NewServer(
 		grpc.UnaryInterceptor(PanicRecoveryInterceptor),

@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"time"
 
 	"github.com/bruhng/distributed-sketching/client"
 	"github.com/bruhng/distributed-sketching/consumer"
@@ -19,6 +20,7 @@ func main() {
 	dataSetType := flag.String("type", "float", "Choose what type the data set is")
 	mergeRate := flag.Int("merge", 1000, "merge rate for clients")
 	streamRate := flag.Int("stream", 10, "stream rate for clients")
+	serverMessureInterval := flag.Int("messure", -1, "Set a time interval for the server to messure throughput")
 
 	flag.Parse()
 	if *isClient {
@@ -30,6 +32,6 @@ func main() {
 	} else if *isConsumer {
 		consumer.Init(*port, *adress)
 	} else {
-		server.Init(*port)
+		server.Init(*port, time.Duration(*serverMessureInterval))
 	}
 }

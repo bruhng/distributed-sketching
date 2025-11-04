@@ -5,6 +5,7 @@ import (
 	"context"
 	"fmt"
 	"sync"
+	"sync/atomic"
 
 	pb "github.com/bruhng/distributed-sketching/proto"
 	"github.com/bruhng/distributed-sketching/shared"
@@ -40,6 +41,7 @@ func (s *Server) BadKll(_ context.Context, in *pb.BadArray) (*pb.MergeReply, err
 		for _, val := range in.Arr.GetValues() {
 			sketch.Add(int(val.GetIntVal()))
 		}
+		atomic.AddInt64(&mergeCount, 1)
 		badKllMutex.Unlock()
 	} else if in.Type == "float64" {
 		sketch := getOrCreateBadKllState[float64]()
@@ -47,6 +49,7 @@ func (s *Server) BadKll(_ context.Context, in *pb.BadArray) (*pb.MergeReply, err
 		for _, val := range in.Arr.GetValues() {
 			sketch.Add(val.GetFloatVal())
 		}
+		atomic.AddInt64(&mergeCount, 1)
 		badKllMutex.Unlock()
 
 	} else {
@@ -73,6 +76,7 @@ func (s *Server) BadCount(_ context.Context, in *pb.BadArray) (*pb.MergeReply, e
 		for _, val := range in.Arr.GetValues() {
 			sketch.Add(int(val.GetIntVal()))
 		}
+		atomic.AddInt64(&mergeCount, 1)
 		badCountMutex.Unlock()
 	} else if in.Type == "float64" {
 		sketch := getOrCreateBadCountState[float64]()
@@ -80,6 +84,7 @@ func (s *Server) BadCount(_ context.Context, in *pb.BadArray) (*pb.MergeReply, e
 		for _, val := range in.Arr.GetValues() {
 			sketch.Add(val.GetFloatVal())
 		}
+		atomic.AddInt64(&mergeCount, 1)
 		badCountMutex.Unlock()
 
 	} else {

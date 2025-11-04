@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"sync"
+	"sync/atomic"
 
 	pb "github.com/bruhng/distributed-sketching/proto"
 	"github.com/bruhng/distributed-sketching/shared"
@@ -52,12 +53,14 @@ func (s *Server) MergeCount(_ context.Context, in *pb.CountSketch) (*pb.MergeRep
 		sketch := convertProtoCountToCount[int](in)
 		CountMutex.Lock()
 		countState.Merge(*sketch)
+		atomic.AddInt64(&mergeCount, 1)
 		CountMutex.Unlock()
 	} else if in.Type == "float64" {
 		countState := getOrCreateCountState[float64]()
 		sketch := convertProtoCountToCount[float64](in)
 		CountMutex.Lock()
 		countState.Merge(*sketch)
+		atomic.AddInt64(&mergeCount, 1)
 		CountMutex.Unlock()
 	} else {
 		return nil, fmt.Errorf("%s is not supported, please submit a valid type", in.Type)

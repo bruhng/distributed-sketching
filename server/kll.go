@@ -5,6 +5,7 @@ import (
 	"context"
 	"fmt"
 	"sync"
+	"sync/atomic"
 
 	pb "github.com/bruhng/distributed-sketching/proto"
 	"github.com/bruhng/distributed-sketching/shared"
@@ -56,12 +57,14 @@ func (s *Server) MergeKll(_ context.Context, in *pb.KLLSketch) (*pb.MergeReply, 
 		sketch := convertProtoKLLToKLL[int](in)
 		KllMutex.Lock()
 		kllState.Merge(*sketch)
+		atomic.AddInt64(&mergeCount, 1)
 		KllMutex.Unlock()
 	} else if in.Type == "float64" {
 		kllState := getOrCreateKllState[float64]()
 		sketch := convertProtoKLLToKLL[float64](in)
 		KllMutex.Lock()
 		kllState.Merge(*sketch)
+		atomic.AddInt64(&mergeCount, 1)
 		KllMutex.Unlock()
 	} else {
 		return nil, fmt.Errorf("%s is not supported, please submit a valid type", in.Type)
