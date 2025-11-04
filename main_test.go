@@ -22,8 +22,8 @@ func BenchmarkPreciseSleep(b *testing.B) {
 }
 func BenchmarkTimeSleep(b *testing.B) {
 	for b.Loop() {
-		for range 1000 {
-			time.Sleep(1000 * time.Nanosecond)
+		for range 5 {
+			time.Sleep(2 * time.Second)
 		}
 	}
 

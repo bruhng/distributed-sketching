@@ -3,8 +3,11 @@ package server
 import (
 	"context"
 	"fmt"
+	"io/ioutil"
 	"log"
 	"net"
+	"strconv"
+	"strings"
 	"sync"
 	"sync/atomic"
 	"time"
@@ -115,10 +118,34 @@ func Init(port string, messureIntervalSeconds time.Duration) {
 		go startServer()
 		for {
 			time.Sleep(messureIntervalSeconds * time.Second)
-			fmt.Println(atomic.SwapInt64(&mergeCount, 0))
+			go func() {
+				fmt.Println(atomic.SwapInt64(&mergeCount, 0))
+				fmt.Println(fetchBytes("lo"))
+			}()
 		}
 
 	}
+}
+
+func fetchBytes(interfaceName string) uint64 {
+	path := fmt.Sprintf("/sys/class/net/%s/statistics/rx_bytes", interfaceName)
+
+	// Read the file
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Convert to string and trim whitespace
+	strData := strings.TrimSpace(string(data))
+
+	// Convert to integer
+	txBytes, err := strconv.ParseUint(strData, 10, 64)
+	if err != nil {
+		log.Fatal(err)
+	}
+	return txBytes
+
 }
 
 func startServer() {
