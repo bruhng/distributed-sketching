@@ -149,9 +149,9 @@ func main() {
 	var wg sync.WaitGroup
 	var fg sync.WaitGroup
 	var mu sync.Mutex
-	mergeRate := *flag.Int("merge", 1000, "merge rate for clients")
-	clientAmmount := *flag.Int("merge", 1, "merge rate for clients")
-	streamRate := *flag.Int("merge", 1000, "merge rate for clients")
+	mergeRate := *flag.Int("mergeRate", 1000, "merge rate for clients")
+	clientAmount := *flag.Int("clientAmount", 1, "number of clients")
+	streamRate := *flag.Int("streamRate", 1000, "stream rate for clients")
 	sketchType := *flag.String("type", "kll", "sketch type")
 
 	cond := sync.NewCond(&mu)
@@ -161,7 +161,7 @@ func main() {
 	badArr := client.GetBad(mergeRate, dataStream)
 	var sketchSize uint64
 
-	for range clientAmmount {
+	for range clientAmount {
 		wg.Add(1)
 
 		if sketchType == "kll" {
