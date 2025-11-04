@@ -52,7 +52,7 @@ func startRealConnection(adr string) (pb.SketcherClient, *grpc.ClientConn, error
 	return c, conn, nil
 }
 
-func startKll[T shared.Number](wg *sync.WaitGroup, fg *sync.WaitGroup, cond *sync.Cond, streamRate int, mergeRate int, sketch *pb.KLLSketch, merges int) {
+func startKll[T shared.Number](wg *sync.WaitGroup, cond *sync.Cond, streamRate int, mergeRate int, sketch *pb.KLLSketch, merges int) {
 	c, conn, err := startRealConnection(SERVER_ADR + ":" + PORT)
 
 	var reconAttempt *int = new(int)
@@ -73,9 +73,8 @@ func startKll[T shared.Number](wg *sync.WaitGroup, fg *sync.WaitGroup, cond *syn
 			atomic.AddUint64(&meregesMade, 1)
 		}()
 	}
-	return
 }
-func startCount[T shared.Number](wg *sync.WaitGroup, fg *sync.WaitGroup, cond *sync.Cond, streamRate int, mergeRate int, sketch *pb.CountSketch, merges int) {
+func startCount[T shared.Number](wg *sync.WaitGroup, cond *sync.Cond, streamRate int, mergeRate int, sketch *pb.CountSketch, merges int) {
 	c, conn, err := startRealConnection(SERVER_ADR + ":" + PORT)
 
 	var reconAttempt *int = new(int)
@@ -96,9 +95,8 @@ func startCount[T shared.Number](wg *sync.WaitGroup, fg *sync.WaitGroup, cond *s
 			atomic.AddUint64(&meregesMade, 1)
 		}()
 	}
-	return
 }
-func startBadKll[T shared.Number](wg *sync.WaitGroup, fg *sync.WaitGroup, cond *sync.Cond, streamRate int, mergeRate int, sketch *pb.BadArray, merges int) {
+func startBadKll[T shared.Number](wg *sync.WaitGroup, cond *sync.Cond, streamRate int, mergeRate int, sketch *pb.BadArray, merges int) {
 	c, conn, err := startRealConnection(SERVER_ADR + ":" + PORT)
 
 	var reconAttempt *int = new(int)
@@ -119,9 +117,8 @@ func startBadKll[T shared.Number](wg *sync.WaitGroup, fg *sync.WaitGroup, cond *
 			atomic.AddUint64(&meregesMade, 1)
 		}()
 	}
-	return
 }
-func startBadCount[T shared.Number](wg *sync.WaitGroup, fg *sync.WaitGroup, cond *sync.Cond, streamRate int, mergeRate int, sketch *pb.BadArray, merges int) {
+func startBadCount[T shared.Number](wg *sync.WaitGroup, cond *sync.Cond, streamRate int, mergeRate int, sketch *pb.BadArray, merges int) {
 	c, conn, err := startRealConnection(SERVER_ADR + ":" + PORT)
 
 	var reconAttempt *int = new(int)
@@ -142,12 +139,10 @@ func startBadCount[T shared.Number](wg *sync.WaitGroup, fg *sync.WaitGroup, cond
 			atomic.AddUint64(&meregesMade, 1)
 		}()
 	}
-	return
 }
 
 func main() {
 	var wg sync.WaitGroup
-	var fg sync.WaitGroup
 	var mu sync.Mutex
 	mergeRate := *flag.Int("mergeRate", 1000, "merge rate for clients")
 	clientAmount := *flag.Int("clientAmount", 1, "number of clients")
@@ -165,16 +160,16 @@ func main() {
 		wg.Add(1)
 
 		if sketchType == "kll" {
-			go startKll[float64](&wg, &fg, cond, streamRate, mergeRate, kllSketch, NUM_MERGES)
+			go startKll[float64](&wg, cond, streamRate, mergeRate, kllSketch, NUM_MERGES)
 		}
 		if sketchType == "count" {
-			go startCount[float64](&wg, &fg, cond, streamRate, mergeRate, countSketch, NUM_MERGES)
+			go startCount[float64](&wg, cond, streamRate, mergeRate, countSketch, NUM_MERGES)
 		}
 		if sketchType == "badCount" {
-			go startBadCount[float64](&wg, &fg, cond, streamRate, mergeRate, badArr, NUM_MERGES)
+			go startBadCount[float64](&wg, cond, streamRate, mergeRate, badArr, NUM_MERGES)
 		}
 		if sketchType == "badKll" {
-			go startBadKll[float64](&wg, &fg, cond, streamRate, mergeRate, badArr, NUM_MERGES)
+			go startBadKll[float64](&wg, cond, streamRate, mergeRate, badArr, NUM_MERGES)
 		}
 
 	}
