@@ -193,7 +193,7 @@ func main() {
 	wg.Wait()
 
 	cond.Broadcast()
-	optimal := math.Round(mesuringInterval / (float64(streamRate) * float64(mergeRate)) * float64(clientAmmount) * timeExponent)
+	optimal := math.Round(mesuringInterval / (float64(streamRate) * float64(mergeRate)) * float64(clientAmount) * timeExponent)
 	optBandWidth := int64(math.Min(1e9/3.0, float64(sketchSize)*optimal/mesuringInterval))
 
 	for {
