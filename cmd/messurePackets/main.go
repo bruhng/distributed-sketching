@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"math"
 	"sync"
@@ -20,9 +21,6 @@ import (
 
 var SERVER_ADR = "127.0.0.1"
 var PORT = "8080"
-var clientAmmount = 100
-var streamRate = 100000
-var mergeRate = 1000
 var NUM_MERGES = 10000
 var DATA_SET_PATH = "../../data/PVS 1/dataset_gps.csv"
 var HEADER_NAME = "speed_meters_per_second"
@@ -30,7 +28,6 @@ var meregesMade uint64 = 0
 var mesuringInterval = 5.0
 var timeUnit = time.Nanosecond
 var timeExponent = 1 / (float64(timeUnit) / float64(time.Second))
-var sketchType = "kll"
 
 func startRealConnection(adr string) (pb.SketcherClient, *grpc.ClientConn, error) {
 
@@ -149,10 +146,14 @@ func startBadCount[T shared.Number](wg *sync.WaitGroup, fg *sync.WaitGroup, cond
 }
 
 func main() {
-
 	var wg sync.WaitGroup
 	var fg sync.WaitGroup
 	var mu sync.Mutex
+	mergeRate := *flag.Int("merge", 1000, "merge rate for clients")
+	clientAmmount := *flag.Int("merge", 1, "merge rate for clients")
+	streamRate := *flag.Int("merge", 1000, "merge rate for clients")
+	sketchType := *flag.String("type", "kll", "sketch type")
+
 	cond := sync.NewCond(&mu)
 	dataStream := *stream.NewStreamFromCsv[float64](DATA_SET_PATH, HEADER_NAME, streamRate, -1)
 	kllSketch := client.GetKll(100, mergeRate, dataStream)
