@@ -30,7 +30,7 @@ func KllClient[T shared.Number](k int, mergeAfter int, dataStream stream.Stream[
 
 		if i%mergeAfter == 0 {
 			protoSketch := ConvertToProtoKLL(sketch)
-			
+
 			MakeRequest[pb.KLLSketch](protoSketch, addr, c.MergeKll, conn, &c, startConnection, reconAttempt)
 			sketch = kll.NewKLLSketch[T](k)
 			i = 0
