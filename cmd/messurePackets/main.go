@@ -145,8 +145,8 @@ func main() {
 	var wg sync.WaitGroup
 	var mu sync.Mutex
 	mergeRate := *flag.Int("mergeRate", 1000, "merge rate for clients")
-	clientAmount := *flag.Int("clientAmount", 1, "number of clients")
-	streamRate := *flag.Int("streamRate", 1000, "stream rate for clients")
+	clientAmount := *flag.Int("clientAmount", 10, "number of clients")
+	streamRate := *flag.Int("streamRate", 10000, "stream rate for clients")
 	sketchType := *flag.String("type", "kll", "sketch type")
 
 	cond := sync.NewCond(&mu)
@@ -186,15 +186,19 @@ func main() {
 		sketchSize = uint64(proto.Size(kllSketch))
 	}
 	wg.Wait()
-
-	cond.Broadcast()
 	optimal := math.Round(mesuringInterval / (float64(streamRate) * float64(mergeRate)) * float64(clientAmount) * timeExponent)
 	optBandWidth := int64(math.Min(1e9/3.0, float64(sketchSize)*optimal/mesuringInterval))
+	fmt.Printf("MergeRate: %d, Clients: %d, StreamRate: %d, SketchType: %s \n", mergeRate, clientAmount, streamRate, sketchType)
 
-	for {
+	cond.Broadcast()
+
+	for i := range 5 {
 		time.Sleep(time.Duration(mesuringInterval) * time.Second)
 		merges := atomic.SwapUint64(&meregesMade, 0)
-		fmt.Println(merges, optimal, sketchSize*merges/uint64(mesuringInterval), optBandWidth)
+		if i != 0 {
+			fmt.Println(merges, optimal, sketchSize*merges/uint64(mesuringInterval), optBandWidth)
+
+		}
 	}
 
 }
