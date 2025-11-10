@@ -179,18 +179,20 @@ func main() {
 		sketchSize = uint64(proto.Size(kllSketch))
 	}
 	if *sketchType == "count" {
-		sketchSize = uint64(proto.Size(kllSketch))
+		sketchSize = uint64(proto.Size(countSketch))
 	}
 	if *sketchType == "badCount" {
-		sketchSize = uint64(proto.Size(kllSketch))
+		sketchSize = uint64(proto.Size(badArr))
 	}
 	if *sketchType == "badKll" {
-		sketchSize = uint64(proto.Size(kllSketch))
+		sketchSize = uint64(proto.Size(badArr))
 	}
+
+	fmt.Println(sketchSize)
 	wg.Wait()
 	optimal := math.Round(mesuringInterval / (float64(*streamRate) * float64(*mergeRate)) * float64(*clientAmount) * timeExponent)
 	optBandWidth := int64(math.Min(1e9/24.0, float64(sketchSize)*optimal/mesuringInterval))
-	fmt.Printf("MergeRate: %d, Clients: %d, StreamRate: %d, SketchType: %s \n", *mergeRate, clientAmount, *streamRate, *sketchType)
+	fmt.Printf("MergeRate: %d, Clients: %d, StreamRate: %d, SketchType: %s \n", *mergeRate, *clientAmount, *streamRate, *sketchType)
 
 	cond.Broadcast()
 	// Time for startup
