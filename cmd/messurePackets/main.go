@@ -19,13 +19,14 @@ import (
 	"google.golang.org/protobuf/proto"
 )
 
-var SERVER_ADR = "127.0.0.1"
+var SERVER_ADR = "10.42.0.1"
 var PORT = "8080"
 var NUM_MERGES = 10000
 var DATA_SET_PATH = "../../data/PVS 1/dataset_gps.csv"
 var HEADER_NAME = "speed_meters_per_second"
 var meregesMade uint64 = 0
 var mesuringInterval = 5.0
+var startupTime = 3
 var timeUnit = time.Nanosecond
 var timeExponent = 1 / (float64(timeUnit) / float64(time.Second))
 
@@ -191,14 +192,13 @@ func main() {
 	fmt.Printf("MergeRate: %d, Clients: %d, StreamRate: %d, SketchType: %s \n", mergeRate, clientAmount, streamRate, sketchType)
 
 	cond.Broadcast()
+	// Time for startup
+	time.Sleep(time.Duration(startupTime) * time.Second)
+	atomic.SwapUint64(&meregesMade, 0)
 
-	for i := range 5 {
-		time.Sleep(time.Duration(mesuringInterval) * time.Second)
-		merges := atomic.SwapUint64(&meregesMade, 0)
-		if i != 0 {
-			fmt.Println(merges, optimal, sketchSize*merges/uint64(mesuringInterval), optBandWidth)
-
-		}
-	}
+	// Running hot messurement
+	time.Sleep(time.Duration(mesuringInterval) * time.Second)
+	merges := atomic.SwapUint64(&meregesMade, 0)
+	fmt.Println(merges, optimal, sketchSize*merges/uint64(mesuringInterval), optBandWidth)
 
 }
