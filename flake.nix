@@ -19,6 +19,7 @@
           buildInputs = [
             go
             gopls
+            grpcurl
             mockgen
             gotools
             go-junit-report

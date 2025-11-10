@@ -205,4 +205,7 @@ func main() {
 	merges := atomic.SwapUint64(&meregesMade, 0)
 	fmt.Println(merges, optimal, sketchSize*merges/uint64(mesuringInterval), optBandWidth, uint64(optBandWidth) > sketchSize*merges/uint64(mesuringInterval))
 
+	// wait for residual requests with the max context sat at 20 seconds
+	time.Sleep(20 * time.Second)
+
 }

@@ -86,13 +86,13 @@ func MakeRequest[T any](protoSketch *T, addr string, merge mergeFunction[T], con
 		fmt.Println(err)
 		conn.Close()
 		if *attempt > MAX_RECONN_ATTEMPTS {
-			fmt.Printf("Could not reconnect after %d attempts shutting down\n", MAX_RECONN_ATTEMPTS)
+			// fmt.Printf("Could not reconnect after %d attempts shutting down\n", MAX_RECONN_ATTEMPTS)
 			panic("Could not reestablish connection")
 			// TODO: Maybe remove panic
 		}
 		tc, tconn, err := startConnection(addr)
 		if err != nil {
-			fmt.Printf("%d faild reconnection attempt, will try again later\n", *attempt)
+			// fmt.Printf("%d faild reconnection attempt, will try again later\n", *attempt)
 			(*attempt)++
 		}
 		c = &tc
