@@ -1,0 +1,136 @@
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=1000
+[1] 14:52:10 [SUCCESS] sketch@10.42.0.3
+1014
+MergeRate: 1000, Clients: 1, StreamRate: 1000, SketchType: kll 
+3671 5000 744478 1014000 true
+[2] 14:52:10 [SUCCESS] sketch@10.42.0.2
+1003
+MergeRate: 1000, Clients: 1, StreamRate: 1000, SketchType: kll 
+3670 5000 736202 1003000 true
+[3] 14:52:10 [SUCCESS] sketch@10.42.0.4
+1003
+MergeRate: 1000, Clients: 1, StreamRate: 1000, SketchType: kll 
+3671 5000 736402 1003000 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=3334222
+[1] 14:52:11 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:11 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:11 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=6667444
+[1] 14:52:12 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:12 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:12 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=10000666
+[1] 14:52:12 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:12 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:12 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=13333888
+[1] 14:52:13 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:13 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:13 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=16667110
+[1] 14:52:13 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:13 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:13 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=20000332
+[1] 14:52:13 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:13 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:13 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=23333554
+[1] 14:52:13 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:13 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:13 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=26666776
+[1] 14:52:13 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:13 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:13 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=30000000
+[1] 14:52:13 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:13 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:13 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=1000
+[1] 14:52:13 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:13 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:13 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=3334222
+[1] 14:52:14 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:14 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:14 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=6667444
+[1] 14:52:14 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:14 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:14 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=10000666
+[1] 14:52:14 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:14 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:14 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=13333888
+[1] 14:52:15 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:15 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:15 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=16667110
+[1] 14:52:15 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:15 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:15 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=20000332
+[1] 14:52:15 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:15 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:15 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=23333554
+[1] 14:52:15 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:15 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:15 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=26666776
+[1] 14:52:15 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:15 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:15 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=30000000
+[1] 14:52:15 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:15 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:15 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=1000
+[1] 14:52:15 [FAILURE] sketch@10.42.0.2 Interrupted
+[2] 14:52:15 [FAILURE] sketch@10.42.0.3 Interrupted
+[3] 14:52:15 [FAILURE] sketch@10.42.0.4 Interrupted
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=3334222
