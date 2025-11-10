@@ -200,6 +200,6 @@ func main() {
 	// Running hot messurement
 	time.Sleep(time.Duration(mesuringInterval) * time.Second)
 	merges := atomic.SwapUint64(&meregesMade, 0)
-	fmt.Println(merges, optimal, sketchSize*merges/uint64(mesuringInterval), optBandWidth)
+	fmt.Println(merges, optimal, sketchSize*merges/uint64(mesuringInterval), optBandWidth, uint64(optBandWidth) > sketchSize*merges/uint64(mesuringInterval))
 
 }
