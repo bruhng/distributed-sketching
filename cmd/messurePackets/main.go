@@ -145,51 +145,52 @@ func startBadCount[T shared.Number](wg *sync.WaitGroup, cond *sync.Cond, streamR
 func main() {
 	var wg sync.WaitGroup
 	var mu sync.Mutex
-	mergeRate := *flag.Int("mergeRate", 1000, "merge rate for clients")
-	clientAmount := *flag.Int("clientAmount", 10, "number of clients")
-	streamRate := *flag.Int("streamRate", 10000, "stream rate for clients")
-	sketchType := *flag.String("type", "kll", "sketch type")
+	mergeRate := flag.Int("mergeRate", 1000, "merge rate for clients")
+	clientAmount := flag.Int("clientAmount", 10, "number of clients")
+	streamRate := flag.Int("streamRate", 10000, "stream rate for clients")
+	sketchType := flag.String("type", "kll", "sketch type")
+	flag.Parse()
 
 	cond := sync.NewCond(&mu)
-	dataStream := *stream.NewStreamFromCsv[float64](DATA_SET_PATH, HEADER_NAME, streamRate, -1)
-	kllSketch := client.GetKll(100, mergeRate, dataStream)
-	countSketch := client.GetCount(mergeRate, dataStream)
-	badArr := client.GetBad(mergeRate, dataStream)
+	dataStream := *stream.NewStreamFromCsv[float64](DATA_SET_PATH, HEADER_NAME, *streamRate, -1)
+	kllSketch := client.GetKll(100, *mergeRate, dataStream)
+	countSketch := client.GetCount(*mergeRate, dataStream)
+	badArr := client.GetBad(*mergeRate, dataStream)
 	var sketchSize uint64
 
-	for range clientAmount {
+	for range *clientAmount {
 		wg.Add(1)
 
-		if sketchType == "kll" {
-			go startKll[float64](&wg, cond, streamRate, mergeRate, kllSketch, NUM_MERGES)
+		if *sketchType == "kll" {
+			go startKll[float64](&wg, cond, *streamRate, *mergeRate, kllSketch, NUM_MERGES)
 		}
-		if sketchType == "count" {
-			go startCount[float64](&wg, cond, streamRate, mergeRate, countSketch, NUM_MERGES)
+		if *sketchType == "count" {
+			go startCount[float64](&wg, cond, *streamRate, *mergeRate, countSketch, NUM_MERGES)
 		}
-		if sketchType == "badCount" {
-			go startBadCount[float64](&wg, cond, streamRate, mergeRate, badArr, NUM_MERGES)
+		if *sketchType == "badCount" {
+			go startBadCount[float64](&wg, cond, *streamRate, *mergeRate, badArr, NUM_MERGES)
 		}
-		if sketchType == "badKll" {
-			go startBadKll[float64](&wg, cond, streamRate, mergeRate, badArr, NUM_MERGES)
+		if *sketchType == "badKll" {
+			go startBadKll[float64](&wg, cond, *streamRate, *mergeRate, badArr, NUM_MERGES)
 		}
 
 	}
-	if sketchType == "kll" {
+	if *sketchType == "kll" {
 		sketchSize = uint64(proto.Size(kllSketch))
 	}
-	if sketchType == "count" {
+	if *sketchType == "count" {
 		sketchSize = uint64(proto.Size(kllSketch))
 	}
-	if sketchType == "badCount" {
+	if *sketchType == "badCount" {
 		sketchSize = uint64(proto.Size(kllSketch))
 	}
-	if sketchType == "badKll" {
+	if *sketchType == "badKll" {
 		sketchSize = uint64(proto.Size(kllSketch))
 	}
 	wg.Wait()
-	optimal := math.Round(mesuringInterval / (float64(streamRate) * float64(mergeRate)) * float64(clientAmount) * timeExponent)
+	optimal := math.Round(mesuringInterval / (float64(*streamRate) * float64(*mergeRate)) * float64(*clientAmount) * timeExponent)
 	optBandWidth := int64(math.Min(1e9/3.0, float64(sketchSize)*optimal/mesuringInterval))
-	fmt.Printf("MergeRate: %d, Clients: %d, StreamRate: %d, SketchType: %s \n", mergeRate, clientAmount, streamRate, sketchType)
+	fmt.Printf("MergeRate: %d, Clients: %d, StreamRate: %d, SketchType: %s \n", *mergeRate, clientAmount, *streamRate, *sketchType)
 
 	cond.Broadcast()
 	// Time for startup
