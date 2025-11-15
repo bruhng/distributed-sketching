@@ -21,7 +21,7 @@ import (
 
 var SERVER_ADR = "10.42.0.1"
 var PORT = "8080"
-var NUM_MERGES = 10000
+var NUM_MERGES = 10000000
 var DATA_SET_PATH = "../../data/PVS 1/dataset_gps.csv"
 var HEADER_NAME = "speed_meters_per_second"
 var meregesMade uint64 = 0
@@ -66,7 +66,7 @@ func startKll[T shared.Number](wg *sync.WaitGroup, cond *sync.Cond, streamRate i
 	cond.Wait()
 	cond.L.Unlock()
 
-	for range merges {
+	for {
 
 		time.Sleep(time.Duration(streamRate*mergeRate) * timeUnit)
 		go func() {
@@ -88,7 +88,7 @@ func startCount[T shared.Number](wg *sync.WaitGroup, cond *sync.Cond, streamRate
 	cond.Wait()
 	cond.L.Unlock()
 
-	for range merges {
+	for {
 
 		time.Sleep(time.Duration(streamRate*mergeRate) * timeUnit)
 		go func() {
@@ -110,7 +110,7 @@ func startBadKll[T shared.Number](wg *sync.WaitGroup, cond *sync.Cond, streamRat
 	cond.Wait()
 	cond.L.Unlock()
 
-	for range merges {
+	for {
 
 		time.Sleep(time.Duration(streamRate*mergeRate) * timeUnit)
 		go func() {
@@ -132,7 +132,7 @@ func startBadCount[T shared.Number](wg *sync.WaitGroup, cond *sync.Cond, streamR
 	cond.Wait()
 	cond.L.Unlock()
 
-	for range merges {
+	for {
 
 		time.Sleep(time.Duration(streamRate*mergeRate) * timeUnit)
 		go func() {

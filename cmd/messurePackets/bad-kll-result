@@ -1,522 +1,1040 @@
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=1000
-[1] 16:32:46 [SUCCESS] sketch@10.42.0.3
+[1] 18:16:27 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 1, StreamRate: 999999, SketchType: badKll 
 5 5 11001 11001 false
-[2] 16:32:46 [SUCCESS] sketch@10.42.0.4
+[2] 18:16:27 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 999999, SketchType: badKll 
 5 5 11001 11001 false
-[3] 16:32:46 [SUCCESS] sketch@10.42.0.2
+[3] 18:16:27 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 999999, SketchType: badKll 
 5 5 11001 11001 false
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=3334222
-[1] 16:32:55 [SUCCESS] sketch@10.42.0.2
+[1] 18:16:37 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 1, StreamRate: 299, SketchType: badKll 
-4808 16722 10578561 36791744 true
-[2] 16:32:55 [SUCCESS] sketch@10.42.0.3
+4735 16722 10417947 36791744 true
+[2] 18:16:37 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 299, SketchType: badKll 
-4771 16722 10497154 36791744 true
-[3] 16:32:55 [SUCCESS] sketch@10.42.0.4
+4722 16722 10389344 36791744 true
+[3] 18:16:37 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 299, SketchType: badKll 
-4678 16722 10292535 36791744 true
+4729 16722 10404745 36791744 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=6667444
-[1] 16:33:05 [SUCCESS] sketch@10.42.0.3
+[1] 18:16:46 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 1, StreamRate: 149, SketchType: badKll 
-4770 33557 10494954 41666666 true
-[2] 16:33:05 [SUCCESS] sketch@10.42.0.2
+4761 33557 10475152 41666666 true
+[2] 18:16:46 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 149, SketchType: badKll 
-4875 33557 10725975 41666666 true
-[3] 16:33:05 [SUCCESS] sketch@10.42.0.4
+4494 33557 9887698 41666666 true
+[3] 18:16:46 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 149, SketchType: badKll 
-4559 33557 10030711 41666666 true
+4538 33557 9984507 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=10000666
-[1] 16:33:14 [SUCCESS] sketch@10.42.0.3
+[1] 18:16:56 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 1, StreamRate: 99, SketchType: badKll 
-5051 50505 11113210 41666666 true
-[2] 16:33:14 [SUCCESS] sketch@10.42.0.2
+4358 50505 9588471 41666666 true
+[2] 18:16:56 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 99, SketchType: badKll 
-4812 50505 10587362 41666666 true
-[3] 16:33:14 [SUCCESS] sketch@10.42.0.4
+5072 50505 11159414 41666666 true
+[3] 18:16:56 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 99, SketchType: badKll 
-5001 50505 11003200 41666666 true
+4580 50505 10076916 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=13333888
-[1] 16:33:24 [SUCCESS] sketch@10.42.0.3
+[1] 18:17:05 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 74, SketchType: badKll 
-3348 67568 7366269 41666666 true
-[2] 16:33:24 [SUCCESS] sketch@10.42.0.2
+3718 67568 8180343 41666666 true
+[2] 18:17:05 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 1, StreamRate: 74, SketchType: badKll 
-3776 67568 8307955 41666666 true
-[3] 16:33:24 [SUCCESS] sketch@10.42.0.4
+3030 67568 6666606 41666666 true
+[3] 18:17:05 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 74, SketchType: badKll 
-3680 67568 8096736 41666666 true
+3083 67568 6783216 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=16667110
-[1] 16:33:33 [SUCCESS] sketch@10.42.0.3
+[1] 18:17:15 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 1, StreamRate: 59, SketchType: badKll 
-2264 84746 4981252 41666666 true
-[2] 16:33:33 [SUCCESS] sketch@10.42.0.2
+1998 84746 4395999 41666666 true
+[2] 18:17:15 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 59, SketchType: badKll 
-2027 84746 4459805 41666666 true
-[3] 16:33:33 [SUCCESS] sketch@10.42.0.4
+1905 84746 4191381 41666666 true
+[3] 18:17:15 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 59, SketchType: badKll 
-2322 84746 5108864 41666666 true
+1985 84746 4367397 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=20000332
-[1] 16:33:43 [SUCCESS] sketch@10.42.0.3
+[1] 18:17:24 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 49, SketchType: badKll 
-908 102041 1997781 41666666 true
-[2] 16:33:43 [SUCCESS] sketch@10.42.0.4
+706 102041 1553341 41666666 true
+[2] 18:17:24 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 1, StreamRate: 49, SketchType: badKll 
-543 102041 1194708 41666666 true
-[3] 16:33:43 [SUCCESS] sketch@10.42.0.2
+344 102041 756868 41666666 true
+[3] 18:17:24 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 49, SketchType: badKll 
-507 102041 1115501 41666666 true
+267 102041 587453 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=23333554
-[1] 16:33:52 [SUCCESS] sketch@10.42.0.3
+[1] 18:17:34 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 1, StreamRate: 42, SketchType: badKll 
+8 119048 17601 41666666 true
+[2] 18:17:34 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 1, StreamRate: 42, SketchType: badKll 
+14 119048 30802 41666666 true
+[3] 18:17:34 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 42, SketchType: badKll 
 6 119048 13201 41666666 true
-[2] 16:33:52 [SUCCESS] sketch@10.42.0.2
-MergeRate: 1000, Clients: 1, StreamRate: 42, SketchType: badKll 
-7 119048 15401 41666666 true
-[3] 16:33:52 [SUCCESS] sketch@10.42.0.4
-MergeRate: 1000, Clients: 1, StreamRate: 42, SketchType: badKll 
-11 119048 24202 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=26666776
-[1] 16:34:02 [SUCCESS] sketch@10.42.0.3
+[1] 18:17:43 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 1, StreamRate: 37, SketchType: badKll 
 9 135135 19801 41666666 true
-[2] 16:34:02 [SUCCESS] sketch@10.42.0.4
+[2] 18:17:43 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 37, SketchType: badKll 
 8 135135 17601 41666666 true
-[3] 16:34:02 [SUCCESS] sketch@10.42.0.2
+[3] 18:17:43 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 37, SketchType: badKll 
-10 135135 22002 41666666 true
+14 135135 30802 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=30000000
-[1] 16:34:11 [SUCCESS] sketch@10.42.0.3
+[1] 18:17:53 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 33, SketchType: badKll 
-6 151515 13201 41666666 true
-[2] 16:34:11 [SUCCESS] sketch@10.42.0.2
+7 151515 15401 41666666 true
+[2] 18:17:53 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 1, StreamRate: 33, SketchType: badKll 
-8 151515 17601 41666666 true
-[3] 16:34:11 [SUCCESS] sketch@10.42.0.4
+10 151515 22002 41666666 true
+[3] 18:17:53 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 33, SketchType: badKll 
-12 151515 26402 41666666 true
+5 151515 11001 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=1000
-[1] 16:34:24 [SUCCESS] sketch@10.42.0.3
+[1] 18:18:05 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 999999, SketchType: badKll 
 0 50 0 110010 true
-[2] 16:34:24 [SUCCESS] sketch@10.42.0.2
+[2] 18:18:05 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 999999, SketchType: badKll 
 0 50 0 110010 true
-[3] 16:34:24 [SUCCESS] sketch@10.42.0.4
+[3] 18:18:05 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 999999, SketchType: badKll 
 0 50 0 110010 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=3334222
-[1] 16:34:34 [SUCCESS] sketch@10.42.0.3
+[1] 18:18:15 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 299, SketchType: badKll 
-819 167224 1801963 41666666 true
-[2] 16:34:34 [SUCCESS] sketch@10.42.0.2
+399 167224 877879 41666666 true
+[2] 18:18:15 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 299, SketchType: badKll 
-923 167224 2030784 41666666 true
-[3] 16:34:34 [SUCCESS] sketch@10.42.0.4
+2166 167224 4765633 41666666 true
+[3] 18:18:15 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 299, SketchType: badKll 
-163 167224 358632 41666666 true
+328 167224 721665 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=6667444
-[1] 16:34:43 [SUCCESS] sketch@10.42.0.2
+[1] 18:18:25 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 149, SketchType: badKll 
-409 335570 899881 41666666 true
-[2] 16:34:44 [SUCCESS] sketch@10.42.0.4
+59 335570 129811 41666666 true
+[2] 18:18:25 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 149, SketchType: badKll 
-381 335570 838276 41666666 true
-[3] 16:34:44 [SUCCESS] sketch@10.42.0.3
+920 335570 2024184 41666666 true
+[3] 18:18:26 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 149, SketchType: badKll 
-747 335570 1643549 41666666 true
+1196 335570 2631439 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=10000666
-[1] 16:34:54 [SUCCESS] sketch@10.42.0.3
+[1] 18:18:35 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 99, SketchType: badKll 
-236 505051 519247 41666666 true
-[2] 16:34:54 [SUCCESS] sketch@10.42.0.2
+212 505051 466442 41666666 true
+[2] 18:18:35 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 99, SketchType: badKll 
-1146 505051 2521429 41666666 true
-[3] 16:34:55 [SUCCESS] sketch@10.42.0.4
+11 505051 24202 41666666 true
+[3] 18:18:35 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 99, SketchType: badKll 
-956 505051 2103391 41666666 true
+332 505051 730466 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=13333888
-[1] 16:35:05 [SUCCESS] sketch@10.42.0.3
+[1] 18:18:45 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 74, SketchType: badKll 
-519 675676 1141903 41666666 true
-[2] 16:35:05 [SUCCESS] sketch@10.42.0.2
+243 675676 534648 41666666 true
+[2] 18:18:46 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 74, SketchType: badKll 
-160 675676 352032 41666666 true
-[3] 16:35:05 [SUCCESS] sketch@10.42.0.4
+143 675676 314628 41666666 true
+[3] 18:18:47 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 74, SketchType: badKll 
-227 675676 499445 41666666 true
+324 675676 712864 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=16667110
-[1] 16:35:14 [SUCCESS] sketch@10.42.0.3
+[1] 18:18:57 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 59, SketchType: badKll 
-254 847458 558850 41666666 true
-[2] 16:35:14 [SUCCESS] sketch@10.42.0.2
+155 847458 341031 41666666 true
+[2] 18:18:57 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 59, SketchType: badKll 
-164 847458 360832 41666666 true
-[3] 16:35:14 [SUCCESS] sketch@10.42.0.4
+217 847458 477443 41666666 true
+[3] 18:19:00 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 59, SketchType: badKll 
-32 847458 70406 41666666 true
+188 847458 413637 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=20000332
-[1] 16:35:24 [SUCCESS] sketch@10.42.0.3
+[1] 18:19:09 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 49, SketchType: badKll 
-247 1.020408e+06 543449 41666666 true
-[2] 16:35:24 [SUCCESS] sketch@10.42.0.4
+115 1.020408e+06 253023 41666666 true
+[2] 18:19:09 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 49, SketchType: badKll 
-42 1.020408e+06 92408 41666666 true
-[3] 16:35:24 [SUCCESS] sketch@10.42.0.2
+90 1.020408e+06 198018 41666666 true
+[3] 18:19:10 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 49, SketchType: badKll 
-159 1.020408e+06 349831 41666666 true
+378 1.020408e+06 831675 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=23333554
-[1] 16:35:34 [SUCCESS] sketch@10.42.0.4
+[1] 18:19:19 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 42, SketchType: badKll 
-471 1.190476e+06 1036294 41666666 true
-[2] 16:35:34 [SUCCESS] sketch@10.42.0.3
+107 1.190476e+06 235421 41666666 true
+[2] 18:19:19 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 42, SketchType: badKll 
-397 1.190476e+06 873479 41666666 true
-[3] 16:35:34 [SUCCESS] sketch@10.42.0.2
+217 1.190476e+06 477443 41666666 true
+[3] 18:19:20 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 42, SketchType: badKll 
-202 1.190476e+06 444440 41666666 true
+258 1.190476e+06 567651 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=26666776
-[1] 16:35:43 [SUCCESS] sketch@10.42.0.3
+[1] 18:19:29 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 37, SketchType: badKll 
-83 1.351351e+06 182616 41666666 true
-[2] 16:35:44 [SUCCESS] sketch@10.42.0.4
+139 1.351351e+06 305827 41666666 true
+[2] 18:19:29 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 37, SketchType: badKll 
-147 1.351351e+06 323429 41666666 true
-[3] 16:35:44 [SUCCESS] sketch@10.42.0.2
+78 1.351351e+06 171615 41666666 true
+[3] 18:19:29 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 37, SketchType: badKll 
-171 1.351351e+06 376234 41666666 true
+115 1.351351e+06 253023 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=30000000
-[1] 16:35:54 [SUCCESS] sketch@10.42.0.3
+[1] 18:19:39 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 33, SketchType: badKll 
-60 1.515152e+06 132012 41666666 true
-[2] 16:35:54 [SUCCESS] sketch@10.42.0.2
+27 1.515152e+06 59405 41666666 true
+[2] 18:19:39 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 33, SketchType: badKll 
-112 1.515152e+06 246422 41666666 true
-[3] 16:35:54 [SUCCESS] sketch@10.42.0.4
+205 1.515152e+06 451041 41666666 true
+[3] 18:19:39 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 33, SketchType: badKll 
-1017 1.515152e+06 2237603 41666666 true
+230 1.515152e+06 506046 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=1000
-[1] 16:36:07 [SUCCESS] sketch@10.42.0.2
+[1] 18:19:52 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 999999, SketchType: badKll 
 250 250 550050 550050 false
-[2] 16:36:07 [SUCCESS] sketch@10.42.0.4
+[2] 18:19:52 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 999999, SketchType: badKll 
 250 250 550050 550050 false
-[3] 16:36:08 [SUCCESS] sketch@10.42.0.3
+[3] 18:19:53 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 999999, SketchType: badKll 
 250 250 550050 550050 false
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=3334222
-[1] 16:36:18 [SUCCESS] sketch@10.42.0.3
+[1] 18:20:03 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 299, SketchType: badKll 
-174 836120 382834 41666666 true
-[2] 16:36:18 [SUCCESS] sketch@10.42.0.2
+140 836120 308028 41666666 true
+[2] 18:20:03 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 299, SketchType: badKll 
-326 836120 717265 41666666 true
-[3] 16:36:18 [SUCCESS] sketch@10.42.0.4
+140 836120 308028 41666666 true
+[3] 18:20:04 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 299, SketchType: badKll 
-109 836120 239821 41666666 true
+314 836120 690862 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=6667444
-[1] 16:36:28 [SUCCESS] sketch@10.42.0.4
+[1] 18:20:14 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 149, SketchType: badKll 
-182 1.677852e+06 400436 41666666 true
-[2] 16:36:28 [SUCCESS] sketch@10.42.0.3
+70 1.677852e+06 154014 41666666 true
+[2] 18:20:14 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 149, SketchType: badKll 
-41 1.677852e+06 90208 41666666 true
-[3] 16:36:28 [SUCCESS] sketch@10.42.0.2
+49 1.677852e+06 107809 41666666 true
+[3] 18:20:15 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 149, SketchType: badKll 
-36 1.677852e+06 79207 41666666 true
+112 1.677852e+06 246422 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=10000666
-[1] 16:36:39 [SUCCESS] sketch@10.42.0.2
+[1] 18:20:25 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 99, SketchType: badKll 
-104 2.525253e+06 228820 41666666 true
-[2] 16:36:39 [SUCCESS] sketch@10.42.0.4
+41 2.525253e+06 90208 41666666 true
+[2] 18:20:25 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 99, SketchType: badKll 
 5 2.525253e+06 11001 41666666 true
-[3] 16:36:44 [SUCCESS] sketch@10.42.0.3
+[3] 18:20:26 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 99, SketchType: badKll 
-211 2.525253e+06 464242 41666666 true
+44 2.525253e+06 96808 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=13333888
-[1] 16:36:55 [SUCCESS] sketch@10.42.0.3
+[1] 18:20:36 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 74, SketchType: badKll 
-3 3.378378e+06 6600 41666666 true
-[2] 16:36:56 [SUCCESS] sketch@10.42.0.2
+6 3.378378e+06 13201 41666666 true
+[2] 18:20:36 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 74, SketchType: badKll 
-42 3.378378e+06 92408 41666666 true
-[3] 16:37:00 [SUCCESS] sketch@10.42.0.4
+14 3.378378e+06 30802 41666666 true
+[3] 18:20:36 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 74, SketchType: badKll 
-59 3.378378e+06 129811 41666666 true
+9 3.378378e+06 19801 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=16667110
-[1] 16:37:10 [SUCCESS] sketch@10.42.0.3
+[1] 18:20:46 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 59, SketchType: badKll 
-3 4.237288e+06 6600 41666666 true
-[2] 16:37:10 [SUCCESS] sketch@10.42.0.4
+78 4.237288e+06 171615 41666666 true
+[2] 18:20:46 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 59, SketchType: badKll 
-47 4.237288e+06 103409 41666666 true
-[3] 16:37:15 [SUCCESS] sketch@10.42.0.2
+50 4.237288e+06 110010 41666666 true
+[3] 18:20:49 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 59, SketchType: badKll 
-54 4.237288e+06 118810 41666666 true
+35 4.237288e+06 77007 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=20000332
-[1] 16:37:25 [SUCCESS] sketch@10.42.0.3
+[1] 18:20:59 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 49, SketchType: badKll 
 22 5.102041e+06 48404 41666666 true
-[2] 16:37:25 [SUCCESS] sketch@10.42.0.2
+[2] 18:20:59 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 49, SketchType: badKll 
-11 5.102041e+06 24202 41666666 true
-[3] 16:37:26 [SUCCESS] sketch@10.42.0.4
+29 5.102041e+06 63805 41666666 true
+[3] 18:20:59 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 49, SketchType: badKll 
-41 5.102041e+06 90208 41666666 true
+0 5.102041e+06 0 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=23333554
-[1] 16:37:36 [SUCCESS] sketch@10.42.0.4
+[1] 18:21:09 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 42, SketchType: badKll 
-32 5.952381e+06 70406 41666666 true
-[2] 16:37:36 [SUCCESS] sketch@10.42.0.2
+41 5.952381e+06 90208 41666666 true
+[2] 18:21:09 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 42, SketchType: badKll 
-14 5.952381e+06 30802 41666666 true
-[3] 16:37:36 [SUCCESS] sketch@10.42.0.3
+1 5.952381e+06 2200 41666666 true
+[3] 18:21:09 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 42, SketchType: badKll 
-273 5.952381e+06 600654 41666666 true
+45 5.952381e+06 99009 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=26666776
-[1] 16:37:46 [SUCCESS] sketch@10.42.0.2
+[1] 18:21:19 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 37, SketchType: badKll 
-8 6.756757e+06 17601 41666666 true
-[2] 16:37:46 [SUCCESS] sketch@10.42.0.4
+89 6.756757e+06 195817 41666666 true
+[2] 18:21:19 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 37, SketchType: badKll 
-40 6.756757e+06 88008 41666666 true
-[3] 16:37:46 [SUCCESS] sketch@10.42.0.3
+73 6.756757e+06 160614 41666666 true
+[3] 18:21:19 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 37, SketchType: badKll 
-45 6.756757e+06 99009 41666666 true
+6 6.756757e+06 13201 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=30000000
-[1] 16:37:56 [SUCCESS] sketch@10.42.0.2
+[1] 18:21:29 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 33, SketchType: badKll 
-14 7.575758e+06 30802 41666666 true
-[2] 16:37:56 [SUCCESS] sketch@10.42.0.3
+22 7.575758e+06 48404 41666666 true
+[2] 18:21:29 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 33, SketchType: badKll 
-0 7.575758e+06 0 41666666 true
-[3] 16:37:59 [SUCCESS] sketch@10.42.0.4
+229 7.575758e+06 503845 41666666 true
+[3] 18:21:29 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 33, SketchType: badKll 
-0 7.575758e+06 0 41666666 true
+25 7.575758e+06 55005 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=1000
-[1] 16:38:12 [SUCCESS] sketch@10.42.0.2
+[1] 18:21:43 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 100, StreamRate: 999999, SketchType: badKll 
 500 500 1100100 1100100 false
-[2] 16:38:12 [SUCCESS] sketch@10.42.0.3
+[2] 18:21:44 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 999999, SketchType: badKll 
 500 500 1100100 1100100 false
-[3] 16:38:13 [SUCCESS] sketch@10.42.0.4
+[3] 18:21:44 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 999999, SketchType: badKll 
 500 500 1100100 1100100 false
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=3334222
-[1] 16:38:23 [SUCCESS] sketch@10.42.0.3
+[1] 18:21:55 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 299, SketchType: badKll 
-33 1.672241e+06 72606 41666666 true
-[2] 16:38:23 [SUCCESS] sketch@10.42.0.4
+352 1.672241e+06 774470 41666666 true
+[2] 18:21:55 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 299, SketchType: badKll 
-96 1.672241e+06 211219 41666666 true
-[3] 16:38:24 [SUCCESS] sketch@10.42.0.2
+157 1.672241e+06 345431 41666666 true
+[3] 18:21:55 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 100, StreamRate: 299, SketchType: badKll 
-317 1.672241e+06 697463 41666666 true
+106 1.672241e+06 233221 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=6667444
-[1] 16:38:35 [SUCCESS] sketch@10.42.0.3
+[1] 18:22:06 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 149, SketchType: badKll 
-0 3.355705e+06 0 41666666 true
-[2] 16:38:36 [SUCCESS] sketch@10.42.0.2
+622 3.355705e+06 1368524 41666666 true
+[2] 18:22:06 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 149, SketchType: badKll 
-20 3.355705e+06 44004 41666666 true
-[3] 16:38:36 [SUCCESS] sketch@10.42.0.4
+7 3.355705e+06 15401 41666666 true
+[3] 18:22:06 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 100, StreamRate: 149, SketchType: badKll 
-15 3.355705e+06 33003 41666666 true
+30 3.355705e+06 66006 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=10000666
-[1] 16:38:46 [SUCCESS] sketch@10.42.0.3
+[1] 18:22:16 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 99, SketchType: badKll 
-42 5.050505e+06 92408 41666666 true
-[2] 16:38:47 [SUCCESS] sketch@10.42.0.2
-MergeRate: 1000, Clients: 100, StreamRate: 99, SketchType: badKll 
-52 5.050505e+06 114410 41666666 true
-[3] 16:38:51 [SUCCESS] sketch@10.42.0.4
+5 5.050505e+06 11001 41666666 true
+[2] 18:22:16 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 99, SketchType: badKll 
 25 5.050505e+06 55005 41666666 true
+[3] 18:22:17 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 100, StreamRate: 99, SketchType: badKll 
+0 5.050505e+06 0 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=13333888
-[1] 16:39:02 [SUCCESS] sketch@10.42.0.2
+[1] 18:22:27 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 74, SketchType: badKll 
-10 6.756757e+06 22002 41666666 true
-[2] 16:39:02 [SUCCESS] sketch@10.42.0.3
+8 6.756757e+06 17601 41666666 true
+[2] 18:22:28 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 100, StreamRate: 74, SketchType: badKll 
-23 6.756757e+06 50604 41666666 true
-[3] 16:39:02 [SUCCESS] sketch@10.42.0.4
+7 6.756757e+06 15401 41666666 true
+[3] 18:22:32 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 74, SketchType: badKll 
-0 6.756757e+06 0 41666666 true
+8 6.756757e+06 17601 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=16667110
-[1] 16:39:13 [SUCCESS] sketch@10.42.0.3
+[1] 18:22:42 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 100, StreamRate: 59, SketchType: badKll 
-0 8.474576e+06 0 41666666 true
-[2] 16:39:13 [SUCCESS] sketch@10.42.0.4
+16 8.474576e+06 35203 41666666 true
+[2] 18:22:42 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 59, SketchType: badKll 
-18 8.474576e+06 39603 41666666 true
-[3] 16:39:13 [SUCCESS] sketch@10.42.0.2
+9 8.474576e+06 19801 41666666 true
+[3] 18:22:43 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 59, SketchType: badKll 
-1 8.474576e+06 2200 41666666 true
+20 8.474576e+06 44004 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=20000332
-[1] 16:39:24 [SUCCESS] sketch@10.42.0.2
+[1] 18:22:54 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 49, SketchType: badKll 
-0 1.0204082e+07 0 41666666 true
-[2] 16:39:24 [SUCCESS] sketch@10.42.0.3
+3 1.0204082e+07 6600 41666666 true
+[2] 18:22:54 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 100, StreamRate: 49, SketchType: badKll 
-0 1.0204082e+07 0 41666666 true
-[3] 16:39:25 [SUCCESS] sketch@10.42.0.4
+5 1.0204082e+07 11001 41666666 true
+[3] 18:22:54 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 49, SketchType: badKll 
-35 1.0204082e+07 77007 41666666 true
+4 1.0204082e+07 8800 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=23333554
-[1] 16:39:36 [SUCCESS] sketch@10.42.0.2
+[1] 18:23:05 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 42, SketchType: badKll 
-10 1.1904762e+07 22002 41666666 true
-[2] 16:39:36 [SUCCESS] sketch@10.42.0.4
+21 1.1904762e+07 46204 41666666 true
+[2] 18:23:05 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 42, SketchType: badKll 
-18 1.1904762e+07 39603 41666666 true
-[3] 16:40:34 [SUCCESS] sketch@10.42.0.3
+1 1.1904762e+07 2200 41666666 true
+[3] 18:23:06 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 100, StreamRate: 42, SketchType: badKll 
-pc error: code = DeadlineExceeded desc = context deadline exceeded
-125 1.1904762e+07 275025 41666666 true
+17 1.1904762e+07 37403 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=26666776
-[1] 16:40:45 [SUCCESS] sketch@10.42.0.2
+[1] 18:23:16 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 37, SketchType: badKll 
-33 1.3513514e+07 72606 41666666 true
-[2] 16:40:46 [SUCCESS] sketch@10.42.0.4
+0 1.3513514e+07 0 41666666 true
+[2] 18:23:17 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 100, StreamRate: 37, SketchType: badKll 
-10 1.3513514e+07 22002 41666666 true
-[3] 16:40:46 [SUCCESS] sketch@10.42.0.3
+11 1.3513514e+07 24202 41666666 true
+[3] 18:23:21 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 37, SketchType: badKll 
-99 1.3513514e+07 217819 41666666 true
+0 1.3513514e+07 0 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=30000000
-[1] 16:40:56 [SUCCESS] sketch@10.42.0.4
+[1] 18:23:32 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 33, SketchType: badKll 
-6 1.5151515e+07 13201 41666666 true
-[2] 16:40:57 [SUCCESS] sketch@10.42.0.3
+8 1.5151515e+07 17601 41666666 true
+[2] 18:23:32 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 33, SketchType: badKll 
-284 1.5151515e+07 624856 41666666 true
-[3] 16:40:57 [SUCCESS] sketch@10.42.0.2
+1 1.5151515e+07 2200 41666666 true
+[3] 18:23:32 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 100, StreamRate: 33, SketchType: badKll 
-35 1.5151515e+07 77007 41666666 true
+0 1.5151515e+07 0 41666666 true
 ----------------------------------------
 
 {}
 Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=1000
+[1] 18:24:12 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 999999, SketchType: badKll 
+0 1 0 22000 true
+[2] 18:24:12 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 999999, SketchType: badKll 
+0 1 0 22000 true
+[3] 18:24:12 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 999999, SketchType: badKll 
+0 1 0 22000 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=3334222
+[1] 18:24:21 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 299, SketchType: badKll 
+463 1672 10186185 36784668 true
+[2] 18:24:21 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 299, SketchType: badKll 
+463 1672 10186185 36784668 true
+[3] 18:24:21 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 299, SketchType: badKll 
+434 1672 9548173 36784668 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=6667444
+[1] 18:24:31 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 149, SketchType: badKll 
+510 3356 11220204 41666666 true
+[2] 18:24:31 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 149, SketchType: badKll 
+500 3356 11000200 41666666 true
+[3] 18:24:31 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 149, SketchType: badKll 
+498 3356 10956199 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=10000666
+[1] 18:24:40 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 99, SketchType: badKll 
+328 5051 7216131 41666666 true
+[2] 18:24:40 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 99, SketchType: badKll 
+326 5051 7172130 41666666 true
+[3] 18:24:40 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 99, SketchType: badKll 
+387 5051 8514154 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=13333888
+[1] 18:24:50 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 74, SketchType: badKll 
+304 6757 6688121 41666666 true
+[2] 18:24:50 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 74, SketchType: badKll 
+388 6757 8536155 41666666 true
+[3] 18:24:50 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 74, SketchType: badKll 
+363 6757 7986145 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=16667110
+[1] 18:25:00 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 59, SketchType: badKll 
+318 8475 6996127 41666666 true
+[2] 18:25:00 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 59, SketchType: badKll 
+347 8475 7634138 41666666 true
+[3] 18:25:00 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 59, SketchType: badKll 
+369 8475 8118147 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=20000332
+[1] 18:25:09 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 49, SketchType: badKll 
+348 10204 7656139 41666666 true
+[2] 18:25:09 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 49, SketchType: badKll 
+356 10204 7832142 41666666 true
+[3] 18:25:09 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 49, SketchType: badKll 
+326 10204 7172130 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=23333554
+[1] 18:25:19 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 42, SketchType: badKll 
+333 11905 7326133 41666666 true
+[2] 18:25:19 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 42, SketchType: badKll 
+360 11905 7920144 41666666 true
+[3] 18:25:19 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 42, SketchType: badKll 
+299 11905 6578119 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=26666776
+[1] 18:25:29 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 37, SketchType: badKll 
+332 13514 7304132 41666666 true
+[2] 18:25:29 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 37, SketchType: badKll 
+273 13514 6006109 41666666 true
+[3] 18:25:29 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 37, SketchType: badKll 
+337 13514 7414134 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=30000000
+[1] 18:25:38 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 33, SketchType: badKll 
+329 15152 7238131 41666666 true
+[2] 18:25:38 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 33, SketchType: badKll 
+290 15152 6380116 41666666 true
+[3] 18:25:38 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 33, SketchType: badKll 
+345 15152 7590138 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=1000
+[1] 18:26:18 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 999999, SketchType: badKll 
+0 5 0 110002 true
+[2] 18:26:18 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 999999, SketchType: badKll 
+0 5 0 110002 true
+[3] 18:26:18 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 999999, SketchType: badKll 
+0 5 0 110002 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=3334222
+[1] 18:26:28 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 299, SketchType: badKll 
+0 16722 0 41666666 true
+[2] 18:26:28 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 299, SketchType: badKll 
+0 16722 0 41666666 true
+[3] 18:26:31 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 299, SketchType: badKll 
+1 16722 22000 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=6667444
+[1] 18:26:41 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 149, SketchType: badKll 
+0 33557 0 41666666 true
+[2] 18:26:41 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 149, SketchType: badKll 
+0 33557 0 41666666 true
+[3] 18:26:42 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 149, SketchType: badKll 
+0 33557 0 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=10000666
+[1] 18:26:52 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 99, SketchType: badKll 
+0 50505 0 41666666 true
+[2] 18:26:52 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 99, SketchType: badKll 
+0 50505 0 41666666 true
+[3] 18:26:52 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 99, SketchType: badKll 
+0 50505 0 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=13333888
+[1] 18:27:02 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 74, SketchType: badKll 
+0 67568 0 41666666 true
+[2] 18:27:02 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 74, SketchType: badKll 
+0 67568 0 41666666 true
+[3] 18:27:02 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 74, SketchType: badKll 
+0 67568 0 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=16667110
+[1] 18:27:11 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 59, SketchType: badKll 
+0 84746 0 41666666 true
+[2] 18:27:11 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 59, SketchType: badKll 
+0 84746 0 41666666 true
+[3] 18:27:13 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 59, SketchType: badKll 
+0 84746 0 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=20000332
+[1] 18:27:23 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 49, SketchType: badKll 
+0 102041 0 41666666 true
+[2] 18:27:23 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 49, SketchType: badKll 
+0 102041 0 41666666 true
+[3] 18:27:24 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 49, SketchType: badKll 
+0 102041 0 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=23333554
+[1] 18:27:34 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 42, SketchType: badKll 
+0 119048 0 41666666 true
+[2] 18:27:34 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 42, SketchType: badKll 
+0 119048 0 41666666 true
+[3] 18:27:43 [FAILURE] sketch@10.42.0.3 Exited with error code 1
+MergeRate: 10000, Clients: 10, StreamRate: 42, SketchType: badKll 
+Stderr: signal: killed
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=26666776
+[1] 18:27:53 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 37, SketchType: badKll 
+0 135135 0 41666666 true
+[2] 18:27:53 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 37, SketchType: badKll 
+2 135135 44000 41666666 true
+[3] 18:27:54 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 37, SketchType: badKll 
+0 135135 0 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=30000000
+[1] 18:28:04 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 33, SketchType: badKll 
+0 151515 0 41666666 true
+[2] 18:28:04 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 33, SketchType: badKll 
+0 151515 0 41666666 true
+[3] 18:28:04 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 33, SketchType: badKll 
+0 151515 0 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=1000
+[1] 18:28:44 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 999999, SketchType: badKll 
+0 25 0 550010 true
+[2] 18:28:45 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 50, StreamRate: 999999, SketchType: badKll 
+0 25 0 550010 true
+[3] 18:28:45 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 50, StreamRate: 999999, SketchType: badKll 
+0 25 0 550010 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=3334222
+[1] 18:28:55 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 50, StreamRate: 299, SketchType: badKll 
+0 83612 0 41666666 true
+[2] 18:28:55 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 299, SketchType: badKll 
+4 83612 88001 41666666 true
+[3] 18:28:55 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 50, StreamRate: 299, SketchType: badKll 
+1 83612 22000 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=6667444
+[1] 18:29:06 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 50, StreamRate: 149, SketchType: badKll 
+0 167785 0 41666666 true
+[2] 18:29:06 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 149, SketchType: badKll 
+0 167785 0 41666666 true
+[3] 18:29:19 [FAILURE] sketch@10.42.0.2 Exited with error code 1
+MergeRate: 10000, Clients: 50, StreamRate: 149, SketchType: badKll 
+Stderr: signal: killed
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=10000666
+[1] 18:29:29 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 99, SketchType: badKll 
+0 252525 0 41666666 true
+[2] 18:29:29 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 50, StreamRate: 99, SketchType: badKll 
+0 252525 0 41666666 true
+[3] 18:29:30 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 50, StreamRate: 99, SketchType: badKll 
+0 252525 0 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=13333888
+[1] 18:29:41 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 50, StreamRate: 74, SketchType: badKll 
+0 337838 0 41666666 true
+[2] 18:29:41 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 74, SketchType: badKll 
+0 337838 0 41666666 true
+[3] 18:29:41 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 50, StreamRate: 74, SketchType: badKll 
+0 337838 0 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=16667110
+[1] 18:29:51 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 59, SketchType: badKll 
+0 423729 0 41666666 true
+[2] 18:29:51 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 50, StreamRate: 59, SketchType: badKll 
+0 423729 0 41666666 true
+[3] 18:29:59 [FAILURE] sketch@10.42.0.4 Exited with error code 1
+MergeRate: 10000, Clients: 50, StreamRate: 59, SketchType: badKll 
+Stderr: signal: killed
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=20000332
+[1] 18:30:09 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 49, SketchType: badKll 
+0 510204 0 41666666 true
+[2] 18:30:09 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 50, StreamRate: 49, SketchType: badKll 
+0 510204 0 41666666 true
+[3] 18:30:11 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 50, StreamRate: 49, SketchType: badKll 
+0 510204 0 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=23333554
+[1] 18:30:21 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 42, SketchType: badKll 
+0 595238 0 41666666 true
+[2] 18:30:21 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 50, StreamRate: 42, SketchType: badKll 
+0 595238 0 41666666 true
+[3] 18:30:35 [FAILURE] sketch@10.42.0.4 Exited with error code 1
+MergeRate: 10000, Clients: 50, StreamRate: 42, SketchType: badKll 
+Stderr: signal: killed
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=26666776
+[1] 18:30:45 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 37, SketchType: badKll 
+0 675676 0 41666666 true
+[2] 18:30:45 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 50, StreamRate: 37, SketchType: badKll 
+0 675676 0 41666666 true
+[3] 18:30:54 [FAILURE] sketch@10.42.0.4 Exited with error code 1
+MergeRate: 10000, Clients: 50, StreamRate: 37, SketchType: badKll 
+Stderr: signal: killed
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=30000000
+[1] 18:31:04 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 33, SketchType: badKll 
+1 757576 22000 41666666 true
+[2] 18:31:04 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 50, StreamRate: 33, SketchType: badKll 
+0 757576 0 41666666 true
+[3] 18:31:06 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 50, StreamRate: 33, SketchType: badKll 
+0 757576 0 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=1000
+[1] 18:31:47 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 100, StreamRate: 999999, SketchType: badKll 
+0 50 0 1100020 true
+[2] 18:31:47 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 100, StreamRate: 999999, SketchType: badKll 
+0 50 0 1100020 true
+[3] 18:31:47 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 100, StreamRate: 999999, SketchType: badKll 
+0 50 0 1100020 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=3334222
+[1] 18:31:57 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 100, StreamRate: 299, SketchType: badKll 
+0 167224 0 41666666 true
+[2] 18:31:58 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 100, StreamRate: 299, SketchType: badKll 
+0 167224 0 41666666 true
+[3] 18:31:58 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 100, StreamRate: 299, SketchType: badKll 
+0 167224 0 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=6667444
+[1] 18:32:09 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 100, StreamRate: 149, SketchType: badKll 
+0 335570 0 41666666 true
+[2] 18:32:09 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 100, StreamRate: 149, SketchType: badKll 
+7 335570 154002 41666666 true
+[3] 18:32:11 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 100, StreamRate: 149, SketchType: badKll 
+3 335570 66001 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=10000666
+[1] 18:32:22 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 100, StreamRate: 99, SketchType: badKll 
+0 505051 0 41666666 true
+[2] 18:32:23 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 100, StreamRate: 99, SketchType: badKll 
+0 505051 0 41666666 true
+[3] 18:32:35 [FAILURE] sketch@10.42.0.4 Exited with error code 1
+MergeRate: 10000, Clients: 100, StreamRate: 99, SketchType: badKll 
+Stderr: signal: killed
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=13333888
+[1] 18:32:46 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 100, StreamRate: 74, SketchType: badKll 
+20 675676 440008 41666666 true
+[2] 18:32:47 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 100, StreamRate: 74, SketchType: badKll 
+1 675676 22000 41666666 true
+[3] 18:32:49 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 100, StreamRate: 74, SketchType: badKll 
+0 675676 0 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=16667110
+[1] 18:33:00 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 100, StreamRate: 59, SketchType: badKll 
+0 847458 0 41666666 true
+[2] 18:33:00 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 100, StreamRate: 59, SketchType: badKll 
+0 847458 0 41666666 true
+[3] 18:33:00 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 100, StreamRate: 59, SketchType: badKll 
+1 847458 22000 41666666 true
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=20000332
+[1] 18:33:11 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 100, StreamRate: 49, SketchType: badKll 
+0 1.020408e+06 0 41666666 true
+[2] 18:33:11 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 100, StreamRate: 49, SketchType: badKll 
+0 1.020408e+06 0 41666666 true
+[3] 18:33:26 [FAILURE] sketch@10.42.0.4 Exited with error code 1
+MergeRate: 10000, Clients: 100, StreamRate: 49, SketchType: badKll 
+Stderr: signal: killed
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=23333554
+[1] 18:33:37 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 100, StreamRate: 42, SketchType: badKll 
+0 1.190476e+06 0 41666666 true
+[2] 18:33:39 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 100, StreamRate: 42, SketchType: badKll 
+0 1.190476e+06 0 41666666 true
+[3] 18:33:44 [FAILURE] sketch@10.42.0.2 Exited with error code 1
+MergeRate: 10000, Clients: 100, StreamRate: 42, SketchType: badKll 
+Stderr: signal: killed
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=26666776
+[1] 18:33:55 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 100, StreamRate: 37, SketchType: badKll 
+0 1.351351e+06 0 41666666 true
+[2] 18:34:04 [FAILURE] sketch@10.42.0.3 Exited with error code 1
+MergeRate: 10000, Clients: 100, StreamRate: 37, SketchType: badKll 
+Stderr: signal: killed
+[3] 18:35:09 [FAILURE] sketch@10.42.0.2 Exited with error code 1
+MergeRate: 10000, Clients: 100, StreamRate: 37, SketchType: badKll 
+Stderr: signal: killed
+----------------------------------------
+
+{}
+Running badKll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=30000000
+[1] 18:35:21 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 100, StreamRate: 33, SketchType: badKll 
+0 1.515152e+06 0 41666666 true
+[2] 18:35:21 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 100, StreamRate: 33, SketchType: badKll 
+0 1.515152e+06 0 41666666 true
+[3] 18:35:26 [FAILURE] sketch@10.42.0.4 Exited with error code 1
+MergeRate: 10000, Clients: 100, StreamRate: 33, SketchType: badKll 
+Stderr: signal: killed
+----------------------------------------
+
+{}

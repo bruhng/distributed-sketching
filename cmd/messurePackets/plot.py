@@ -54,8 +54,8 @@ for client_amount, merge_dict in data.items():
     for merge_rate, values in merge_dict.items():
         # Sort by stream_rate
         values.sort(key=lambda x: x[0])
-        x = [v[0] for v in values]
-        y = [v[1]*merge_rate for v in values]
+        x = [v[0]*client_amount for v in values]
+        y = [v[1]*merge_rate/5 for v in values]
         plt.plot(x, y, marker='o', label=f'MergeRate={merge_rate}')
 
     plt.title(f'ClientAmount = {client_amount}')
