@@ -1,1040 +1,1040 @@
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=1000
-[1] 15:50:46 [SUCCESS] sketch@10.42.0.2
+[1] 12:04:40 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 999999, SketchType: count 
 5 5 5148 5148 false
-[2] 15:50:46 [SUCCESS] sketch@10.42.0.3
+[2] 12:04:40 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 999999, SketchType: count 
 5 5 5148 5148 false
-[3] 15:50:46 [SUCCESS] sketch@10.42.0.4
+[3] 12:04:42 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 1, StreamRate: 999999, SketchType: count 
 5 5 5148 5148 false
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=45333
-[1] 15:50:55 [SUCCESS] sketch@10.42.0.2
+[1] 12:05:11 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 1, StreamRate: 22058, SketchType: count 
+224 227 230630 233719 true
+[2] 12:05:11 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 22058, SketchType: count 
 223 227 229600 233719 true
-[2] 15:50:55 [SUCCESS] sketch@10.42.0.3
-MergeRate: 1000, Clients: 1, StreamRate: 22058, SketchType: count 
-223 227 229600 233719 true
-[3] 15:50:55 [SUCCESS] sketch@10.42.0.4
+[3] 12:05:11 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 22058, SketchType: count 
 223 227 229600 233719 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=89666
-[1] 15:51:05 [SUCCESS] sketch@10.42.0.2
+[1] 12:05:39 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 1, StreamRate: 11152, SketchType: count 
+434 448 446846 461260 true
+[2] 12:05:39 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 11152, SketchType: count 
 435 448 447876 461260 true
-[2] 15:51:05 [SUCCESS] sketch@10.42.0.3
+[3] 12:05:39 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 11152, SketchType: count 
-435 448 447876 461260 true
-[3] 15:51:05 [SUCCESS] sketch@10.42.0.4
-MergeRate: 1000, Clients: 1, StreamRate: 11152, SketchType: count 
-436 448 448905 461260 true
+434 448 446846 461260 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=133000
-[1] 15:51:14 [SUCCESS] sketch@10.42.0.3
+[1] 12:06:08 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 1, StreamRate: 7518, SketchType: count 
 602 665 619819 684684 true
-[2] 15:51:14 [SUCCESS] sketch@10.42.0.2
+[2] 12:06:08 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 7518, SketchType: count 
 603 665 620848 684684 true
-[3] 15:51:14 [SUCCESS] sketch@10.42.0.4
+[3] 12:06:08 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 7518, SketchType: count 
-603 665 620848 684684 true
+602 665 619819 684684 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=176333
-[1] 15:51:24 [SUCCESS] sketch@10.42.0.3
+[1] 12:06:37 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 5671, SketchType: count 
-794 882 817502 908107 true
-[2] 15:51:24 [SUCCESS] sketch@10.42.0.4
+792 882 815443 908107 true
+[2] 12:06:37 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 1, StreamRate: 5671, SketchType: count 
-795 882 818532 908107 true
-[3] 15:51:24 [SUCCESS] sketch@10.42.0.2
+792 882 815443 908107 true
+[3] 12:06:37 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 5671, SketchType: count 
-794 882 817502 908107 true
+792 882 815443 908107 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=219666
-[1] 15:51:33 [SUCCESS] sketch@10.42.0.2
+[1] 12:07:05 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 4552, SketchType: count 
-931 1098 958557 1130500 true
-[2] 15:51:33 [SUCCESS] sketch@10.42.0.3
+948 1098 976060 1130500 true
+[2] 12:07:05 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 1, StreamRate: 4552, SketchType: count 
-932 1098 959587 1130500 true
-[3] 15:51:33 [SUCCESS] sketch@10.42.0.4
+948 1098 976060 1130500 true
+[3] 12:07:05 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 4552, SketchType: count 
-932 1098 959587 1130500 true
+947 1098 975031 1130500 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=263000
-[1] 15:51:43 [SUCCESS] sketch@10.42.0.2
+[1] 12:07:34 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 1, StreamRate: 3802, SketchType: count 
-1151 1315 1185069 1353924 true
-[2] 15:51:43 [SUCCESS] sketch@10.42.0.4
+1152 1315 1186099 1353924 true
+[2] 12:07:34 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 3802, SketchType: count 
-1150 1315 1184040 1353924 true
-[3] 15:51:43 [SUCCESS] sketch@10.42.0.3
+1152 1315 1186099 1353924 true
+[3] 12:07:34 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 3802, SketchType: count 
-1150 1315 1184040 1353924 true
+1153 1315 1187128 1353924 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=306333
-[1] 15:51:52 [SUCCESS] sketch@10.42.0.3
+[1] 12:08:03 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 3264, SketchType: count 
-1294 1532 1332302 1577347 true
-[2] 15:51:52 [SUCCESS] sketch@10.42.0.2
+1304 1532 1342598 1577347 true
+[2] 12:08:03 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 1, StreamRate: 3264, SketchType: count 
-1294 1532 1332302 1577347 true
-[3] 15:51:52 [SUCCESS] sketch@10.42.0.4
+1305 1532 1343628 1577347 true
+[3] 12:08:03 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 3264, SketchType: count 
-1295 1532 1333332 1577347 true
+1304 1532 1342598 1577347 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=349666
-[1] 15:52:02 [SUCCESS] sketch@10.42.0.3
+[1] 12:08:31 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 2859, SketchType: count 
-1573 1749 1619560 1800770 true
-[2] 15:52:02 [SUCCESS] sketch@10.42.0.2
+1572 1749 1618531 1800770 true
+[2] 12:08:31 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 1, StreamRate: 2859, SketchType: count 
-1576 1749 1622649 1800770 true
-[3] 15:52:02 [SUCCESS] sketch@10.42.0.4
+1572 1749 1618531 1800770 true
+[3] 12:08:32 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 2859, SketchType: count 
-1577 1749 1623679 1800770 true
+1575 1749 1621620 1800770 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=400000
-[1] 15:52:11 [SUCCESS] sketch@10.42.0.3
+[1] 12:09:00 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 1, StreamRate: 2499, SketchType: count 
-1819 2001 1872842 2060229 true
-[2] 15:52:11 [SUCCESS] sketch@10.42.0.4
+1806 2001 1859457 2060229 true
+[2] 12:09:00 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 2499, SketchType: count 
-1820 2001 1873872 2060229 true
-[3] 15:52:11 [SUCCESS] sketch@10.42.0.2
+1807 2001 1860487 2060229 true
+[3] 12:09:00 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 2499, SketchType: count 
-1819 2001 1872842 2060229 true
+1807 2001 1860487 2060229 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=1000
-[1] 15:52:24 [SUCCESS] sketch@10.42.0.3
+[1] 12:09:32 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 999999, SketchType: count 
 50 50 51480 51480 false
-[2] 15:52:24 [SUCCESS] sketch@10.42.0.4
+[2] 12:09:32 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 999999, SketchType: count 
 50 50 51480 51480 false
-[3] 15:52:24 [SUCCESS] sketch@10.42.0.2
+[3] 12:09:32 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 999999, SketchType: count 
 50 50 51480 51480 false
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=45333
-[1] 15:52:33 [SUCCESS] sketch@10.42.0.3
+[1] 12:10:01 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 22058, SketchType: count 
-2213 2267 2278504 2334103 true
-[2] 15:52:33 [SUCCESS] sketch@10.42.0.2
+2220 2267 2285712 2334103 true
+[2] 12:10:01 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 22058, SketchType: count 
 2210 2267 2275416 2334103 true
-[3] 15:52:33 [SUCCESS] sketch@10.42.0.4
+[3] 12:10:01 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 22058, SketchType: count 
 2210 2267 2275416 2334103 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=89666
-[1] 15:52:43 [SUCCESS] sketch@10.42.0.2
+[1] 12:10:30 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 11152, SketchType: count 
-4320 4484 4447872 4616726 true
-[2] 15:52:43 [SUCCESS] sketch@10.42.0.3
+4289 4484 4415954 4616726 true
+[2] 12:10:30 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 11152, SketchType: count 
-4310 4484 4437576 4616726 true
-[3] 15:52:43 [SUCCESS] sketch@10.42.0.4
+4282 4484 4408747 4616726 true
+[3] 12:10:30 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 11152, SketchType: count 
-4320 4484 4447872 4616726 true
+4280 4484 4406688 4616726 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=133000
-[1] 15:52:53 [SUCCESS] sketch@10.42.0.3
+[1] 12:10:58 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 7518, SketchType: count 
-6170 6651 6352632 6847869 true
-[2] 15:52:53 [SUCCESS] sketch@10.42.0.2
+6190 6651 6373224 6847869 true
+[2] 12:10:58 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 7518, SketchType: count 
-6170 6651 6352632 6847869 true
-[3] 15:52:53 [SUCCESS] sketch@10.42.0.4
+6186 6651 6369105 6847869 true
+[3] 12:10:58 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 7518, SketchType: count 
-6150 6651 6332040 6847869 true
+6181 6651 6363957 6847869 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=176333
-[1] 15:53:02 [SUCCESS] sketch@10.42.0.2
+[1] 12:11:27 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 5671, SketchType: count 
-7940 8817 8175024 9077983 true
-[2] 15:53:02 [SUCCESS] sketch@10.42.0.3
+8010 8817 8247096 9077983 true
+[2] 12:11:27 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 5671, SketchType: count 
-7950 8817 8185320 9077983 true
-[3] 15:53:02 [SUCCESS] sketch@10.42.0.4
+8015 8817 8252244 9077983 true
+[3] 12:11:27 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 5671, SketchType: count 
-7960 8817 8195616 9077983 true
+8013 8817 8250184 9077983 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=219666
-[1] 15:53:12 [SUCCESS] sketch@10.42.0.3
+[1] 12:11:56 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 4552, SketchType: count 
-9790 10984 10079784 11309126 true
-[2] 15:53:12 [SUCCESS] sketch@10.42.0.2
+9798 10984 10088020 11309126 true
+[2] 12:11:56 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 4552, SketchType: count 
-9804 10984 10094198 11309126 true
-[3] 15:53:12 [SUCCESS] sketch@10.42.0.4
+9829 10984 10119938 11309126 true
+[3] 12:11:56 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 4552, SketchType: count 
-9779 10984 10068458 11309126 true
+9784 10984 10073606 11309126 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=263000
-[1] 15:53:21 [SUCCESS] sketch@10.42.0.3
+[1] 12:12:25 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 3802, SketchType: count 
-11586 13151 11928945 13540269 true
-[2] 15:53:21 [SUCCESS] sketch@10.42.0.2
+11654 13151 11998958 13540269 true
+[2] 12:12:25 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 3802, SketchType: count 
-11559 13151 11901146 13540269 true
-[3] 15:53:21 [SUCCESS] sketch@10.42.0.4
+11678 13151 12023668 13540269 true
+[3] 12:12:25 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 3802, SketchType: count 
-11577 13151 11919679 13540269 true
+11646 13151 11990721 13540269 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=306333
-[1] 15:53:31 [SUCCESS] sketch@10.42.0.3
+[1] 12:12:54 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 3264, SketchType: count 
-13753 15319 14160088 15772442 true
-[2] 15:53:31 [SUCCESS] sketch@10.42.0.4
+13765 15319 14172444 15772442 true
+[2] 12:12:54 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 3264, SketchType: count 
-13649 15319 14053010 15772442 true
-[3] 15:53:31 [SUCCESS] sketch@10.42.0.2
+13824 15319 14233190 15772442 true
+[3] 12:12:54 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 3264, SketchType: count 
-12324 15319 12688790 15772442 true
+13589 15319 13991234 15772442 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=349666
-[1] 15:53:41 [SUCCESS] sketch@10.42.0.3
+[1] 12:13:22 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 2859, SketchType: count 
-14801 17489 15239109 18006674 true
-[2] 15:53:41 [SUCCESS] sketch@10.42.0.4
+15159 17489 15607706 18006674 true
+[2] 12:13:22 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 2859, SketchType: count 
-14623 17489 15055840 18006674 true
-[3] 15:53:41 [SUCCESS] sketch@10.42.0.2
+15118 17489 15565492 18006674 true
+[3] 12:13:22 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 2859, SketchType: count 
-14894 17489 15334862 18006674 true
+15083 17489 15529456 18006674 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=400000
-[1] 15:53:50 [SUCCESS] sketch@10.42.0.2
+[1] 12:13:51 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 10, StreamRate: 2499, SketchType: count 
-16920 20008 17420832 20600236 true
-[2] 15:53:50 [SUCCESS] sketch@10.42.0.3
+16932 20008 17433187 20600236 true
+[2] 12:13:51 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 10, StreamRate: 2499, SketchType: count 
-16845 20008 17343612 20600236 true
-[3] 15:53:50 [SUCCESS] sketch@10.42.0.4
+16814 20008 17311694 20600236 true
+[3] 12:13:51 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 10, StreamRate: 2499, SketchType: count 
-16990 20008 17492904 20600236 true
+16820 20008 17317872 20600236 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=1000
-[1] 15:54:03 [SUCCESS] sketch@10.42.0.4
+[1] 12:14:23 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 999999, SketchType: count 
 250 250 257400 257400 false
-[2] 15:54:03 [SUCCESS] sketch@10.42.0.3
+[2] 12:14:24 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 999999, SketchType: count 
 250 250 257400 257400 false
-[3] 15:54:03 [SUCCESS] sketch@10.42.0.2
+[3] 12:14:24 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 999999, SketchType: count 
 250 250 257400 257400 false
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=45333
-[1] 15:54:13 [SUCCESS] sketch@10.42.0.3
+[1] 12:14:53 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 22058, SketchType: count 
-11088 11334 11416204 11669486 true
-[2] 15:54:14 [SUCCESS] sketch@10.42.0.2
+11062 11334 11389435 11669486 true
+[2] 12:14:53 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 22058, SketchType: count 
-11078 11334 11405908 11669486 true
-[3] 15:54:14 [SUCCESS] sketch@10.42.0.4
+11050 11334 11377080 11669486 true
+[3] 12:14:53 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 22058, SketchType: count 
-11101 11334 11429589 11669486 true
+11054 11334 11381198 11669486 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=89666
-[1] 15:54:24 [SUCCESS] sketch@10.42.0.2
+[1] 12:15:22 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 11152, SketchType: count 
-21655 22418 22295988 23081572 true
-[2] 15:54:24 [SUCCESS] sketch@10.42.0.3
+22040 22418 22692384 23081572 true
+[2] 12:15:23 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 11152, SketchType: count 
-21631 22418 22271277 23081572 true
-[3] 15:54:24 [SUCCESS] sketch@10.42.0.4
+21731 22418 22374237 23081572 true
+[3] 12:15:23 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 11152, SketchType: count 
-21887 22418 22534855 23081572 true
+22018 22418 22669732 23081572 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=133000
-[1] 15:54:34 [SUCCESS] sketch@10.42.0.3
+[1] 12:15:52 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 7518, SketchType: count 
-32257 33254 33211807 34238318 true
-[2] 15:54:34 [SUCCESS] sketch@10.42.0.4
+31855 33254 32797908 34238318 true
+[2] 12:15:52 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 7518, SketchType: count 
-32530 33254 33492888 34238318 true
-[3] 15:54:34 [SUCCESS] sketch@10.42.0.2
+32342 33254 33299323 34238318 true
+[3] 12:15:52 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 7518, SketchType: count 
-32783 33254 33753376 34238318 true
+32402 33254 33361099 34238318 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=176333
-[1] 15:54:44 [SUCCESS] sketch@10.42.0.2
+[1] 12:16:22 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 5671, SketchType: count 
-36284 44084 37358006 41666666 true
-[2] 15:54:44 [SUCCESS] sketch@10.42.0.3
+36409 44084 37486706 41666666 true
+[2] 12:16:22 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 5671, SketchType: count 
-36309 44084 37383746 41666666 true
-[3] 15:54:44 [SUCCESS] sketch@10.42.0.4
+36652 44084 37736899 41666666 true
+[3] 12:16:22 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 5671, SketchType: count 
-36288 44084 37362124 41666666 true
+36015 44084 37081044 41666666 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=219666
-[1] 15:54:55 [SUCCESS] sketch@10.42.0.3
+[1] 12:16:51 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 4552, SketchType: count 
-36308 54921 37382716 41666666 true
-[2] 15:54:55 [SUCCESS] sketch@10.42.0.4
+36310 54921 37384776 41666666 true
+[2] 12:16:51 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 4552, SketchType: count 
-34586 54921 35609745 41666666 true
-[3] 15:54:55 [SUCCESS] sketch@10.42.0.2
+35181 54921 36222357 41666666 true
+[3] 12:16:51 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 4552, SketchType: count 
-36780 54921 37868688 41666666 true
+35786 54921 36845265 41666666 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=263000
-[1] 15:55:05 [SUCCESS] sketch@10.42.0.2
+[1] 12:17:20 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 3802, SketchType: count 
-34229 65755 35242178 41666666 true
-[2] 15:55:05 [SUCCESS] sketch@10.42.0.3
+33409 65755 34397906 41666666 true
+[2] 12:17:20 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 3802, SketchType: count 
-36184 65755 37255046 41666666 true
-[3] 15:55:05 [SUCCESS] sketch@10.42.0.4
+37860 65755 38980656 41666666 true
+[3] 12:17:20 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 3802, SketchType: count 
-37939 65755 39061994 41666666 true
+36833 65755 37923256 41666666 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=306333
-[1] 15:55:15 [SUCCESS] sketch@10.42.0.3
+[1] 12:17:49 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 3264, SketchType: count 
-34390 76593 35407944 41666666 true
-[2] 15:55:15 [SUCCESS] sketch@10.42.0.2
+33549 76593 34542050 41666666 true
+[2] 12:17:49 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 3264, SketchType: count 
-34519 76593 35540762 41666666 true
-[3] 15:55:15 [SUCCESS] sketch@10.42.0.4
+35605 76593 36658908 41666666 true
+[3] 12:17:49 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 3264, SketchType: count 
-36002 76593 37067659 41666666 true
+36595 76593 37678212 41666666 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=349666
-[1] 15:55:25 [SUCCESS] sketch@10.42.0.2
+[1] 12:18:19 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 2859, SketchType: count 
-34962 87443 35996875 41666666 true
-[2] 15:55:25 [SUCCESS] sketch@10.42.0.3
+35238 87443 36281044 41666666 true
+[2] 12:18:19 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 2859, SketchType: count 
-34753 87443 35781688 41666666 true
-[3] 15:55:25 [SUCCESS] sketch@10.42.0.4
+34212 87443 35224675 41666666 true
+[3] 12:18:19 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 2859, SketchType: count 
-35119 87443 36158522 41666666 true
+33750 87443 34749000 41666666 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=400000
-[1] 15:55:36 [SUCCESS] sketch@10.42.0.2
+[1] 12:18:48 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 50, StreamRate: 2499, SketchType: count 
-32968 100040 33943852 41666666 true
-[2] 15:55:36 [SUCCESS] sketch@10.42.0.4
+34505 100040 35526348 41666666 true
+[2] 12:18:48 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 50, StreamRate: 2499, SketchType: count 
-34154 100040 35164958 41666666 true
-[3] 15:55:36 [SUCCESS] sketch@10.42.0.3
+33722 100040 34720171 41666666 true
+[3] 12:18:48 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 50, StreamRate: 2499, SketchType: count 
-36150 100040 37220040 41666666 true
+36900 100040 37992240 41666666 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=1000
-[1] 15:55:50 [SUCCESS] sketch@10.42.0.2
+[1] 12:19:21 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 999999, SketchType: count 
 500 500 514800 514800 false
-[2] 15:55:50 [SUCCESS] sketch@10.42.0.3
+[2] 12:19:22 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 100, StreamRate: 999999, SketchType: count 
 500 500 514800 514800 false
-[3] 15:55:50 [SUCCESS] sketch@10.42.0.4
+[3] 12:19:22 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 999999, SketchType: count 
 500 500 514800 514800 false
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=45333
-[1] 15:56:01 [SUCCESS] sketch@10.42.0.3
+[1] 12:19:52 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 22058, SketchType: count 
-22127 22668 22781959 23338972 true
-[2] 15:56:01 [SUCCESS] sketch@10.42.0.2
+22256 22668 22914777 23338972 true
+[2] 12:19:52 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 100, StreamRate: 22058, SketchType: count 
-22058 22668 22710916 23338972 true
-[3] 15:56:01 [SUCCESS] sketch@10.42.0.4
+22104 22668 22758278 23338972 true
+[3] 12:19:53 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 22058, SketchType: count 
-22153 22668 22808728 23338972 true
+22332 22668 22993027 23338972 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=89666
-[1] 15:56:12 [SUCCESS] sketch@10.42.0.2
+[1] 12:20:23 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 11152, SketchType: count 
-36992 44835 38086963 41666666 true
-[2] 15:56:12 [SUCCESS] sketch@10.42.0.3
+32348 44835 33305500 41666666 true
+[2] 12:20:23 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 100, StreamRate: 11152, SketchType: count 
-36646 44835 37730721 41666666 true
-[3] 15:56:13 [SUCCESS] sketch@10.42.0.4
+31483 44835 32414896 41666666 true
+[3] 12:20:23 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 11152, SketchType: count 
-48269 44835 49697762 41666666 false
+32490 44835 33451704 41666666 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=133000
-[1] 15:56:23 [SUCCESS] sketch@10.42.0.2
+[1] 12:20:53 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 7518, SketchType: count 
-35332 66507 36377827 41666666 true
-[2] 15:56:24 [SUCCESS] sketch@10.42.0.4
+29245 66507 30110652 41666666 true
+[2] 12:20:53 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 7518, SketchType: count 
-35295 66507 36339732 41666666 true
-[3] 15:56:24 [SUCCESS] sketch@10.42.0.3
+29048 66507 29907820 41666666 true
+[3] 12:20:55 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 100, StreamRate: 7518, SketchType: count 
-37343 66507 38448352 41666666 true
+55870 66507 57523752 41666666 false
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=176333
-[1] 15:56:35 [SUCCESS] sketch@10.42.0.2
+[1] 12:21:25 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 5671, SketchType: count 
-35804 88168 36863798 41666666 true
-[2] 15:56:35 [SUCCESS] sketch@10.42.0.3
+28834 88168 29687486 41666666 true
+[2] 12:21:25 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 5671, SketchType: count 
-34158 88168 35169076 41666666 true
-[3] 15:56:36 [SUCCESS] sketch@10.42.0.4
+30870 88168 31783752 41666666 true
+[3] 12:21:26 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 100, StreamRate: 5671, SketchType: count 
-42380 88168 43634448 41666666 false
+45103 88168 46438048 41666666 false
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=219666
-[1] 15:56:46 [SUCCESS] sketch@10.42.0.3
+[1] 12:21:56 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 4552, SketchType: count 
-34167 109842 35178343 41666666 true
-[2] 15:56:46 [SUCCESS] sketch@10.42.0.2
+33823 109842 34824160 41666666 true
+[2] 12:21:56 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 100, StreamRate: 4552, SketchType: count 
-34708 109842 35735356 41666666 true
-[3] 15:56:46 [SUCCESS] sketch@10.42.0.4
+31964 109842 32910134 41666666 true
+[3] 12:21:56 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 4552, SketchType: count 
-35572 109842 36624931 41666666 true
+33115 109842 34095204 41666666 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=263000
-[1] 15:56:57 [SUCCESS] sketch@10.42.0.3
+[1] 12:22:26 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 100, StreamRate: 3802, SketchType: count 
-35116 131510 36155433 41666666 true
-[2] 15:56:58 [SUCCESS] sketch@10.42.0.2
+31552 131510 32485939 41666666 true
+[2] 12:22:26 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 3802, SketchType: count 
-39087 131510 40243975 41666666 true
-[3] 15:56:58 [SUCCESS] sketch@10.42.0.4
+32682 131510 33649387 41666666 true
+[3] 12:22:27 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 3802, SketchType: count 
-34721 131510 35748741 41666666 true
+44090 131510 45395064 41666666 false
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=306333
-[1] 15:57:09 [SUCCESS] sketch@10.42.0.3
+[1] 12:22:57 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 100, StreamRate: 3264, SketchType: count 
-34427 153186 35446039 41666666 true
-[2] 15:57:09 [SUCCESS] sketch@10.42.0.4
+32344 153186 33301382 41666666 true
+[2] 12:22:57 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 3264, SketchType: count 
-34697 153186 35724031 41666666 true
-[3] 15:57:10 [SUCCESS] sketch@10.42.0.2
+32465 153186 33425964 41666666 true
+[3] 12:22:58 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 3264, SketchType: count 
-47191 153186 48587853 41666666 false
+29332 153186 30200227 41666666 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=349666
-[1] 15:57:20 [SUCCESS] sketch@10.42.0.3
+[1] 12:23:28 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 2859, SketchType: count 
-29974 174886 30861230 41666666 true
-[2] 15:57:20 [SUCCESS] sketch@10.42.0.2
+30382 174886 31281307 41666666 true
+[2] 12:23:28 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 2859, SketchType: count 
-29864 174886 30747974 41666666 true
-[3] 15:57:21 [SUCCESS] sketch@10.42.0.4
+33174 174886 34155950 41666666 true
+[3] 12:23:29 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 100, StreamRate: 2859, SketchType: count 
-32165 174886 33117084 41666666 true
+34623 174886 35647840 41666666 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=400000
-[1] 15:57:32 [SUCCESS] sketch@10.42.0.2
+[1] 12:23:59 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 100, StreamRate: 2499, SketchType: count 
-29470 200080 30342312 41666666 true
-[2] 15:57:32 [SUCCESS] sketch@10.42.0.4
+33437 200080 34426735 41666666 true
+[2] 12:23:59 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 100, StreamRate: 2499, SketchType: count 
-30241 200080 31136133 41666666 true
-[3] 15:57:32 [SUCCESS] sketch@10.42.0.3
+32738 200080 33707044 41666666 true
+[3] 12:23:59 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 100, StreamRate: 2499, SketchType: count 
-42845 200080 44113212 41666666 false
+34187 200080 35198935 41666666 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=1000
-[1] 15:58:12 [SUCCESS] sketch@10.42.0.3
+[1] 12:24:58 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 1, StreamRate: 999999, SketchType: count 
 0 1 0 1150 true
-[2] 15:58:12 [SUCCESS] sketch@10.42.0.4
+[2] 12:24:58 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 1, StreamRate: 999999, SketchType: count 
 0 1 0 1150 true
-[3] 15:58:12 [SUCCESS] sketch@10.42.0.2
+[3] 12:24:58 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 1, StreamRate: 999999, SketchType: count 
 0 1 0 1150 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=45333
-[1] 15:58:22 [SUCCESS] sketch@10.42.0.2
+[1] 12:25:27 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 1, StreamRate: 22058, SketchType: count 
 23 23 26454 26454 false
-[2] 15:58:22 [SUCCESS] sketch@10.42.0.3
+[2] 12:25:27 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 1, StreamRate: 22058, SketchType: count 
 23 23 26454 26454 false
-[3] 15:58:22 [SUCCESS] sketch@10.42.0.4
+[3] 12:25:27 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 1, StreamRate: 22058, SketchType: count 
 23 23 26454 26454 false
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=89666
-[1] 15:58:32 [SUCCESS] sketch@10.42.0.3
+[1] 12:25:56 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 1, StreamRate: 11152, SketchType: count 
 45 45 51759 51759 false
-[2] 15:58:32 [SUCCESS] sketch@10.42.0.2
+[2] 12:25:56 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 1, StreamRate: 11152, SketchType: count 
 45 45 51759 51759 false
-[3] 15:58:32 [SUCCESS] sketch@10.42.0.4
+[3] 12:25:56 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 1, StreamRate: 11152, SketchType: count 
 45 45 51759 51759 false
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=133000
-[1] 15:58:42 [SUCCESS] sketch@10.42.0.3
+[1] 12:26:25 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 1, StreamRate: 7518, SketchType: count 
 66 67 75913 77063 true
-[2] 15:58:42 [SUCCESS] sketch@10.42.0.2
+[2] 12:26:25 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 1, StreamRate: 7518, SketchType: count 
-67 67 77063 77063 false
-[3] 15:58:42 [SUCCESS] sketch@10.42.0.4
+66 67 75913 77063 true
+[3] 12:26:25 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 1, StreamRate: 7518, SketchType: count 
-67 67 77063 77063 false
+66 67 75913 77063 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=176333
-[1] 15:58:51 [SUCCESS] sketch@10.42.0.3
+[1] 12:26:54 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 1, StreamRate: 5671, SketchType: count 
 87 88 100067 101217 true
-[2] 15:58:51 [SUCCESS] sketch@10.42.0.2
+[2] 12:26:54 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 1, StreamRate: 5671, SketchType: count 
 87 88 100067 101217 true
-[3] 15:58:51 [SUCCESS] sketch@10.42.0.4
+[3] 12:26:54 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 1, StreamRate: 5671, SketchType: count 
 87 88 100067 101217 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=219666
-[1] 15:59:01 [SUCCESS] sketch@10.42.0.3
-MergeRate: 10000, Clients: 1, StreamRate: 4552, SketchType: count 
-109 110 125371 126522 true
-[2] 15:59:01 [SUCCESS] sketch@10.42.0.2
+[1] 12:27:23 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 1, StreamRate: 4552, SketchType: count 
 108 110 124221 126522 true
-[3] 15:59:01 [SUCCESS] sketch@10.42.0.4
+[2] 12:27:23 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 1, StreamRate: 4552, SketchType: count 
-109 110 125371 126522 true
+108 110 124221 126522 true
+[3] 12:27:23 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 4552, SketchType: count 
+108 110 124221 126522 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=263000
-[1] 15:59:10 [SUCCESS] sketch@10.42.0.3
+[1] 12:27:52 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 1, StreamRate: 3802, SketchType: count 
 130 132 149526 151826 true
-[2] 15:59:10 [SUCCESS] sketch@10.42.0.4
+[2] 12:27:52 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 1, StreamRate: 3802, SketchType: count 
 130 132 149526 151826 true
-[3] 15:59:10 [SUCCESS] sketch@10.42.0.2
+[3] 12:27:52 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 1, StreamRate: 3802, SketchType: count 
 130 132 149526 151826 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=306333
-[1] 15:59:20 [SUCCESS] sketch@10.42.0.3
+[1] 12:28:21 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 1, StreamRate: 3264, SketchType: count 
 150 153 172530 175980 true
-[2] 15:59:20 [SUCCESS] sketch@10.42.0.2
+[2] 12:28:21 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 1, StreamRate: 3264, SketchType: count 
 150 153 172530 175980 true
-[3] 15:59:20 [SUCCESS] sketch@10.42.0.4
+[3] 12:28:21 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 1, StreamRate: 3264, SketchType: count 
 150 153 172530 175980 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=349666
-[1] 15:59:30 [SUCCESS] sketch@10.42.0.3
-MergeRate: 10000, Clients: 1, StreamRate: 2859, SketchType: count 
-171 175 196684 201285 true
-[2] 15:59:30 [SUCCESS] sketch@10.42.0.2
+[1] 12:28:49 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 1, StreamRate: 2859, SketchType: count 
 170 175 195534 201285 true
-[3] 15:59:30 [SUCCESS] sketch@10.42.0.4
+[2] 12:28:49 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 2859, SketchType: count 
+170 175 195534 201285 true
+[3] 12:28:49 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 1, StreamRate: 2859, SketchType: count 
 170 175 195534 201285 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=400000
-[1] 15:59:39 [SUCCESS] sketch@10.42.0.2
+[1] 12:29:18 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 1, StreamRate: 2499, SketchType: count 
-197 200 226589 230040 true
-[2] 15:59:39 [SUCCESS] sketch@10.42.0.3
+196 200 225439 230040 true
+[2] 12:29:18 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 1, StreamRate: 2499, SketchType: count 
-197 200 226589 230040 true
-[3] 15:59:39 [SUCCESS] sketch@10.42.0.4
+196 200 225439 230040 true
+[3] 12:29:18 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 1, StreamRate: 2499, SketchType: count 
 197 200 226589 230040 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=1000
-[1] 16:00:19 [SUCCESS] sketch@10.42.0.2
+[1] 12:30:17 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 10, StreamRate: 999999, SketchType: count 
 0 5 0 5751 true
-[2] 16:00:19 [SUCCESS] sketch@10.42.0.4
+[2] 12:30:17 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 10, StreamRate: 999999, SketchType: count 
 0 5 0 5751 true
-[3] 16:00:19 [SUCCESS] sketch@10.42.0.3
+[3] 12:30:17 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 10, StreamRate: 999999, SketchType: count 
 0 5 0 5751 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=45333
-[1] 16:00:29 [SUCCESS] sketch@10.42.0.2
+[1] 12:30:46 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 10, StreamRate: 22058, SketchType: count 
 230 227 264546 261095 false
-[2] 16:00:29 [SUCCESS] sketch@10.42.0.3
+[2] 12:30:46 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 10, StreamRate: 22058, SketchType: count 
 230 227 264546 261095 false
-[3] 16:00:29 [SUCCESS] sketch@10.42.0.4
+[3] 12:30:47 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 10, StreamRate: 22058, SketchType: count 
 230 227 264546 261095 false
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=89666
-[1] 16:00:39 [SUCCESS] sketch@10.42.0.2
+[1] 12:31:16 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 10, StreamRate: 11152, SketchType: count 
 450 448 517590 515289 false
-[2] 16:00:39 [SUCCESS] sketch@10.42.0.4
+[2] 12:31:16 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 10, StreamRate: 11152, SketchType: count 
 450 448 517590 515289 false
-[3] 16:00:39 [SUCCESS] sketch@10.42.0.3
+[3] 12:31:16 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 10, StreamRate: 11152, SketchType: count 
 450 448 517590 515289 false
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=133000
-[1] 16:00:49 [SUCCESS] sketch@10.42.0.2
+[1] 12:31:45 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 10, StreamRate: 7518, SketchType: count 
 660 665 759132 764883 true
-[2] 16:00:49 [SUCCESS] sketch@10.42.0.3
+[2] 12:31:45 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 10, StreamRate: 7518, SketchType: count 
 660 665 759132 764883 true
-[3] 16:00:49 [SUCCESS] sketch@10.42.0.4
+[3] 12:31:45 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 10, StreamRate: 7518, SketchType: count 
 660 665 759132 764883 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=176333
-[1] 16:00:59 [SUCCESS] sketch@10.42.0.2
+[1] 12:32:14 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 10, StreamRate: 5671, SketchType: count 
 870 882 1000674 1014476 true
-[2] 16:00:59 [SUCCESS] sketch@10.42.0.3
+[2] 12:32:14 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 10, StreamRate: 5671, SketchType: count 
 870 882 1000674 1014476 true
-[3] 16:00:59 [SUCCESS] sketch@10.42.0.4
+[3] 12:32:14 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 10, StreamRate: 5671, SketchType: count 
 870 882 1000674 1014476 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=219666
-[1] 16:01:08 [SUCCESS] sketch@10.42.0.3
+[1] 12:32:42 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 10, StreamRate: 4552, SketchType: count 
 1080 1098 1242216 1262919 true
-[2] 16:01:08 [SUCCESS] sketch@10.42.0.2
+[2] 12:32:43 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 10, StreamRate: 4552, SketchType: count 
 1090 1098 1253718 1262919 true
-[3] 16:01:08 [SUCCESS] sketch@10.42.0.4
+[3] 12:32:43 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 10, StreamRate: 4552, SketchType: count 
 1080 1098 1242216 1262919 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=263000
-[1] 16:01:18 [SUCCESS] sketch@10.42.0.2
+[1] 12:33:11 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 10, StreamRate: 3802, SketchType: count 
-1300 1315 1495260 1512513 true
-[2] 16:01:18 [SUCCESS] sketch@10.42.0.3
+1310 1315 1506762 1512513 true
+[2] 12:33:11 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 10, StreamRate: 3802, SketchType: count 
-1300 1315 1495260 1512513 true
-[3] 16:01:18 [SUCCESS] sketch@10.42.0.4
+1304 1315 1499860 1512513 true
+[3] 12:33:11 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 10, StreamRate: 3802, SketchType: count 
-1300 1315 1495260 1512513 true
+1310 1315 1506762 1512513 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=306333
-[1] 16:01:28 [SUCCESS] sketch@10.42.0.3
+[1] 12:33:40 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 3264, SketchType: count 
+1510 1532 1736802 1762106 true
+[2] 12:33:40 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 10, StreamRate: 3264, SketchType: count 
 1500 1532 1725300 1762106 true
-[2] 16:01:28 [SUCCESS] sketch@10.42.0.2
+[3] 12:33:40 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 10, StreamRate: 3264, SketchType: count 
-1500 1532 1725300 1762106 true
-[3] 16:01:28 [SUCCESS] sketch@10.42.0.4
-MergeRate: 10000, Clients: 10, StreamRate: 3264, SketchType: count 
-1500 1532 1725300 1762106 true
+1510 1532 1736802 1762106 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=349666
-[1] 16:01:37 [SUCCESS] sketch@10.42.0.2
+[1] 12:34:09 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 10, StreamRate: 2859, SketchType: count 
-1710 1749 1966842 2011699 true
-[2] 16:01:37 [SUCCESS] sketch@10.42.0.4
+1716 1749 1973743 2011699 true
+[2] 12:34:09 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 10, StreamRate: 2859, SketchType: count 
-1710 1749 1966842 2011699 true
-[3] 16:01:37 [SUCCESS] sketch@10.42.0.3
+1717 1749 1974893 2011699 true
+[3] 12:34:09 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 10, StreamRate: 2859, SketchType: count 
-1710 1749 1966842 2011699 true
+1720 1749 1978344 2011699 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=400000
-[1] 16:01:47 [SUCCESS] sketch@10.42.0.3
+[1] 12:34:38 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 10, StreamRate: 2499, SketchType: count 
 1960 2001 2254392 2301550 true
-[2] 16:01:47 [SUCCESS] sketch@10.42.0.4
+[2] 12:34:38 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 10, StreamRate: 2499, SketchType: count 
 1960 2001 2254392 2301550 true
-[3] 16:01:47 [SUCCESS] sketch@10.42.0.2
+[3] 12:34:38 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 10, StreamRate: 2499, SketchType: count 
 1960 2001 2254392 2301550 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=1000
-[1] 16:02:27 [SUCCESS] sketch@10.42.0.4
+[1] 12:35:37 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 50, StreamRate: 999999, SketchType: count 
 0 25 0 28755 true
-[2] 16:02:27 [SUCCESS] sketch@10.42.0.3
+[2] 12:35:38 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 50, StreamRate: 999999, SketchType: count 
 0 25 0 28755 true
-[3] 16:02:28 [SUCCESS] sketch@10.42.0.2
+[3] 12:35:38 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 50, StreamRate: 999999, SketchType: count 
 0 25 0 28755 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=45333
-[1] 16:02:38 [SUCCESS] sketch@10.42.0.3
+[1] 12:36:08 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 50, StreamRate: 22058, SketchType: count 
 1150 1133 1322730 1303176 false
-[2] 16:02:38 [SUCCESS] sketch@10.42.0.4
+[2] 12:36:08 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 50, StreamRate: 22058, SketchType: count 
 1150 1133 1322730 1303176 false
-[3] 16:02:38 [SUCCESS] sketch@10.42.0.2
+[3] 12:36:08 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 50, StreamRate: 22058, SketchType: count 
 1150 1133 1322730 1303176 false
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=89666
-[1] 16:02:49 [SUCCESS] sketch@10.42.0.2
+[1] 12:36:37 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 50, StreamRate: 11152, SketchType: count 
 2250 2242 2587950 2578748 false
-[2] 16:02:49 [SUCCESS] sketch@10.42.0.4
+[2] 12:36:38 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 50, StreamRate: 11152, SketchType: count 
 2250 2242 2587950 2578748 false
-[3] 16:02:49 [SUCCESS] sketch@10.42.0.3
+[3] 12:36:38 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 50, StreamRate: 11152, SketchType: count 
 2250 2242 2587950 2578748 false
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=133000
-[1] 16:02:59 [SUCCESS] sketch@10.42.0.4
+[1] 12:37:07 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 50, StreamRate: 7518, SketchType: count 
 3300 3325 3795660 3824415 true
-[2] 16:02:59 [SUCCESS] sketch@10.42.0.3
+[2] 12:37:07 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 50, StreamRate: 7518, SketchType: count 
-3304 3325 3800260 3824415 true
-[3] 16:02:59 [SUCCESS] sketch@10.42.0.2
+3300 3325 3795660 3824415 true
+[3] 12:37:08 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 50, StreamRate: 7518, SketchType: count 
 3300 3325 3795660 3824415 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=176333
-[1] 16:03:09 [SUCCESS] sketch@10.42.0.3
+[1] 12:37:37 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 50, StreamRate: 5671, SketchType: count 
 4350 4408 5003370 5070081 true
-[2] 16:03:09 [SUCCESS] sketch@10.42.0.4
+[2] 12:37:37 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 50, StreamRate: 5671, SketchType: count 
 4350 4408 5003370 5070081 true
-[3] 16:03:09 [SUCCESS] sketch@10.42.0.2
+[3] 12:37:37 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 50, StreamRate: 5671, SketchType: count 
 4350 4408 5003370 5070081 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=219666
-[1] 16:03:19 [SUCCESS] sketch@10.42.0.2
-MergeRate: 10000, Clients: 50, StreamRate: 4552, SketchType: count 
-5423 5492 6237534 6316898 true
-[2] 16:03:20 [SUCCESS] sketch@10.42.0.3
+[1] 12:38:06 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 50, StreamRate: 4552, SketchType: count 
 5400 5492 6211080 6316898 true
-[3] 16:03:20 [SUCCESS] sketch@10.42.0.4
+[2] 12:38:07 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 50, StreamRate: 4552, SketchType: count 
-5450 5492 6268590 6316898 true
+5422 5492 6236384 6316898 true
+[3] 12:38:07 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 50, StreamRate: 4552, SketchType: count 
+5425 5492 6239835 6316898 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=263000
-[1] 16:03:30 [SUCCESS] sketch@10.42.0.3
+[1] 12:38:36 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 50, StreamRate: 3802, SketchType: count 
 6500 6575 7476300 7562565 true
-[2] 16:03:30 [SUCCESS] sketch@10.42.0.4
+[2] 12:38:36 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 50, StreamRate: 3802, SketchType: count 
-6498 6575 7473999 7562565 true
-[3] 16:03:30 [SUCCESS] sketch@10.42.0.2
+6490 6575 7464798 7562565 true
+[3] 12:38:36 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 50, StreamRate: 3802, SketchType: count 
-6500 6575 7476300 7562565 true
+6461 6575 7431442 7562565 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=306333
-[1] 16:03:40 [SUCCESS] sketch@10.42.0.3
+[1] 12:39:05 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 50, StreamRate: 3264, SketchType: count 
-7500 7659 8626500 8809381 true
-[2] 16:03:40 [SUCCESS] sketch@10.42.0.4
+7528 7659 8658705 8809381 true
+[2] 12:39:05 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 50, StreamRate: 3264, SketchType: count 
-7500 7659 8626500 8809381 true
-[3] 16:03:40 [SUCCESS] sketch@10.42.0.2
+7526 7659 8656405 8809381 true
+[3] 12:39:05 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 50, StreamRate: 3264, SketchType: count 
-7500 7659 8626500 8809381 true
+7517 7659 8646053 8809381 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=349666
-[1] 16:03:51 [SUCCESS] sketch@10.42.0.2
+[1] 12:39:35 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 50, StreamRate: 2859, SketchType: count 
-8544 8744 9827308 10057348 true
-[2] 16:03:51 [SUCCESS] sketch@10.42.0.4
+8561 8744 9846862 10057348 true
+[2] 12:39:35 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 50, StreamRate: 2859, SketchType: count 
-8600 8744 9891720 10057348 true
-[3] 16:03:51 [SUCCESS] sketch@10.42.0.3
+8553 8744 9837660 10057348 true
+[3] 12:39:35 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 50, StreamRate: 2859, SketchType: count 
-8590 8744 9880218 10057348 true
+8568 8744 9854913 10057348 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=400000
-[1] 16:04:01 [SUCCESS] sketch@10.42.0.3
+[1] 12:40:04 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 50, StreamRate: 2499, SketchType: count 
-9813 10004 11286912 11506600 true
-[2] 16:04:01 [SUCCESS] sketch@10.42.0.2
+9800 10004 11271960 11506600 true
+[2] 12:40:04 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 50, StreamRate: 2499, SketchType: count 
-9758 10004 11223651 11506600 true
-[3] 16:04:01 [SUCCESS] sketch@10.42.0.4
+9767 10004 11234003 11506600 true
+[3] 12:40:04 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 50, StreamRate: 2499, SketchType: count 
-9811 10004 11284612 11506600 true
+9809 10004 11282311 11506600 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=1000
-[1] 16:04:42 [SUCCESS] sketch@10.42.0.4
+[1] 12:41:04 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 100, StreamRate: 999999, SketchType: count 
 0 50 0 57510 true
-[2] 16:04:42 [SUCCESS] sketch@10.42.0.3
+[2] 12:41:04 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 100, StreamRate: 999999, SketchType: count 
 0 50 0 57510 true
-[3] 16:04:42 [SUCCESS] sketch@10.42.0.2
+[3] 12:41:04 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 100, StreamRate: 999999, SketchType: count 
 0 50 0 57510 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=45333
-[1] 16:04:53 [SUCCESS] sketch@10.42.0.3
+[1] 12:41:34 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 100, StreamRate: 22058, SketchType: count 
 2300 2267 2645460 2607503 false
-[2] 16:04:54 [SUCCESS] sketch@10.42.0.4
+[2] 12:41:35 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 100, StreamRate: 22058, SketchType: count 
 2300 2267 2645460 2607503 false
-[3] 16:04:54 [SUCCESS] sketch@10.42.0.2
+[3] 12:41:35 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 100, StreamRate: 22058, SketchType: count 
 2300 2267 2645460 2607503 false
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=89666
-[1] 16:05:05 [SUCCESS] sketch@10.42.0.3
+[1] 12:42:05 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 100, StreamRate: 11152, SketchType: count 
 4500 4484 5175900 5157496 false
-[2] 16:05:06 [SUCCESS] sketch@10.42.0.2
+[2] 12:42:05 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 100, StreamRate: 11152, SketchType: count 
 4500 4484 5175900 5157496 false
-[3] 16:05:06 [SUCCESS] sketch@10.42.0.4
+[3] 12:42:06 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 100, StreamRate: 11152, SketchType: count 
 4500 4484 5175900 5157496 false
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=133000
-[1] 16:05:16 [SUCCESS] sketch@10.42.0.4
+[1] 12:42:36 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 100, StreamRate: 7518, SketchType: count 
 6600 6651 7591320 7649980 true
-[2] 16:05:17 [SUCCESS] sketch@10.42.0.3
+[2] 12:42:36 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 100, StreamRate: 7518, SketchType: count 
-6600 6651 7591320 7649980 true
-[3] 16:05:17 [SUCCESS] sketch@10.42.0.2
+6603 6651 7594770 7649980 true
+[3] 12:42:36 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 100, StreamRate: 7518, SketchType: count 
 6600 6651 7591320 7649980 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=176333
-[1] 16:05:28 [SUCCESS] sketch@10.42.0.4
+[1] 12:43:06 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 100, StreamRate: 5671, SketchType: count 
+8703 8817 10010190 10141313 true
+[2] 12:43:06 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 100, StreamRate: 5671, SketchType: count 
 8700 8817 10006740 10141313 true
-[2] 16:05:28 [SUCCESS] sketch@10.42.0.2
-MergeRate: 10000, Clients: 100, StreamRate: 5671, SketchType: count 
-8686 8817 9990637 10141313 true
-[3] 16:05:28 [SUCCESS] sketch@10.42.0.3
+[3] 12:43:06 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 100, StreamRate: 5671, SketchType: count 
 8700 8817 10006740 10141313 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=219666
-[1] 16:05:39 [SUCCESS] sketch@10.42.0.2
+[1] 12:43:36 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 100, StreamRate: 4552, SketchType: count 
-10763 10984 12379602 12633796 true
-[2] 16:05:39 [SUCCESS] sketch@10.42.0.4
+10831 10984 12457816 12633796 true
+[2] 12:43:36 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 100, StreamRate: 4552, SketchType: count 
-10819 10984 12444013 12633796 true
-[3] 16:05:39 [SUCCESS] sketch@10.42.0.3
+10823 10984 12448614 12633796 true
+[3] 12:43:36 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 100, StreamRate: 4552, SketchType: count 
-10812 10984 12435962 12633796 true
+10818 10984 12442863 12633796 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=263000
-[1] 16:05:50 [SUCCESS] sketch@10.42.0.3
+[1] 12:44:06 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 100, StreamRate: 3802, SketchType: count 
-13038 13151 14996307 15126280 true
-[2] 16:05:50 [SUCCESS] sketch@10.42.0.4
+12998 13151 14950299 15126280 true
+[2] 12:44:07 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 100, StreamRate: 3802, SketchType: count 
 13000 13151 14952600 15126280 true
-[3] 16:05:50 [SUCCESS] sketch@10.42.0.2
+[3] 12:44:07 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 100, StreamRate: 3802, SketchType: count 
-13058 13151 15019311 15126280 true
+13007 13151 14960651 15126280 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=306333
-[1] 16:06:01 [SUCCESS] sketch@10.42.0.3
+[1] 12:44:37 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 100, StreamRate: 3264, SketchType: count 
-15077 15319 17341565 17619913 true
-[2] 16:06:01 [SUCCESS] sketch@10.42.0.2
+15100 15319 17368020 17619913 true
+[2] 12:44:37 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 100, StreamRate: 3264, SketchType: count 
-15062 15319 17324312 17619913 true
-[3] 16:06:01 [SUCCESS] sketch@10.42.0.4
+15119 15319 17389873 17619913 true
+[3] 12:44:37 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 100, StreamRate: 3264, SketchType: count 
-15036 15319 17294407 17619913 true
+15135 15319 17408277 17619913 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=349666
-[1] 16:06:11 [SUCCESS] sketch@10.42.0.2
+[1] 12:45:07 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 100, StreamRate: 2859, SketchType: count 
-17062 17489 19624712 20115847 true
-[2] 16:06:11 [SUCCESS] sketch@10.42.0.4
+17265 17489 19858203 20115847 true
+[2] 12:45:07 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 100, StreamRate: 2859, SketchType: count 
-17121 17489 19692574 20115847 true
-[3] 16:06:12 [SUCCESS] sketch@10.42.0.3
+17194 17489 19776538 20115847 true
+[3] 12:45:08 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 100, StreamRate: 2859, SketchType: count 
-17192 17489 19774238 20115847 true
+17226 17489 19813345 20115847 true
 ----------------------------------------
 
 {}
 Running count with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=400000
-[1] 16:06:22 [SUCCESS] sketch@10.42.0.4
+[1] 12:45:38 [SUCCESS] sketch@10.42.0.2
 MergeRate: 10000, Clients: 100, StreamRate: 2499, SketchType: count 
-19351 20008 22257520 23013201 true
-[2] 16:06:22 [SUCCESS] sketch@10.42.0.2
+19611 20008 22556572 23013201 true
+[2] 12:45:38 [SUCCESS] sketch@10.42.0.4
 MergeRate: 10000, Clients: 100, StreamRate: 2499, SketchType: count 
-19652 20008 22603730 23013201 true
-[3] 16:06:23 [SUCCESS] sketch@10.42.0.3
+19567 20008 22505963 23013201 true
+[3] 12:45:38 [SUCCESS] sketch@10.42.0.3
 MergeRate: 10000, Clients: 100, StreamRate: 2499, SketchType: count 
-19773 20008 22742904 23013201 true
+19604 20008 22548520 23013201 true
 ----------------------------------------
 
 {}

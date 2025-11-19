@@ -4,9 +4,10 @@
 SKETCH_TYPE="badCount"
 
 # Values to test
-MERGE_RATES=(1000 10000)
-CLIENT_AMOUNTS=(1 10 50 100)
-STREAM_RATES=(1000 45333 89666 133000 176333 219666 263000 306333 )
+MERGE_RATES=( 1000 10000)
+CLIENT_AMOUNTS=(100)
+STREAM_RATES=(1000 45333 89666 133000 176333 219666 263000 306333 349666 400000)
+# 
 # Removed do to memory: 349666 400000
 
 
@@ -27,7 +28,7 @@ for MERGE_RATE in "${MERGE_RATES[@]}"; do
       echo "----------------------------------------"
       echo
       grpcurl -plaintext -d '{"numMsg": 1}' -proto ../../proto/sketch.proto localhost:8080 proto.Sketcher/RestartServer
-      sleep 1
+      sleep 20
     done
   done
 done

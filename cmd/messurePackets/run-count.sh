@@ -25,7 +25,7 @@ for MERGE_RATE in "${MERGE_RATES[@]}"; do
       echo "----------------------------------------"
       echo
       grpcurl -plaintext -d '{"numMsg": 1}' -proto ../../proto/sketch.proto localhost:8080 proto.Sketcher/RestartServer
-      sleep 1
+      sleep 20
     done
   done
 done

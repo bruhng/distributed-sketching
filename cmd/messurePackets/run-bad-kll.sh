@@ -4,9 +4,10 @@
 SKETCH_TYPE="badKll"
 
 # Values to test
-MERGE_RATES=(1000 10000)
-CLIENT_AMOUNTS=(1 10 50 100)
-STREAM_RATES=(1000 3334222 6667444 10000666 13333888 16667110 20000332 23333554 26666776 30000000)
+MERGE_RATES=( 10000)
+# CLIENT_AMOUNTS=( 10 50 100)
+CLIENT_AMOUNTS=(100)
+STREAM_RATES=(500667 667223 833778 1000334 1166889 1333445 1500000)
 
 
 # Host list
@@ -26,7 +27,7 @@ for MERGE_RATE in "${MERGE_RATES[@]}"; do
       echo "----------------------------------------"
       echo
       grpcurl -plaintext -d '{"numMsg": 1}' -proto ../../proto/sketch.proto localhost:8080 proto.Sketcher/RestartServer
-      sleep 1
+      sleep 20
     done
   done
 done

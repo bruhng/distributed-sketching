@@ -1,25 +1,971 @@
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=1000
+[1] 09:55:08 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 10, StreamRate: 999999, SketchType: kll 
+50 50 10030 10030 false
+[2] 09:55:08 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 10, StreamRate: 999999, SketchType: kll 
+50 50 10140 10140 false
+[3] 09:55:08 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 10, StreamRate: 999999, SketchType: kll 
+50 50 10140 10140 false
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=167556
+[1] 09:55:19 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 10, StreamRate: 5968, SketchType: kll 
+7690 8378 1559532 1699058 true
+[2] 09:55:19 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 10, StreamRate: 5968, SketchType: kll 
+7678 8378 1540206 1680626 true
+[3] 09:55:19 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 10, StreamRate: 5968, SketchType: kll 
+7701 8378 3001849 3265744 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=334112
+[1] 09:55:31 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 10, StreamRate: 2993, SketchType: kll 
+14716 16706 2952029 3351223 true
+[2] 09:55:31 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 10, StreamRate: 2993, SketchType: kll 
+14719 16706 2985013 3387976 true
+[3] 09:55:31 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 10, StreamRate: 2993, SketchType: kll 
+14702 16706 2981565 3387976 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=500667
+[1] 09:55:42 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 10, StreamRate: 1997, SketchType: kll 
+20174 25038 4046904 5022622 true
+[2] 09:55:42 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 10, StreamRate: 1997, SketchType: kll 
+20237 25038 4059542 5022622 true
+[3] 09:55:43 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 10, StreamRate: 1997, SketchType: kll 
+20181 25038 4092706 5077706 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=667223
+[1] 09:55:54 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 10, StreamRate: 1498, SketchType: kll 
+26333 33378 5340332 6769058 true
+[2] 09:55:54 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 10, StreamRate: 1498, SketchType: kll 
+26275 33378 10877850 13818492 true
+[3] 09:55:54 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 10, StreamRate: 1498, SketchType: kll 
+26218 33378 5317010 6769058 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=833778
+[1] 09:56:06 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 10, StreamRate: 1199, SketchType: kll 
+32602 41701 6539961 8365220 true
+[2] 09:56:06 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 10, StreamRate: 1199, SketchType: kll 
+32952 41701 12917184 16346792 true
+[3] 09:56:06 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 10, StreamRate: 1199, SketchType: kll 
+32679 41701 6627301 8456962 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=1000334
+[1] 09:56:17 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 10, StreamRate: 999, SketchType: kll 
+37933 50050 15787714 20830810 true
+[2] 09:56:17 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 10, StreamRate: 999, SketchType: kll 
+38112 50050 7645267 10040030 true
+[3] 09:56:17 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 10, StreamRate: 999, SketchType: kll 
+37982 50050 7702749 10150140 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=1166889
+[1] 09:56:29 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 10, StreamRate: 856, SketchType: kll 
+43753 58411 16958662 22640103 true
+[2] 09:56:29 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 10, StreamRate: 856, SketchType: kll 
+39416 58411 7993564 11845750 true
+[3] 09:56:29 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 10, StreamRate: 856, SketchType: kll 
+43883 58411 8802929 11717246 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=1333445
+[1] 09:56:40 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 10, StreamRate: 749, SketchType: kll 
+49497 66756 20600651 27783847 true
+[2] 09:56:40 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 10, StreamRate: 749, SketchType: kll 
+49324 66756 19443520 26315215 true
+[3] 09:56:40 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 10, StreamRate: 749, SketchType: kll 
+49468 66756 9923280 13391253 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=10, STREAM_RATE=1500000
+[1] 09:56:52 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 10, StreamRate: 666, SketchType: kll 
+55343 75075 11223560 15225210 true
+[2] 09:56:52 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 10, StreamRate: 666, SketchType: kll 
+55329 75075 11098997 15060045 true
+[3] 09:56:52 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 10, StreamRate: 666, SketchType: kll 
+55274 75075 11087964 15060045 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=1000
+[1] 09:57:07 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 50, StreamRate: 999999, SketchType: kll 
+250 250 50150 50150 false
+[2] 09:57:07 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 50, StreamRate: 999999, SketchType: kll 
+250 250 50150 50150 false
+[3] 09:57:07 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 50, StreamRate: 999999, SketchType: kll 
+250 250 103500 103500 false
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=167556
+[1] 09:57:20 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 50, StreamRate: 5968, SketchType: kll 
+40066 41890 8037239 8403134 true
+[2] 09:57:20 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 50, StreamRate: 5968, SketchType: kll 
+40283 41890 16677162 17342460 true
+[3] 09:57:20 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 50, StreamRate: 5968, SketchType: kll 
+40154 41890 16535417 17250302 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=334112
+[1] 09:57:32 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 50, StreamRate: 2993, SketchType: kll 
+62606 83528 24403818 32559214 true
+[2] 09:57:32 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 50, StreamRate: 2993, SketchType: kll 
+62878 83528 12751658 16939478 true
+[3] 09:57:32 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 50, StreamRate: 2993, SketchType: kll 
+63368 83528 12711620 16755716 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=500667
+[1] 09:57:44 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 50, StreamRate: 1997, SketchType: kll 
+50510 125188 10243428 25388126 true
+[2] 09:57:44 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 50, StreamRate: 1997, SketchType: kll 
+28637 125188 11162702 41666666 true
+[3] 09:57:44 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 50, StreamRate: 1997, SketchType: kll 
+35820 125188 14041440 41666666 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=667223
+[1] 09:57:56 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 50, StreamRate: 1498, SketchType: kll 
+29609 166889 12323265 41666666 true
+[2] 09:57:56 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 50, StreamRate: 1498, SketchType: kll 
+50700 166889 10170420 33477933 true
+[3] 09:57:56 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 50, StreamRate: 1498, SketchType: kll 
+19480 166889 8021864 41666666 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=833778
+[1] 09:58:08 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 50, StreamRate: 1199, SketchType: kll 
+61663 208507 12369597 41666666 true
+[2] 09:58:08 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 50, StreamRate: 1199, SketchType: kll 
+72307 208507 14663859 41666666 true
+[3] 09:58:08 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 50, StreamRate: 1199, SketchType: kll 
+62628 208507 12563176 41666666 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=1000334
+[1] 09:58:20 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 50, StreamRate: 999, SketchType: kll 
+70199 250250 14236357 41666666 true
+[2] 09:58:20 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 50, StreamRate: 999, SketchType: kll 
+74759 250250 14996655 41666666 true
+[3] 09:58:21 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 50, StreamRate: 999, SketchType: kll 
+14978 250250 6167940 41666666 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=1166889
+[1] 09:58:33 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 50, StreamRate: 856, SketchType: kll 
+69201 292056 13881720 41666666 true
+[2] 09:58:33 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 50, StreamRate: 856, SketchType: kll 
+76578 292056 15530018 41666666 true
+[3] 09:58:33 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 50, StreamRate: 856, SketchType: kll 
+15306 292056 6336684 41666666 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=1333445
+[1] 09:58:45 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 50, StreamRate: 749, SketchType: kll 
+80990 333778 16424772 41666666 true
+[2] 09:58:45 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 50, StreamRate: 749, SketchType: kll 
+36715 333778 7445802 41666666 true
+[3] 09:58:46 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 50, StreamRate: 749, SketchType: kll 
+57256 333778 11611516 41666666 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=50, STREAM_RATE=1500000
+[1] 09:58:58 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 50, StreamRate: 666, SketchType: kll 
+85831 375375 17217698 41666666 true
+[2] 09:58:58 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 50, StreamRate: 666, SketchType: kll 
+91768 375375 18408660 41666666 true
+[3] 09:58:58 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 50, StreamRate: 666, SketchType: kll 
+2114 375375 875196 41666666 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=1000
+[1] 09:59:14 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 100, StreamRate: 999999, SketchType: kll 
+500 500 207000 207000 false
+[2] 09:59:15 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 100, StreamRate: 999999, SketchType: kll 
+500 500 101400 101400 false
+[3] 09:59:15 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 100, StreamRate: 999999, SketchType: kll 
+500 500 102500 102500 false
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=167556
+[1] 09:59:27 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 100, StreamRate: 5968, SketchType: kll 
+78416 83780 15730249 16806268 true
+[2] 09:59:28 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 100, StreamRate: 5968, SketchType: kll 
+78123 83780 15843344 16990584 true
+[3] 09:59:28 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 100, StreamRate: 5968, SketchType: kll 
+78819 83780 15811091 16806268 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=334112
+[1] 09:59:41 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 100, StreamRate: 2993, SketchType: kll 
+54454 167056 10803673 33143910 true
+[2] 09:59:41 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 100, StreamRate: 2993, SketchType: kll 
+50407 167056 10222539 33878956 true
+[3] 09:59:41 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 100, StreamRate: 2993, SketchType: kll 
+63840 167056 12806304 33511433 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=500667
+[1] 09:59:54 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 100, StreamRate: 1997, SketchType: kll 
+56443 250376 11446640 41666666 true
+[2] 09:59:54 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 100, StreamRate: 1997, SketchType: kll 
+62687 250376 12575012 41666666 true
+[3] 09:59:54 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 100, StreamRate: 1997, SketchType: kll 
+59779 250376 12123181 41666666 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=667223
+[1] 10:00:07 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 100, StreamRate: 1498, SketchType: kll 
+85226 333778 17096335 41666666 true
+[2] 10:00:07 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 100, StreamRate: 1498, SketchType: kll 
+70501 333778 14297602 41666666 true
+[3] 10:00:08 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 100, StreamRate: 1498, SketchType: kll 
+58945 333778 11824367 41666666 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=833778
+[1] 10:00:21 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 100, StreamRate: 1199, SketchType: kll 
+55370 417014 11107222 41666666 true
+[2] 10:00:21 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 100, StreamRate: 1199, SketchType: kll 
+74827 417014 15010296 41666666 true
+[3] 10:00:22 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 100, StreamRate: 1199, SketchType: kll 
+55099 417014 11174077 41666666 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=1000334
+[1] 10:00:34 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 100, StreamRate: 999, SketchType: kll 
+47491 500501 9631174 41666666 true
+[2] 10:00:35 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 100, StreamRate: 999, SketchType: kll 
+82450 500501 16539470 41666666 true
+[3] 10:00:35 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 100, StreamRate: 999, SketchType: kll 
+56099 500501 11376877 41666666 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=1166889
+[1] 10:00:48 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 100, StreamRate: 856, SketchType: kll 
+33109 584112 6641665 41666666 true
+[2] 10:00:48 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 100, StreamRate: 856, SketchType: kll 
+33906 584112 6876136 41666666 true
+[3] 10:00:48 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 100, StreamRate: 856, SketchType: kll 
+40887 584112 8201932 41666666 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=1333445
+[1] 10:01:00 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 100, StreamRate: 749, SketchType: kll 
+29669 667557 5951601 41666666 true
+[2] 10:01:00 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 100, StreamRate: 749, SketchType: kll 
+15275 667557 5954195 41666666 true
+[3] 10:01:01 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 100, StreamRate: 749, SketchType: kll 
+20053 667557 4066748 41666666 true
+----------------------------------------
+
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=100, STREAM_RATE=1500000
+[1] 10:01:13 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 100, StreamRate: 666, SketchType: kll 
+33973 750751 6814983 41666666 true
+[2] 10:01:13 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 100, StreamRate: 666, SketchType: kll 
+26979 750751 5471341 41666666 true
+[3] 10:01:14 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 100, StreamRate: 666, SketchType: kll 
+40668 750751 8247470 41666666 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=1000
+[1] 10:01:55 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 999999, SketchType: kll 
+0 1 0 285 true
+[2] 10:01:55 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 999999, SketchType: kll 
+0 1 0 248 true
+[3] 10:01:55 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 999999, SketchType: kll 
+0 1 0 246 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=167556
+[1] 10:02:07 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 5968, SketchType: kll 
+83 84 22791 23066 true
+[2] 10:02:07 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 5968, SketchType: kll 
+83 84 20783 21033 true
+[3] 10:02:07 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 5968, SketchType: kll 
+83 84 22061 22327 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=334112
+[1] 10:02:18 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 2993, SketchType: kll 
+164 167 42508 43286 true
+[2] 10:02:18 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 2993, SketchType: kll 
+164 167 51200 52137 true
+[3] 10:02:18 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 2993, SketchType: kll 
+164 167 43230 44021 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=500667
+[1] 10:02:30 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 1997, SketchType: kll 
+244 250 62708 64250 true
+[2] 10:02:30 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 1997, SketchType: kll 
+244 250 62171 63700 true
+[3] 10:02:30 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 1997, SketchType: kll 
+245 250 64043 65350 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=667223
+[1] 10:02:42 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 1498, SketchType: kll 
+322 334 97630 101268 true
+[2] 10:02:42 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 1498, SketchType: kll 
+323 334 83721 86572 true
+[3] 10:02:42 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 1498, SketchType: kll 
+322 334 84170 87307 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=833778
+[1] 10:02:53 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 1199, SketchType: kll 
+402 417 116580 120930 true
+[2] 10:02:53 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 1199, SketchType: kll 
+402 417 114811 119095 true
+[3] 10:02:53 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 1199, SketchType: kll 
+402 417 98007 101664 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=1000334
+[1] 10:03:05 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 999, SketchType: kll 
+483 501 128381 133165 true
+[2] 10:03:05 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 999, SketchType: kll 
+483 501 139007 144187 true
+[3] 10:03:05 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 999, SketchType: kll 
+483 501 142291 147594 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=1166889
+[1] 10:03:16 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 856, SketchType: kll 
+541 584 137846 148803 true
+[2] 10:03:16 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 856, SketchType: kll 
+541 584 154617 166907 true
+[3] 10:03:16 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 856, SketchType: kll 
+541 584 158080 170644 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=1333445
+[1] 10:03:28 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 749, SketchType: kll 
+613 668 158889 173145 true
+[2] 10:03:28 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 749, SketchType: kll 
+612 668 154591 168736 true
+[3] 10:03:28 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 749, SketchType: kll 
+612 668 166708 181963 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=1, STREAM_RATE=1500000
+[1] 10:03:39 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 1, StreamRate: 666, SketchType: kll 
+676 751 169270 188050 true
+[2] 10:03:39 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 1, StreamRate: 666, SketchType: kll 
+676 751 176706 196311 true
+[3] 10:03:39 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 1, StreamRate: 666, SketchType: kll 
+677 751 175478 194659 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=1000
+[1] 10:04:21 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 999999, SketchType: kll 
+0 5 0 1527 true
+[2] 10:04:21 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 999999, SketchType: kll 
+0 5 0 1285 true
+[3] 10:04:21 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 999999, SketchType: kll 
+0 5 0 1427 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=167556
+[1] 10:04:33 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 5968, SketchType: kll 
+830 838 206006 207991 true
+[2] 10:04:33 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 5968, SketchType: kll 
+830 838 264438 266986 true
+[3] 10:04:33 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 5968, SketchType: kll 
+830 838 227918 230114 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=334112
+[1] 10:04:44 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 2993, SketchType: kll 
+1640 1671 439848 448162 true
+[2] 10:04:44 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 2993, SketchType: kll 
+1640 1671 483144 492276 true
+[3] 10:04:44 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 2993, SketchType: kll 
+1640 1671 471992 480913 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=500667
+[1] 10:04:56 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 1997, SketchType: kll 
+2440 2504 680760 698616 true
+[2] 10:04:56 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 1997, SketchType: kll 
+2440 2504 788608 809292 true
+[3] 10:04:56 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 1997, SketchType: kll 
+2440 2504 718824 737678 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=667223
+[1] 10:05:08 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 1498, SketchType: kll 
+3210 3338 838452 871885 true
+[2] 10:05:08 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 1498, SketchType: kll 
+3220 3338 833980 864542 true
+[3] 10:05:08 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 1498, SketchType: kll 
+3220 3338 927360 961344 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=833778
+[1] 10:05:19 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 1199, SketchType: kll 
+4004 4170 1214012 1264344 true
+[2] 10:05:19 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 1199, SketchType: kll 
+4000 4170 1028000 1071690 true
+[3] 10:05:19 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 1199, SketchType: kll 
+3980 4170 1110420 1163430 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=1000334
+[1] 10:05:31 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 999, SketchType: kll 
+4740 5005 1103472 1165164 true
+[2] 10:05:31 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 999, SketchType: kll 
+4740 5005 1259892 1330329 true
+[3] 10:05:31 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 999, SketchType: kll 
+4750 5005 1220750 1286285 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=1166889
+[1] 10:05:42 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 856, SketchType: kll 
+5450 5841 1520550 1629639 true
+[2] 10:05:43 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 856, SketchType: kll 
+5440 5841 1338240 1436886 true
+[3] 10:05:43 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 856, SketchType: kll 
+5463 5841 1584270 1693890 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=1333445
+[1] 10:05:54 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 749, SketchType: kll 
+6180 6676 1697028 1833229 true
+[2] 10:05:54 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 749, SketchType: kll 
+6180 6676 1695792 1831894 true
+[3] 10:05:54 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 749, SketchType: kll 
+6180 6676 2009736 2171035 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=10, STREAM_RATE=1500000
+[1] 10:06:06 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 10, StreamRate: 666, SketchType: kll 
+6872 7508 2007998 2193837 true
+[2] 10:06:06 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 10, StreamRate: 666, SketchType: kll 
+6860 7508 1868664 2045179 true
+[3] 10:06:06 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 10, StreamRate: 666, SketchType: kll 
+6880 7508 1843840 2012144 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=1000
+[1] 10:06:48 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 999999, SketchType: kll 
+0 25 0 6810 true
+[2] 10:06:48 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 50, StreamRate: 999999, SketchType: kll 
+0 25 0 6315 true
+[3] 10:06:48 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 50, StreamRate: 999999, SketchType: kll 
+0 25 0 6315 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=167556
+[1] 10:07:00 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 5968, SketchType: kll 
+4150 4189 975250 984415 true
+[2] 10:07:00 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 50, StreamRate: 5968, SketchType: kll 
+4150 4189 1323020 1335453 true
+[3] 10:07:00 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 50, StreamRate: 5968, SketchType: kll 
+4150 4189 1084810 1095004 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=334112
+[1] 10:07:13 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 50, StreamRate: 2993, SketchType: kll 
+8200 8353 1963080 1999708 true
+[2] 10:07:13 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 2993, SketchType: kll 
+8200 8353 2289440 2332157 true
+[3] 10:07:13 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 50, StreamRate: 2993, SketchType: kll 
+8200 8353 2414080 2459123 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=500667
+[1] 10:07:25 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 1997, SketchType: kll 
+12150 12519 3336390 3437717 true
+[2] 10:07:25 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 50, StreamRate: 1997, SketchType: kll 
+12200 12519 3916200 4018599 true
+[3] 10:07:25 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 50, StreamRate: 1997, SketchType: kll 
+12152 12519 3553244 3660555 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=667223
+[1] 10:07:37 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 1498, SketchType: kll 
+16089 16689 5093777 5283737 true
+[2] 10:07:37 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 50, StreamRate: 1498, SketchType: kll 
+16100 16689 4066860 4215641 true
+[3] 10:07:38 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 50, StreamRate: 1498, SketchType: kll 
+16050 16689 4333500 4506030 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=833778
+[1] 10:07:50 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 1199, SketchType: kll 
+19933 20851 5872261 6142704 true
+[2] 10:07:50 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 50, StreamRate: 1199, SketchType: kll 
+19950 20851 5522160 5771556 true
+[3] 10:07:50 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 50, StreamRate: 1199, SketchType: kll 
+19950 20851 5171040 5404579 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=1000334
+[1] 10:08:02 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 999, SketchType: kll 
+23750 25025 6469500 6816810 true
+[2] 10:08:02 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 50, StreamRate: 999, SketchType: kll 
+23725 25025 7041580 7427420 true
+[3] 10:08:02 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 50, StreamRate: 999, SketchType: kll 
+23750 25025 7514500 7917910 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=1166889
+[1] 10:08:14 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 856, SketchType: kll 
+27523 29206 7436714 7891461 true
+[2] 10:08:14 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 50, StreamRate: 856, SketchType: kll 
+27474 29206 6637718 7056169 true
+[3] 10:08:15 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 50, StreamRate: 856, SketchType: kll 
+27439 29206 7902432 8411328 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=1333445
+[1] 10:08:27 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 50, StreamRate: 749, SketchType: kll 
+31250 33378 8100000 8651577 true
+[2] 10:08:27 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 749, SketchType: kll 
+31292 33378 9012096 9612864 true
+[3] 10:08:27 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 50, StreamRate: 749, SketchType: kll 
+31353 33378 8402604 8945304 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=50, STREAM_RATE=1500000
+[1] 10:08:39 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 50, StreamRate: 666, SketchType: kll 
+35006 37538 10074726 10803436 true
+[2] 10:08:39 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 50, StreamRate: 666, SketchType: kll 
+35057 37538 9549526 10225351 true
+[3] 10:08:39 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 50, StreamRate: 666, SketchType: kll 
+35134 37538 8874848 9482098 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=1000
+[1] 10:09:22 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 100, StreamRate: 999999, SketchType: kll 
+0 50 0 13400 true
+[2] 10:09:22 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 100, StreamRate: 999999, SketchType: kll 
+0 50 0 14950 true
+[3] 10:09:23 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 100, StreamRate: 999999, SketchType: kll 
+0 50 0 13630 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=167556
+[1] 10:09:35 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 100, StreamRate: 5968, SketchType: kll 
+8300 8378 2206140 2226872 true
+[2] 10:09:35 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 100, StreamRate: 5968, SketchType: kll 
+8300 8378 2279180 2300598 true
+[3] 10:09:35 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 100, StreamRate: 5968, SketchType: kll 
+8300 8378 2279180 2300598 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=334112
+[1] 10:09:48 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 100, StreamRate: 2993, SketchType: kll 
+16400 16706 4936400 5028506 true
+[2] 10:09:48 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 100, StreamRate: 2993, SketchType: kll 
+16400 16706 4395200 4477208 true
+[3] 10:09:49 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 100, StreamRate: 2993, SketchType: kll 
+16400 16706 5084000 5178860 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=500667
+[1] 10:10:01 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 100, StreamRate: 1997, SketchType: kll 
+24473 25038 7204851 7371187 true
+[2] 10:10:01 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 100, StreamRate: 1997, SketchType: kll 
+24351 25038 6151062 6324598 true
+[3] 10:10:02 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 100, StreamRate: 1997, SketchType: kll 
+24401 25038 6217374 6379682 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=667223
+[1] 10:10:15 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 100, StreamRate: 1498, SketchType: kll 
+32300 33378 9295940 9606188 true
+[2] 10:10:15 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 100, StreamRate: 1498, SketchType: kll 
+32411 33378 9548280 9833158 true
+[3] 10:10:15 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 100, StreamRate: 1498, SketchType: kll 
+32300 33378 8158980 8431282 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=833778
+[1] 10:10:28 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 100, StreamRate: 1199, SketchType: kll 
+40537 41701 10061283 10350188 true
+[2] 10:10:28 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 100, StreamRate: 1199, SketchType: kll 
+40809 41701 12471230 12743825 true
+[3] 10:10:28 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 100, StreamRate: 1199, SketchType: kll 
+40834 41701 11662190 11909805 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=1000334
+[1] 10:10:41 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 100, StreamRate: 999, SketchType: kll 
+48529 50050 12792244 13193180 true
+[2] 10:10:41 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 100, StreamRate: 999, SketchType: kll 
+48706 50050 13053208 13413400 true
+[3] 10:10:41 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 100, StreamRate: 999, SketchType: kll 
+48702 50050 14454753 14854840 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=1166889
+[1] 10:10:54 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 100, StreamRate: 856, SketchType: kll 
+55448 58411 16456966 17336384 true
+[2] 10:10:54 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 100, StreamRate: 856, SketchType: kll 
+56774 58411 16839168 17324702 true
+[3] 10:10:54 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 100, StreamRate: 856, SketchType: kll 
+56814 58411 17362358 17850401 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=1333445
+[1] 10:11:07 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 100, StreamRate: 749, SketchType: kll 
+63983 66756 18132782 18918650 true
+[2] 10:11:07 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 100, StreamRate: 749, SketchType: kll 
+63947 66756 17406373 18170983 true
+[3] 10:11:08 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 100, StreamRate: 749, SketchType: kll 
+63941 66756 18120879 18918650 true
+----------------------------------------
+
+Running kll with MERGE_RATE=10000, CLIENT_AMOUNT=100, STREAM_RATE=1500000
+[1] 10:11:20 [SUCCESS] sketch@10.42.0.2
+MergeRate: 10000, Clients: 100, StreamRate: 666, SketchType: kll 
+66759 75075 19360110 21771750 true
+[2] 10:11:20 [SUCCESS] sketch@10.42.0.4
+MergeRate: 10000, Clients: 100, StreamRate: 666, SketchType: kll 
+68556 75075 18373008 20120100 true
+[3] 10:11:21 [SUCCESS] sketch@10.42.0.3
+MergeRate: 10000, Clients: 100, StreamRate: 666, SketchType: kll 
+72116 75075 21086718 21951930 true
+----------------------------------------
+
 Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=1000
-[1] 09:43:29 [SUCCESS] sketch@10.42.0.2
+[1] 13:16:24 [SUCCESS] sketch@10.42.0.2
 MergeRate: 1000, Clients: 1, StreamRate: 999999, SketchType: kll 
 5 5 1003 1003 false
-[2] 09:43:29 [SUCCESS] sketch@10.42.0.3
+[2] 13:16:24 [SUCCESS] sketch@10.42.0.3
 MergeRate: 1000, Clients: 1, StreamRate: 999999, SketchType: kll 
-5 5 1949 1949 false
-[3] 09:43:29 [SUCCESS] sketch@10.42.0.4
+5 5 1014 1014 false
+[3] 13:16:24 [SUCCESS] sketch@10.42.0.4
 MergeRate: 1000, Clients: 1, StreamRate: 999999, SketchType: kll 
 5 5 1003 1003 false
 ----------------------------------------
 
-Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=300000
-[1] 09:43:40 [SUCCESS] sketch@10.42.0.2
-MergeRate: 1000, Clients: 1, StreamRate: 3333, SketchType: kll 
-1277 1500 531487 624300 true
-[2] 09:43:40 [SUCCESS] sketch@10.42.0.3
-MergeRate: 1000, Clients: 1, StreamRate: 3333, SketchType: kll 
-1277 1500 258975 304200 true
-[3] 09:43:40 [SUCCESS] sketch@10.42.0.4
-MergeRate: 1000, Clients: 1, StreamRate: 3333, SketchType: kll 
-1277 1500 256166 300900 true
+{}
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=167556
+[1] 13:16:52 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 1, StreamRate: 5968, SketchType: kll 
+804 838 161282 168102 true
+[2] 13:16:52 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 1, StreamRate: 5968, SketchType: kll 
+803 838 162848 169946 true
+[3] 13:16:52 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 1, StreamRate: 5968, SketchType: kll 
+803 838 332442 346932 true
 ----------------------------------------
 
-Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=600000
+{}
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=334112
+[1] 13:17:21 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 1, StreamRate: 2993, SketchType: kll 
+1501 1671 301100 335202 true
+[2] 13:17:21 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 1, StreamRate: 2993, SketchType: kll 
+1500 1671 621000 691794 true
+[3] 13:17:21 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 1, StreamRate: 2993, SketchType: kll 
+1499 1671 303997 338878 true
+----------------------------------------
+
+{}
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=500667
+[1] 13:17:50 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 1, StreamRate: 1997, SketchType: kll 
+1875 2504 380250 507811 true
+[2] 13:17:50 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 1, StreamRate: 1997, SketchType: kll 
+1876 2504 376325 502302 true
+[3] 13:17:50 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 1, StreamRate: 1997, SketchType: kll 
+1881 2504 737352 981568 true
+----------------------------------------
+
+{}
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=667223
+[1] 13:18:18 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 1, StreamRate: 1498, SketchType: kll 
+2605 3338 522563 669602 true
+[2] 13:18:18 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 1, StreamRate: 1498, SketchType: kll 
+2600 3338 521560 669602 true
+[3] 13:18:19 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 1, StreamRate: 1498, SketchType: kll 
+2604 3338 528091 676946 true
+----------------------------------------
+
+{}
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=833778
+[1] 13:18:47 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 1, StreamRate: 1199, SketchType: kll 
+3443 4170 698240 845676 true
+[2] 13:18:47 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 1, StreamRate: 1199, SketchType: kll 
+3444 4170 1350048 1634640 true
+[3] 13:18:47 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 1, StreamRate: 1199, SketchType: kll 
+3440 4170 690064 836502 true
+----------------------------------------
+
+{}
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=1000334
+[1] 13:19:16 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 1, StreamRate: 999, SketchType: kll 
+3772 5005 756663 1004003 true
+[2] 13:19:16 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 1, StreamRate: 999, SketchType: kll 
+3772 5005 756663 1004003 true
+[3] 13:19:16 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 1, StreamRate: 999, SketchType: kll 
+3772 5005 1486922 1972971 true
+----------------------------------------
+
+{}
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=1166889
+[1] 13:19:44 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 1, StreamRate: 856, SketchType: kll 
+3752 5841 760905 1184554 true
+[2] 13:19:45 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 1, StreamRate: 856, SketchType: kll 
+3752 5841 752651 1171704 true
+[3] 13:19:45 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 1, StreamRate: 856, SketchType: kll 
+3752 5841 752651 1171704 true
+----------------------------------------
+
+{}
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=1333445
+[1] 13:20:13 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 1, StreamRate: 749, SketchType: kll 
+3762 6676 762933 1353892 true
+[2] 13:20:13 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 1, StreamRate: 749, SketchType: kll 
+3757 6676 761919 1353892 true
+[3] 13:20:13 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 1, StreamRate: 749, SketchType: kll 
+3760 6676 754256 1339205 true
+----------------------------------------
+
+{}
+Running kll with MERGE_RATE=1000, CLIENT_AMOUNT=1, STREAM_RATE=1500000
+[1] 13:20:42 [SUCCESS] sketch@10.42.0.3
+MergeRate: 1000, Clients: 1, StreamRate: 666, SketchType: kll 
+3766 7508 755459 1506104 true
+[2] 13:20:42 [SUCCESS] sketch@10.42.0.2
+MergeRate: 1000, Clients: 1, StreamRate: 666, SketchType: kll 
+3766 7508 755459 1506104 true
+[3] 13:20:42 [SUCCESS] sketch@10.42.0.4
+MergeRate: 1000, Clients: 1, StreamRate: 666, SketchType: kll 
+3766 7508 755459 1506104 true
+----------------------------------------
+
+{}

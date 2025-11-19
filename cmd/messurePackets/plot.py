@@ -32,6 +32,14 @@ for dataset_name, file_path in log_files.items():
     current_stream = None
     y_sum = 0
     collecting = False
+for client_amount, merge_dict in data.items():
+    plt.figure(figsize=(8, 5))
+    for merge_rate, values in merge_dict.items():
+        # Sort by stream_rate
+        values.sort(key=lambda x: x[0])
+        x = [v[0]*client_amount*3 for v in values]
+        y = [v[1]*merge_rate/5 for v in values]
+        plt.plot(x, y, marker='o', label=f'MergeRate={merge_rate}')
 
     for line in lines:
         line = line.strip()
