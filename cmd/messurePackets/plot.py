@@ -32,14 +32,6 @@ for dataset_name, file_path in log_files.items():
     current_stream = None
     y_sum = 0
     collecting = False
-for client_amount, merge_dict in data.items():
-    plt.figure(figsize=(8, 5))
-    for merge_rate, values in merge_dict.items():
-        # Sort by stream_rate
-        values.sort(key=lambda x: x[0])
-        x = [v[0]*client_amount*3 for v in values]
-        y = [v[1]*merge_rate/5 for v in values]
-        plt.plot(x, y, marker='o', label=f'MergeRate={merge_rate}')
 
     for line in lines:
         line = line.strip()
@@ -114,7 +106,7 @@ def plot_sketch_type(sketch_type, output_prefix):
                 )
                 handles_labels.append((line, line.get_label()))
 
-        ax.set_title(f"Clients: {client}", fontsize=10)
+        ax.set_title(f"Clients: {client*3}", fontsize=10)
         ax.set_xlabel("Stream Rate (T/s)", fontsize=9)
         ax.set_ylabel("Throughput (T/s)", fontsize=9)
         ax.grid(True)
@@ -128,12 +120,12 @@ def plot_sketch_type(sketch_type, output_prefix):
         plt.tight_layout()
 
         # *** Save as individual plot ***
-        filename = f"{output_prefix}_clients_{client}.png"
+        filename = f"{output_prefix}-clients-{client}.png"
         plt.savefig(filename, bbox_inches="tight")
         plt.close()
         print(f"Saved: {filename}")
 
 
 
-plot_sketch_type("KLL", "results-kll-combined")
-plot_sketch_type("Count", "results-count-combined")
+plot_sketch_type("KLL", "results-kll")
+plot_sketch_type("Count", "results-count")
